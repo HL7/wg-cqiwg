@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="qrda.xsl"?>
+<!-- 
+    Title: Pioneer ACO (QMAT) Sample QRDA-I Report
+    
+   This sample file is informative only.
+                  
+-->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:hl7-org:v3   ../Schema/CDA/infrastructure/cda/CDA_SDTC.xsd" xmlns="urn:hl7-org:v3"
+  xmlns:voc="urn:h17-org:v3/voc" xmlns:sdtc="urn:hl7-org:sdtc">
+  <!-- 
+		********************************************************
+		CDA Header
+		********************************************************
+	-->
+  <realmCode code="US" />
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3" />
+
+  <!-- US Realm Header (V2)  -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2014-06-09" />
+  <!-- QRDA Category I Framework (V2) -->
+  <templateId root="2.16.840.1.113883.10.20.24.1.1" extension="2014-12-01" />
+  <!-- QDM-Based QRDA (V2) -->
+  <templateId root="2.16.840.1.113883.10.20.24.1.2" extension="2014-12-01" />
+  <!--  <templateId root="2.16.840.1.113883.10.20.24.1.3" />-->
+  <id root="d651b289-c487-4436-95d2-4c816e50b447" />
+  <code code="55182-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Quality Measure Report" />
+  <title>Pioneer ACO (QMAT) Sample QRDA-I Report</title>
+  <effectiveTime value="20131127160653" />
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  <languageCode code="eng" />
+  <recordTarget>
+    <patientRole>
+      <id extension="321654987A" root="2.16.840.1.113883.4.572" />
+      <id extension="022354" root="2.16.840.1.113883.123.123.1" />
+      <addr use="HP">
+        <streetAddressLine>101 North Pole Lane</streetAddressLine>
+        <city>Ames</city>
+        <state>IA</state>
+        <postalCode>50014</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:+1-781-271-3000" />
+      <patient>
+        <name>
+          <given>Jane</given>
+          <family>Doe</family>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.18.2" />
+        <birthTime value="19460102" />
+        <raceCode code="2106-3" codeSystem="2.16.840.1.113883.6.238" />
+        <ethnicGroupCode code="2186-5" codeSystem="2.16.840.1.113883.6.238" />
+        <languageCommunication>
+          <templateId assigningAuthorityName="HITSP/C83" root="2.16.840.1.113883.3.88.11.83.2" />
+          <templateId assigningAuthorityName="IHE/PCC" root="1.3.6.1.4.1.19376.1.5.3.1.2.1" />
+          <languageCode code="eng" />
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20131125171038" />
+    <assignedAuthor>
+      <id extension="TestNPI" root="2.16.840.1.113883.4.6" />
+      <addr use="HP">
+        <streetAddressLine>101 North Pole Lane</streetAddressLine>
+        <city>Ames</city>
+        <state>IA</state>
+        <postalCode>50014</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:+1-781-271-3000" />
+      <assignedAuthoringDevice>
+        <manufacturerModelName>QMAT</manufacturerModelName>
+        <softwareName>QMAT</softwareName>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.16.840.1.113883.19.5" />
+        <name>QMAT Test Deck</name>
+        <telecom use="WP" value="tel:+1-781-271-3000" />
+        <addr use="HP">
+          <streetAddressLine>101 North Pole Lane</streetAddressLine>
+          <city>Ames</city>
+          <state>IA</state>
+          <postalCode>50014</postalCode>
+          <country>US</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient>
+    <intendedRecipient>
+      <id extension="PIONEER_ACO" root="2.16.840.1.113883.3.249.7" />
+    </intendedRecipient>
+  </informationRecipient>
+  <legalAuthenticator>
+    <time value="20131125171038" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="bc01a5d1-3a34-4286-82cc-43eb04c972a7" />
+      <addr use="HP">
+        <streetAddressLine>101 North Pole Lane</streetAddressLine>
+        <city>Ames</city>
+        <state>IA</state>
+        <postalCode>50014</postalCode>
+        <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:+1-781-271-3000" />
+      <assignedPerson>
+        <name>
+          <given>Henry</given>
+          <family>Seven</family>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <id root="2.16.840.1.113883.19.5" />
+        <name>QMAT</name>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+  <participant typeCode="LOC">
+    <associatedEntity classCode="SDLOC">
+      <id assigningAuthorityName="ONC" extension="CC-2014-900880-3" root="2.16.840.1.113883.3.2074.1" />
+      <code code="394730007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+        displayName="healthcare related organization" />
+      <scopingOrganization>
+        <id root="2.16.840.1.113883.19.5" />
+        <name>QMAT Test Deck</name>
+        <telecom use="WP" value="tel:+1-781-271-3000" />
+        <addr use="HP">
+          <streetAddressLine>101 North Pole Lane</streetAddressLine>
+          <city>Ames</city>
+          <state>IA</state>
+          <postalCode>50014</postalCode>
+          <country>US</country>
+        </addr>
+      </scopingOrganization>
+    </associatedEntity>
+  </participant>
+  <documentationOf typeCode="DOC">
+    <serviceEvent classCode="PCPR">
+      <effectiveTime>
+        <low value="20020716" />
+        <high value="20131125171038" />
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <time>
+          <low value="20020716" />
+          <high value="20131125171038" />
+        </time>
+        <assignedEntity>
+          <id extension="1234567890" root="2.16.840.1.113883.4.6" />
+          <telecom value="mailto:npiUser@aClinic.com" />
+          <assignedPerson>
+            <name>
+              <given>John</given>
+              <family>Smith</family>
+            </name>
+          </assignedPerson>
+          <representedOrganization>
+            <id extension="987654321" root="2.16.840.1.113883.4.2" />
+            <id extension="54321" root="2.16.840.1.113883.4.336" />
+            <name>Good Health Clinic</name>
+            <telecom value="mailto:tinUser@aClinic.com" />
+            <addr>
+              <streetAddressLine>1601 NW 114th Street</streetAddressLine>
+              <streetAddressLine>Suite 151</streetAddressLine>
+              <city>Clive</city>
+              <state>IA</state>
+              <postalCode>50325</postalCode>
+              <country>US</country>
+            </addr>
+          </representedOrganization>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <!-- 
+********************************************************
+CDA Body 
+********************************************************
+-->
+  <component>
+    <structuredBody>
+      <component>
+        <!-- 
+********************************************************
+Measure Section
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.24.2.2" />
+          <templateId root="2.16.840.1.113883.10.20.24.2.3" />
+          <code code="55186-1" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Measure Section</title>
+          <text />
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.24.3.98" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.97" />
+              <id root="f09a2cba-3e8a-4f03-a30c-57fb6daa4790" />
+              <statusCode code="completed" />
+              <reference typeCode="REFR">
+                <externalDocument classCode="DOC" moodCode="EVN">
+                  <id root="2.16.840.1.113883.4.738" extension="12345" />
+                  <setId root="8439f671-2932-4d4c-88ca-ea5faeacc89a" />
+                </externalDocument>
+              </reference>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!-- 
+********************************************************
+Reporting Parameters Section 
+********************************************************
+-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.17.2.1" />
+          <code code="55187-9" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Reporting Parameters</title>
+          <text />
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.17.3.8" />
+              <id root="c99c84bf-2fba-4772-921d-dff6e22db414" />
+              <code code="252116004" codeSystem="2.16.840.1.113883.6.96" displayName="Observation Parameters" />
+              <effectiveTime>
+                <low value="20140101000000" />
+                <high value="20141231000000" />
+              </effectiveTime>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!-- 
+********************************************************
+Patient Data Section 
+********************************************************
+-->
+        <section>
+          <!-- Patient Data Section -->
+          <templateId root="2.16.840.1.113883.10.20.17.2.4" />
+          <!-- Patient Data Section QDM (V2) -->
+          <templateId root="2.16.840.1.113883.10.20.24.2.1" extension="2014-12-01" />
+          <code code="55188-7" codeSystem="2.16.840.1.113883.6.1" />
+          <title>Patient Data</title>
+          <text />
+          <entry>
+            <!-- QDM Datatype: Patient Characteristic, Payer -->
+            <observation classCode="OBS" moodCode="EVN">
+              <!-- Patient Characteristic Payer templateId-->
+              <templateId root="2.16.840.1.113883.10.20.24.3.55" extension="2014-12-01" />
+              <id extension="528fc9f81d41c835200001a2" root="1.3.6.1.4.1.115" />
+              <code code="48768-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Payment source" />
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20110303" />
+              </effectiveTime>
+              <value xsi:type="CD" code="1" codeSystem="2.16.840.1.113883.3.221.5"
+                sdtc:valueSet="2.16.840.1.114222.4.11.3591">
+                <originalText />
+              </value>
+            </observation>
+          </entry>
+
+          <entry>
+            <!-- QDM Datatype: Diagnosis, Active -->
+            <act classCode="ACT" moodCode="EVN">
+              <!-- Conforms to C-CDA Problem Concern Act (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2014-06-09" />
+              <!-- Diagnosis Active Concern Act -->
+              <templateId root="2.16.840.1.113883.10.20.24.3.121" extension="2014-12-01" />
+              <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7" />
+
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <!-- The statusCode represents whether this is an active (active), inactive (suspended) or resolved (completed) diagnosis -->
+              <statusCode code="active" />
+              <effectiveTime>
+                <!-- QDM Attribute: Start Datetime 
+                  (equivalent to author/time/low in the contained observation) -->
+                <low value="20011108105506" />
+              </effectiveTime>
+
+              <entryRelationship typeCode="SUBJ">
+
+                <observation classCode="OBS" moodCode="EVN" negationInd="false">
+
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2014-06-09" />
+                  <!-- Diagnosis Active (V2) templateId-->
+                  <templateId root="2.16.840.1.113883.10.20.24.3.11" extension="2014-12-01" />
+                  <id extension="528fc9f81d41c83520000046" root="1.3.6.1.4.115" />
+                  <code code="29308-4" displayName="diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <text />
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20011107" />
+                    <high nullFlavor="NA" />
+                  </effectiveTime>
+                  <value code="I50.9" codeSystem="2.16.840.1.113883.6.90" sdtc:valueSet="2.16.840.1.113883.3.526.3.376"
+                    xsi:type="CD" />
+
+                  <author>
+                    <!-- C-CDA R2 Author Participation -->
+                    <templateId root="2.16.840.1.113883.10.20.22.4.119" />
+                    <time xsi:type="IVL_TS">
+                      <!-- QDM Attribute: Start Datetime 
+                        (equivalent to effectiveTime/low in the containing act) -->
+                      <low value="20011108105506" />
+                    </time>
+                    <assignedAuthor>
+                      <id root="2.16.840.1.113883.4.6" extension="111111111" />
+                    </assignedAuthor>
+                  </author>
+
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09" />
+                      <code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7ActCode"
+                        displayName="Severity                         Observation" />
+                      <text />
+                      <statusCode code="completed" />
+                      <value nullFlavor="NI" xsi:type="CD" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+
+          <entry>
+            <!-- QDM Datatype: Diagnosis, Active -->
+            <act classCode="ACT" moodCode="EVN">
+              <!-- Conforms to C-CDA Problem Concern Act (V2) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2014-06-09" />
+              <!-- Diagnosis Active Concern Act -->
+              <templateId root="2.16.840.1.113883.10.20.24.3.121" extension="2014-12-01" />
+              <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7" />
+
+              <code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <!-- The statusCode represents whether this is an active (active), inactive (suspended) or resolved (completed) diagnosis -->
+              <statusCode code="active" />
+              <effectiveTime>
+                <!-- QDM Attribute: Start Datetime 
+                  (equivalent to author/time/low in the contained observation) -->
+                <low value="20120605131214" />
+              </effectiveTime>
+
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN" negationInd="false">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2014-06-09" />
+                  <templateId root="2.16.840.1.113883.10.20.24.3.11" extension="2014-12-01" />
+                  <id extension="528fc9f81d41c83520000046" root="1.3.6.1.4.115" />
+                  <code code="29308-4" displayName="diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <text />
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20120604" />
+                    <high nullFlavor="NA" />
+                  </effectiveTime>
+                  <value code="134401001" codeSystem="2.16.840.1.113883.6.96"
+                    sdtc:valueSet="2.16.840.1.113883.3.526.3.1091" xsi:type="CD" />
+
+                  <author>
+                    <!-- C-CDA R2 Author Participation -->
+                    <templateId root="2.16.840.1.113883.10.20.22.4.119" />
+                    <time xsi:type="IVL_TS">
+                      <!-- QDM Attribute: Start Datetime 
+                        (equivalent to effectiveTime/low in the containing act) -->
+                      <low value="20120605131214" />
+                    </time>
+                    <assignedAuthor>
+                      <id root="2.16.840.1.113883.4.6" extension="111111111" />
+                    </assignedAuthor>
+                  </author>
+
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.22.4.8" extension="2014-06-09" />
+                      <code code="SEV" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7ActCode"
+                        displayName="Severity                         Observation" />
+                      <text />
+                      <statusCode code="completed" />
+                      <value code="981000124106" codeSystem="2.16.840.1.113883.6.96"
+                        sdtc:valueSet="2.16.840.1.113883.3.526.3.1090" xsi:type="CD" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.41" extension="2014-12-01" />
+              <id root="236a6afa-7a39-4f4c-9a29-a63ac4f5866f" />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20130605131214" />
+                <high nullFlavor="NI" />
+              </effectiveTime>
+              <repeatNumber value="2" />
+              <doseQuantity value="1" />
+              <rateQuantity unit="ml/min" value="90" />
+              <maxDoseQuantity nullFlavor="NI">
+                <numerator nullFlavor="NI" />
+                <denominator nullFlavor="NI" />
+              </maxDoseQuantity>
+              <administrationUnitCode code="C42944" codeSystem="2.16.840.1.113883.3.26.1.1"
+                codeSystemName="NCI                 Thesaurus" displayName="INHALANT" sdtc:valueSet="1.2.99999" />
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <id root="8100abc8-c25a-4223-ad03-75c3625ba359" />
+                  <manufacturedMaterial>
+                    <code code="866511" codeSystem="2.16.840.1.113883.6.88" codeSystemName="SNOMED CT"
+                      sdtc:valueSet="2.16.840.1.113883.3.526.3.1174" />
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name>Medication Factory Inc.</name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+
+          <!-- QDM Datatype: Encounter Performed -->
+          <entry>
+            <encounter classCode="ENC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.23" extension="2014-12-01" />
+              <id root="258ca2a5-595b-487f-a593-2d0e61f1cea1" />
+              <code code="99214" codeSystem="2.16.840.1.113883.6.12"
+                sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001" />
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20140605131214" />
+                <high value="20140605131214" />
+              </effectiveTime>
+            </encounter>
+          </entry>
+
+          <!-- QDM Datatype: Encounter Performed -->
+          <entry>
+            <encounter classCode="ENC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.49" extension="2014-06-09" />
+              <templateId root="2.16.840.1.113883.10.20.24.3.23" extension="2014-12-01" />
+              <id root="0a32d6ba-da27-4a2d-be66-068d0218aa19" />
+              <code code="386473003" codeSystem="2.16.840.1.113883.6.96" sdtc:valueSet="2.16.840.1.113883.3.526.3.1012" />
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="20141110090506" />
+                <high value="20141110090506" />
+              </effectiveTime>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
