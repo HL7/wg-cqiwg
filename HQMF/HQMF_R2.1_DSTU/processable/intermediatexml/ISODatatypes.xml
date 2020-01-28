@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spec SYSTEM "../../support/dtd/v3m.dtd">
+<spec>
+  <header ballotStatus="MembershipNormativeBallot" ballotNumber="1">
+    <title>ISO-Harmonized Data Types, Release 1</title>
+    <version>2.0</version>
+    <date>20130305</date>
+    <authlist>
+			<author>
+				<role>Primary Contributer &amp; MnM Co Chair</role>
+				<name>Grahame Grieve</name>
+				<affiliation>Health Intersections Pty Ltd</affiliation>
+				<email href="grahame@healthintersections.com.au" xlink-form="simple" show="embed" actuate="auto"/>
+			</author>
+			<author>
+				<role>Primary Contributer</role>
+				<name key="McCay, Charlie">Charlie McCay</name>
+				<affiliation>Ramsey Systems Ltd</affiliation>
+				<email href="charlie@ramseysystems.co.uk" xlink-form="simple" show="embed" actuate="auto"/>
+			</author>
+			<author>
+				<role>ITS Co Chair &amp; Editor</role>
+				<name>Paul Knapp</name>
+				<affiliation>Knapp Consulting Inc.</affiliation>
+				<email href="pknapp@pknapp.com" xlink-form="simple" show="embed" actuate="auto"/>
+			</author>
+			<author>
+				<role>ITS Co Chair</role>
+				<name>Dale Nelson</name>
+				<affiliation>Lantana Consulting Group</affiliation>
+				<email href="dale.nelson@lantanagroup.com" xlink-form="simple" show="embed" actuate="auto"/>
+			</author>
+			<author>
+				<role>ITS Co Chair</role>
+				<name>Andy Stechishin</name>
+				<affiliation>CANA Software &amp; Services Ltd.</affiliation>
+				<email href="andy.stechishin@gmail.com" xlink-form="simple"/>
+			</author>
+    </authlist>
+  </header>
+  <body>
+	<div1 id="ballotnote">
+	  <head>Notice to Balloters</head>
+	  <p>
+		No substantive changes have been made to the specification since it was last balloted at HL7 in September 2009 however, where appropriate,
+		ballot reconciliation suggestions have been applied to the final ISO document. This specification is being re-balloted due to the large time gap 
+		between the last public review and now. Balloters are not being asked to provide detailed ballot comments as the referenced specification is already 
+		a declared ISO standard, but rather to provide an "Up/Down" ballot vote on this specification for the HL7 context. Any comments provided may receive 
+		future consideration.
+	  </p>
+	</div1>
+    <div1 id="introduction">
+      <head>ISO 21090 Healthcare Datatypes</head>
+      	<p>
+      		The ISO-Harmonized data types are effectively the XML ITS Data Types R2. They will replace the 
+      		XML ITS Data Types R1. The format differences between the specification provided here and conventional HL7 specifications
+			arise because of the need to align with ISO style requirements.
+      	</p>
+		<p>
+			The ISO-Harmonized data types document is a shared document between HL7 and ISO. The final format of 
+			this document is as a full ISO specification (it is identified as ISO/FDIS 21090:2009(E)). This
+			document is the result of a jointly-balloted document by HL7, ISO, and CEN in a ballot that opened 
+			on Mar 29, 2008 and closed on Aug 29, 2008 (5 months, per ISO and CEN rules). Ballot Disposition was 
+			conducted at both HL7 and ISO meetings through 2008 and 2009. 
+		</p>
+      	<p>
+      		The linked ISO-Harmonized Data Types, Release 1 document is a pdf: 
+      		<loc href="ISO 21090 Healthcare Datatypes.pdf">ISO Datatypes Standard.pdf</loc> (for HL7 
+			Normative Ballot) (Hint: right-click and select 'Save Target As' to download, or 'Open in New Window'.)  
+		</p>
+      	<p>Because the material would become an ISO standard, the ITS Work Group petitioned the Technical Steering Committee to move the document from DSTU to full Normative ballot and that petition was granted.</p>
+      	<p>Please note that the reconciliation spreadsheet from the September 2009 ballot has been posted on the Ballot Desktop.</p>
+    </div1>
+	<div1 id="guide">
+		<head>ITS R2 Guide</head>
+		<p>
+		   The guide has been previously balloted as an informative specification (September 2012) and will be published separately.
+		</p>
+	</div1>
+    <div1 id="attachment">
+      <head>Additional Information</head>
+      <p>
+      	Some additional useful supporting material can be found in an <loc href="ISO 21090 resources.zip">attachments
+		zip file</loc> (Hint: right-click and select 'Save Target As...' to save this file to your hard drive.) Note that these materials are Informative whereas the datatypes specification referred to above is Normative. 
+	  </p>
+      <p>
+      	The additional information includes: 
+      </p>
+		<list role="unordered">
+			<item><p>Schema for the datatypes</p></item>
+			<item><p>Examples for the datatypes</p></item>
+		</list>
+    </div1>
+  </body>
+</spec>

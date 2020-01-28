@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:glossary xmlns:mif="urn:hl7-org:v3/mif2" xmlns:hl7="urn:hl7-org:v3" title="Glossary for: Document rim" schemaVersion="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+	<mif:packageLocation root="DEFN" realmNamespace="UV" artifact="GL" name="rim"/>
+	<mif:termDefinition term="ANSI">
+		<!-- @id:ansi key:ansi -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>American National Standards Institute</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="association">
+		<!-- @id:association key:association -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>A reference from one <mif:a href="#gl-class">class</mif:a> to another class or to itself,  or a connection between two <mif:a href="#gl-object">objects</mif:a> (instances of classes).</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="association role name">
+		<!-- @id:association_role_name key:association_role_name -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A name for each end of an <mif:a href="#gl-association">association</mif:a>. 
+								The name is a short verb phrase depicting the <mif:a href="#gl-role">
+								role</mif:a> of the <mif:a href="#gl-class">class</mif:a> at 
+								the opposite end of the association from the perspective of 
+								the class adjacent to the role.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="attribute">
+		<!-- @id:attribute key:attribute -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An abstraction of a particular aspect of a <mif:a href="#gl-class">
+								class</mif:a>. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="cardinality">
+		<!-- @id:cardinality key:cardinality -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								Property of a data element - the number of times a data element 
+								may repeat within an individual occurrence of an object view. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="class">
+		<!-- @id:class key:class -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An abstraction of a thing or concept in a particular 
+								application <mif:a href="#gl-domain">domain</mif:a>. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="classifier attribute">
+		<!-- @id:classifier_attribute key:classifier_attribute -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An <mif:a href="#gl-attribute">attribute</mif:a> used in 
+								<mif:a href="#gl-generalization_hierarchy">generalization 
+								hierarchies</mif:a> to indicate which of the 
+								<mif:a href="#gl-specialization">specializations
+								</mif:a> is the focus of the <mif:a href="#gl-class">class
+								</mif:a>. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="coded attribute">
+		<!-- @id:coded_attribute key:coded_attribute -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An <mif:a href="#gl-attribute">attribute</mif:a> in the 
+								<mif:a href="#gl-reference_information_model">Reference 
+								Information Model</mif:a> 
+								(RIM) with a base <mif:a href="#gl-data_type">data type</mif:a> of 
+								CD, CE, CS, or CV. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="code system">
+		<!-- @id: key:code_system -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>A managed collection of concept representations, including codes. Examples include ICD-9 CM, SNOMED CT, LOINC, and CPT. </mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="data type">
+		<!-- @id:data_type key:data_type -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								The structural format of the data carried in an 
+								<mif:a href="#gl-attribute">attribute</mif:a>. 
+								It may constrain the set of 
+								values an attribute may assume.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="distal class">
+		<!-- @id:distal_class key:distal_class -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								From the perspective of a <mif:a href="#gl-class">class</mif:a> 
+								in an <mif:a href="#gl-information_model">information model</mif:a>, it is 
+								the class at the opposite end of an <mif:a href="#gl-association">
+								association</mif:a> between the two.  
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="value domain">
+		<!-- @id:value_domain key:value_domain -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>The set of possible values of a <mif:a href="#gl-data_type">data type
+								</mif:a>, <mif:a href="#gl-attribute">attribute</mif:a>, or data 
+								type component. See also <mif:a href="#gl-concept_domain">concept domain
+								</mif:a>.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="generalization">
+		<!-- @id:generalization key:generalization -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An <mif:a href="#gl-association">association</mif:a> between two 
+								<mif:a href="#gl-class">classes</mif:a>, referred to as 
+								<mif:a href="#gl-superclass">superclass</mif:a> and 
+								<mif:a href="#gl-subclass">subclass</mif:a>, in which the subclass 
+								is derived from the superclass. The subclass inherits all
+								properties from the superclass, including <mif:a href="#gl-attribute">
+								attributes</mif:a>, relationships, and <mif:a href="#gl-state">
+								states</mif:a>, but also adds new ones to extend the 
+								capabilities of the parent class. Essentially, a 
+								<mif:a href="#gl-specialization">specialization</mif:a> from the 
+								point-of-view of the subclass. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="generalization hierarchy">
+		<!-- @id:generalization_hierarchy key:generalization_hierarchy -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								All <mif:a href="#gl-superclass">superclasses</mif:a> and 
+								<mif:a href="#gl-subclass">subclasses</mif:a> with a common 
+								root superclass. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="graphical expression">
+		<!-- @id:graphical_expression key:graphical_expression -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A visual representation of a <mif:a href="#gl-model">model</mif:a> 
+								that uses graphic symbols to represent
+								the components of the model and the relationships that exist
+								between those components. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="Health Level Seven International">
+		<!-- @id:hl7 key:health_level_seven_international -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>A standards developing organization based in the United States of America.</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="HL7">
+		<!-- @id:hl7 key:hl7 -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>An abbreviation for <mif:a href="#gl-health_level_seven_international">Health Level Seven International</mif:a>.</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="information model">
+		<!-- @id:information_model key:information_model -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A structured specification, 
+								expressed graphically and/or in narrative, of the information 
+								requirements of a domain of interest. An 
+								information model describes the <mif:a href="#gl-class">classes
+								</mif:a> of information required and the properties of those 
+								classes, including <mif:a href="#gl-attribute">attributes</mif:a>, 
+								relationships, and <mif:a href="#gl-state">states</mif:a>.							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="inheritance">
+		<!-- @id:inheritance key:inheritance -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								In a <mif:a href="#gl-generalization">generalization</mif:a> relationship, 
+								the <mif:a href="#gl-subclass">subclass</mif:a> inherits all 
+								properties from the <mif:a href="#gl-superclass">superclass</mif:a>, 
+								including <mif:a href="#gl-attribute">attributes</mif:a>, 
+								relationships, and <mif:a href="#gl-state">states</mif:a>, 
+								unless otherwise specified. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="instance">
+		<!-- @id:instance key:instance -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A case or an occurrence. For example, an instance of a 
+								<mif:a href="#gl-class">class</mif:a> is an 
+								<mif:a href="#gl-object">object</mif:a>.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="literary expression">
+		<!-- @id:literary_expression key:literary_expression -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A representation of a <mif:a href="#gl-model">model</mif:a> in 
+								text. The literary expression seeks to 
+								balance the need for a rigorous, unambiguous description 
+								of the model with the need for a rendition that can be easily read and
+								interpreted by individuals who understand the general concepts         
+								underlying object-oriented models, but who may not be schooled in
+								formal model definition languages. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="methodology">
+		<!-- @id:methodology key:methodology -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								Methods or rules followed in a particular discipline.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="model">
+		<!-- @id:model key:model -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A representation of a domain of interest that 
+								uses abstraction to express the relevant concepts. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="multiplicity">
+		<!-- @id:multiplicity key:multiplicity -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								In the <mif:a href="#gl-information_model">information model</mif:a>, 
+								multiplicity is a specification 
+								of the minimum and maximum number of <mif:a href="#gl-object">objects
+								</mif:a>from each <mif:a href="#gl-class">class</mif:a> that 
+								can participate in an <mif:a href="#gl-association">association</mif:a>.  
+								Multiplicity is specified for each end of the association.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="namespace">
+		<!-- @id:namespace key:namespace -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>A namespace is a part of the model in which names are defined and used, where each name has a unique meaning.</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="object">
+		<!-- @id:object key:object -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An <mif:a href="#gl-instance">instance</mif:a> of a 
+								<mif:a href="#gl-class">class</mif:a>. A part of an information 
+								system containing a collection of related data (in the form of 
+								<mif:a href="#gl-attribute">attributes</mif:a>) and
+								procedures (methods) for operating on that data.  
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="property">
+		<!-- @id:property key:property -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								Any <mif:a href="#gl-attribute">attribute</mif:a>, 
+								<mif:a href="#gl-association">association</mif:a>, method, or 
+								<mif:a href="#gl-state">state</mif:a> model defined for a
+								<mif:a href="#gl-class">class</mif:a> or <mif:a href="#gl-object">
+								object</mif:a>.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="Reference Information Model">
+		<!-- @id:reference_information_model key:reference_information_model -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								The HL7 <mif:a href="#gl-information_model">information model
+								</mif:a> from which all other information models 
+								(e.g., R-MIMs) and messages 
+								are derived.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="RIM">
+		<!-- @id:reference_information_model key:rim -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>An abbreviation for <mif:a href="#gl-reference_information_model">Reference Information Model</mif:a>.</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="role">
+		<!-- @id:role key:role -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								In the <mif:a href="#gl-unified_modeling_language">UML</mif:a>, each end of an <mif:a href="#gl-association">association
+								</mif:a> is designated as a role to 
+								reflect the function that class plays in the association.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="role name">
+		<!-- @id:role_name key:role_name -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								See <mif:a href="#gl-association_role_name">association role 
+								name</mif:a>.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="specialization">
+		<!-- @id:specialization key:specialization -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An <mif:a href="#gl-association">association</mif:a> between two 
+								<mif:a href="#gl-class">classes</mif:a> (designated 
+								<mif:a href="#gl-superclass">superclass</mif:a> and 
+								<mif:a href="#gl-subclass">subclass</mif:a>),
+								in which the subclass is derived from the superclass. The 
+								subclass inherits all properties from the superclass, 
+								including <mif:a href="#gl-attribute">attributes</mif:a>, 
+								relationships, and <mif:a href="#gl-state">states</mif:a>, but 
+								also adds new ones to extend the capabilities of the superclass. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="state">
+		<!-- @id:state key:state -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A named condition of a <mif:a href="#gl-class">class</mif:a>
+					<mif:a href="#gl-instance">instance</mif:a> (<mif:a href="#gl-object">
+								object</mif:a>) that can be tested by
+								examination of the instance's <mif:a href="#gl-attribute">attributes
+								</mif:a>and <mif:a href="#gl-association">associations</mif:a>.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="state attribute">
+		<!-- @id:state_attribute key:state_attribute -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An <mif:a href="#gl-attribute">attribute</mif:a> describing the 
+								current <mif:a href="#gl-state">state</mif:a> of an 
+								<mif:a href="#gl-object">object</mif:a>. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="state diagram">
+		<!-- @id:state_diagram key:state_diagram -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A graphical representation of a <mif:a href="#gl-state_transition_model"> 
+								state transition model</mif:a> showing <mif:a href="#gl-state">states
+								</mif:a>as vertices (nodes) and <mif:a href="#gl-state_transition">
+								state transitions</mif:a> as directed arcs (arrows) between the nodes. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="state machine">
+		<!-- @id:state_machine key:state_machine -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A description of the life cycle for <mif:a href="#gl-instance">instances
+								</mif:a>of a <mif:a href="#gl-class">class</mif:a>, defined by a 
+								<mif:a href="#gl-state_transition_model">state transition model</mif:a>.  
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="state transition">
+		<!-- @id:state_transition key:state_transition -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A change in the <mif:a href="#gl-state">state</mif:a> of an 
+								<mif:a href="#gl-object">object</mif:a>, as a result of a change 
+								in its <mif:a href="#gl-attribute">attributes</mif:a> 
+								or <mif:a href="#gl-association">associations</mif:a>.
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="state transition model">
+		<!-- @id:state_transition_model key:state_transition_model -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A graphical representation of the life cycle of a 
+								<mif:a href="#gl-class">class</mif:a>. The <mif:a href="#gl-model">
+								model</mif:a> depicts all of the relevant <mif:a href="#gl-state">
+								states</mif:a> of a class, and the valid transitions 
+								from state to state. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="subclass">
+		<!-- @id:subclass key:subclass -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A <mif:a href="#gl-class">class</mif:a> that is the 
+								<mif:a href="#gl-specialization">specialization</mif:a> of 
+								another class (<mif:a href="#gl-superclass">superclass</mif:a>). 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="subject area">
+		<!-- @id:subject_area key:subject_area -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>A convenient aggregation of <mif:a href="#gl-model">model </mif:a><mif:a href="#gl-class">classes</mif:a> used to partition large models into manageable subsets. </mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="sub-state">
+		<!-- @id:sub-state key:sub-state -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								An identifiable <mif:a href="#gl-state">state</mif:a> of a 
+								<mif:a href="#gl-class">class</mif:a> that has a more specific
+								definition than, and is entirely encompassed within the scope         
+								of, its <mif:a href="#gl-super-state">super-state</mif:a>. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="superclass">
+		<!-- @id:superclass key:superclass -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A <mif:a href="#gl-class">class</mif:a> that is the 
+								<mif:a href="#gl-generalization">generalization</mif:a> of one or more 
+								other classes (<mif:a href="#gl-subclass">subclasses</mif:a>). 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="super-state">
+		<!-- @id:super-state key:super-state -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A <mif:a href="#gl-state">state</mif:a> of a <mif:a href="#gl-class">
+								class</mif:a> that encompasses two or more independent 
+								<mif:a href="#gl-sub-state">sub-states</mif:a>. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="Unified Modeling Language">
+		<!-- @id:unified_modeling_language key:unified_modeling_language -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								A language for the creation of <mif:a href="#gl-domain">domain</mif:a>
+					<mif:a href="#gl-model">models</mif:a>. Established as a standard by the Object Management Group. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="UML">
+		<!-- @id:unified_modeling_language key:uml -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>An abbreviation for <mif:a href="#gl-unified_modeling_language">Unified Modeling Language</mif:a>.</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="concept domain">
+		<!-- @id:concept_domain key:concept_domain -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>
+								The set of all concepts that can be taken as valid values in an 
+								<mif:a href="#gl-instance">instance</mif:a> of a 
+								<mif:a href="#gl-coded_attribute">coded attribute</mif:a> or field; a 
+								constraint applicable to code 
+								values. 
+							</mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+	<mif:termDefinition term="W3C">
+		<!-- @id:w3c key:w3c -->
+		<mif:definition>
+			<mif:text>
+				<mif:p>The World Wide Web Consortium, an international industry consortium </mif:p>
+			</mif:text>
+		</mif:definition>
+	</mif:termDefinition>
+</mif:glossary>

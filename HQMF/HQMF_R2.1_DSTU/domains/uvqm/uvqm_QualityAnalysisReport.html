@@ -1,0 +1,754 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:mif="urn:hl7-org:v3/mif2" xmlns:hl7="urn:hl7-org:v3"><script xmlns="http://www.w3.org/1999/xhtml" src="../../support/js/tree.js" type="text/javascript"></script><script xmlns="http://www.w3.org/1999/xhtml" src="../../support/js/setTopFrameText.js" type="text/javascript"></script><script xmlns="http://www.w3.org/1999/xhtml" src="../../support/js/swapcss.js" type="text/javascript"></script><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+			if (find('heading')) setHeadingTextFromFileName(document.location.href);
+			</script><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <title>QA Review for Domain: QM</title>
+      <link rel="stylesheet" type="text/css" href="../../support/css/V3m.css"><style type="text/css">
+					td.sm {font-family: Verdana,Arial; text-align: left; vertical-align: top; font-size: 10}
+					th.sm {font-family: Verdana,Arial; FONT-WEIGHT: bold; text-align: left; font-size: 10}
+				</style></head>
+   <body>
+      <div class="section">
+         <h1>HL7 Edition/Ballot Quality Review</h1>
+         <p>Release: Ballot2012SEP</p>
+         <table border="0" width="100%" cellpadding="6">
+            <tr>
+               <td width="225" valign="top" align="left" nowrap>V3 Publishing Co-Chair</td>
+               <td width="95%" valign="top" align="left" nowrap>George Beeler<br>Beeler Consulting LLC
+               </td>
+            </tr>
+            <tr>
+               <td width="225" valign="top" align="left" nowrap>V3 Publishing Co-Chair</td>
+               <td width="95%" valign="top" align="left" nowrap>Andy Stechishin<br></td>
+            </tr>
+            <tr>
+               <td width="225" valign="top" align="left" nowrap>Director of Technical Publications</td>
+               <td width="95%" valign="top" align="left" nowrap>Don Lloyd<br>Health Level Seven, Inc.
+               </td>
+            </tr>
+         </table>
+         <p class="copyright">Edited:&nbsp;2012-07-13T09:53:01</p>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">Last Published:&nbsp;20140506&nbsp;7:56&nbsp;AM</p>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7® Version 3 Standard, © 2014  Health Level Seven® International. &nbsp;All Rights Reserved.</p>
+         <p xmlns="http://www.w3.org/1999/xhtml" class="copyright">HL7 and Health Level Seven are registered trademarks of Health Level Seven International Reg. U.S. Pat &amp; TM Off.<br></br>Use of these materials is governed by HL7 International's <a href="http://www.hl7.org/legal/ippolicy.cfm">IP Compliance Policy</a>.
+         </p>
+         <hr title="Separator for header"><a name="top"></a><div class="body"><a href="uvqm.html">Return to Parent Domain</a><div class="foundationToc">
+               <h2><a name="contents">Table of Contents</a></h2>1 &nbsp;
+               			      <a href="#introduction">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.1 &nbsp;
+               				<a href="#introOverview">Overview</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.2 &nbsp;
+               				<a href="#introRefTypes">Reference Types Being Checked</a><br>&nbsp;&nbsp;&nbsp;&nbsp;1.3 &nbsp;
+               				<a href="#introFatalErrors">Indication of "Fatal" Errors</a><br>2 &nbsp;
+               			      <a href="#vocabRefGroup">Vocabulary Reference Failure Tests</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.1.&nbsp;
+               				<a href="#vr-intro">Vocabulary Testing Overview</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 &nbsp;
+               				<a href="#vr-intro-testing">Reference Testing</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.2 &nbsp;
+               				<a href="#vr-intro-correction">Vocabulary Reference Correction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.2 &nbsp;
+               			      <a href="#vocRefErrors">Vocabulary Reference Errors</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.1 &nbsp;
+               					  <a href="#vocRefErrors-Introduction">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.2 &nbsp;
+               			      <a href="#vocRefs">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;2.3 &nbsp;
+               			      <a href="#errantStaticModels">Static Models with Vocabulary Reference Errors</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.1 &nbsp;
+               					  <a href="#errantStaticModels-Introduction">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.2 &nbsp;
+               			      <a href="#staticModelVocRefs">Results</a><br>3 &nbsp;
+               			      <a href="#bindingRefGroup">Dynamic Model Binding Reference Failures</a><br>&nbsp;&nbsp;&nbsp;&nbsp;3.1.&nbsp;
+               				<a href="#br-Intro">Binding Reference Analysis</a><br>&nbsp;&nbsp;&nbsp;&nbsp;3.2 &nbsp;
+               			      <a href="#failedInteractions">Interaction Binding Reference Failures</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.1.&nbsp;
+               				<a href="#br-failed">Failed Binding of "Complete" Interactions</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2.2 &nbsp;
+               			      <a href="#failedInts">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;3.3 &nbsp;
+               			      <a href="#warningInteractions">Interaction Binding Reference Warnings</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.1.&nbsp;
+               				<a href="#br-warned">Warning on Interactions Without Payload</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3.2 &nbsp;
+               			      <a href="#warnedInts">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;3.4 &nbsp;
+               			      <a href="#exampleInteractions">Example Interactions with Incomplete Bindings</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.1.&nbsp;
+               				<a href="#br-example">Incomplete Example Interactions</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4.2 &nbsp;
+               			      <a href="#exampleInts">Results</a><br>4 &nbsp;
+               			      <a href="#cmetRefGroup">CMET Reference Failures</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.1.&nbsp;
+               				<a href="#cr-Intro">CMET Reference List</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.2 &nbsp;
+               			      <a href="#cr-item1">Incomplete Specification of Listed CMETs</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.1.&nbsp;
+               				<a href="#cr-listErrs">CMET Reference List</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.2 &nbsp;
+               			      <a href="#cmetSpecErrors">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.3 &nbsp;
+               			      <a href="#cr-item2">Incomplete Listing of Referenced CMETs</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3.1.&nbsp;
+               				<a href="#cr-listOmissions">CMET List Omissions</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3.2 &nbsp;
+               			      <a href="#cmetListErrors">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;4.4 &nbsp;
+               			      <a href="#cr-item3">Mis-matched CMET References from Static Models</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4.1.&nbsp;
+               				<a href="#cr-refWarnErrs">Mis-matched CMET References</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4.2 &nbsp;
+               			      <a href="#cmetWarnErrors">Results</a><br>5 &nbsp;
+               			      <a href="#staticDesignDefnLinks">Static Model Design and Definition Failures</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.1.&nbsp;
+               				<a href="#sr-Intro">Static Model Design and Definition Issues</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.2 &nbsp;
+               			      <a href="#stref-item0">Static Model Designs That Cannot be Serialized</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.1.&nbsp;
+               				<a href="#sr-nonSerializable">Serialization Issues</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2.2 &nbsp;
+               			      <a href="#nonSerializable">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.3 &nbsp;
+               			      <a href="#stref-item0a">Static Model Designs With MIF-invalid Names</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.1.&nbsp;
+               				<a href="#sr-mifValidty">MIF Name Validation</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.3.2 &nbsp;
+               			      <a href="#mifValidity">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.4 &nbsp;
+               			      <a href="#stref-item1">Missing or Mismatched Static Model Designs</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.1.&nbsp;
+               				<a href="#sr-missingStatic">Missing Static Models</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.4.2 &nbsp;
+               			      <a href="#missingStatic">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.5 &nbsp;
+               			      <a href="#stref-item2">Missing Definition for Static Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.5.1.&nbsp;
+               				<a href="#sr-missingDefn">Missing Definition</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.5.2 &nbsp;
+               			      <a href="#missingDefn">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;5.6 &nbsp;
+               			      <a href="#stref-item3">Duplicate Design for Static Model</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.6.1.&nbsp;
+               				<a href="#sr-duplicateDsgn">Duplicate Design</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.6.2 &nbsp;
+               			      <a href="#duplicateDsgn">Results</a><br>6 &nbsp;
+               			      <a href="#invalidModelDerivation">Invalid Model Derivation Tests</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.1.&nbsp;
+               				<a href="#deriv-intro">Model Derivation Overview</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.1 &nbsp;
+               				<a href="#deriv-intro-testing">Reference Testing</a><br>&nbsp;&nbsp;&nbsp;&nbsp;6.2 &nbsp;
+               			      <a href="#illDerivedStaticModels">Information (Static) Models with Invalid RIM Derivations</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2.1 &nbsp;
+               					  <a href="#illDerivedStaticModels-Introduction">Introduction</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.2.2 &nbsp;
+               			      <a href="#erroneousModelDerivations">Results</a><br>7 &nbsp;
+               			      <a href="#otherRefGroup">Missing Files for Graphics and Other References</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.1.&nbsp;
+               				<a href="#or-Intro">Other Reference Issues</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.2 &nbsp;
+               			      <a href="#otherRef-item0">Missing Files in Content Submission</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2.1.&nbsp;
+               				<a href="#or-missingFiles">Missing graphic and "other" support files</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2.2 &nbsp;
+               			      <a href="#missingFiles">Results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;7.3 &nbsp;
+               			      <a href="#otherRef-item1">"Uncertain" Hyperlinks</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3.1.&nbsp;
+               				<a href="#or-uncertainURL">"Uncertain" Hyperlinks In Specifications</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.3.2 &nbsp;
+               			      <a href="#uncertainURL">Results</a><br>8 &nbsp;
+               			      <a href="#errorSummary">Summary of Raw Reference Errors Data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.1.&nbsp;
+               				<a href="#raw-Intro">Summary Table</a><br>&nbsp;&nbsp;&nbsp;&nbsp;8.2 &nbsp;
+               			      <a href="#rawContent">Results</a><br><hr>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="introduction"></a>1 </span><span class="title">Introduction</span></div>
+               <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="introOverview"></a>1.1 </span><span class="title">Overview</span></div>
+               <div class="body">
+                  <p>In early 2006, the V3 Generator became a more integral part of preparing each V3 Publication.  This vehicle draws upon a comprehensive
+                     collection of files containing the domain artifacts being processed.  As a consequence the Publishing Committee created an
+                     analysis of the cross-references embedded in these files, since the "failure" of any cross-reference represents incomplete
+                     linkages in the published content, and, therefore, a publication quality issue.
+                     
+                  </p>
+                  <p>The resulting quality review files have been used to guide the creation of each ballot publication, identifying potential
+                     problems or places where the "wrong" source file has been provided.  They have also guided the modification of generator processes
+                     to correct systematic errors in the content.  These files have been provided to the publishing facilitators in the raw XML
+                     form.  This document represents this content in a form that can guide implementers of the standards and the individual Work
+                     Groups responsible for creating the content in their efforts to adapt and improve the content
+                  </p>
+               </div>
+               <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="introRefTypes"></a>1.2 </span><span class="title">Reference Types Being Checked</span></div>
+               <div class="body">
+                  <p>At present, the principle forms of reference that have been tested are:</p>
+                  <ul>
+                     <li><strong>Vocabulary References</strong><p>Almost half of the attributes used in HL7 static model (message) designs are coded attributes.  Each of these carries a constraint
+                           specification that constitutes a reference to an element defined in the HL7 Vocabulary.  In the HL7 "parallel development"
+                           environment these references are frequently inserted in model designs before their "target" has been added to the Vocabulary
+                           Content.  This portion of the review looks for places where the necessary target is not in the Vocabulary.  These arise for
+                           one of two reasons:
+                        </p>
+                        <ol>
+                           <li>The reference may be incorrectly entered.</li>
+                           <li>The necessary target has not been defined and approved (through Harmonization) in the Vocabulary.<br></li>
+                        </ol>
+                     </li>
+                     <li><strong>Dynamic Model Bindings (Wrappers)</strong><p>Within the messaging dynamic model, HL7 static models are assembled into complete communicable models by "wrapping" models
+                           within models.  Thus, a transmission wrapper surrounds a control act wrapper that surrounds a payload. These are bindings
+                           from "stubs" to their corresponding payload. In the HL7 "parallel development" environment these references are asserted by
+                           one Work Group while another Work Group is creating the target.  Thus, it is necessary to check that the referenced target
+                           exists and that the "type" of the stub matches the type of the root element being bound to that stub.
+                        </p>
+                     </li>
+                     <li><strong>CMET References</strong><p>HL7 static models include a significant amount of "re-use" in the form of Common Model Element Type (CMET) references. In
+                           the HL7 "parallel development" environment these references are asserted by one Work Group while another Work Group is creating
+                           the target.  Thus, it is necessary to check that the referenced target exists.
+                        </p>
+                     </li>
+                     <li><strong>Static Model Design-to-Definition References</strong><p>HL7 static models are designed in a graphic-editor environment (currently the RMIM Designer in Visio), but the relations of
+                           these static models to the rest of the "dynamic model" is documented separately in a "publication data base".  This set of
+                           reference checks verifies that each static model design being distributed is "defined" in a dynamic model, and, conversely,
+                           that there is a static model design for each model defined in a publication data base.
+                        </p>
+                     </li>
+                     <li><strong>Derivation from the HL7 Reference Information Model</strong><p>The HL7 Version 3 Methodology includes a defined set of rules that governs the derivation of one information model from another.
+                           Chief among these rules is that every UML class and attribute in an HL7 information model <b>SHALL</b> be derived from a defined class and attribute in the HL7 Reference Information Model version to which the model is "bound."
+                           (Each HL7 Ballot and Normative Edition specifies the version of the RIM to which the models within it are bound.) Although
+                           the model design tooling enforces such a linkage, subsequent changes to the RIM, including the <b>Deprecation</b> and/or <b>Removal</b> of classes and attributes may cause a design to be invalid when bound to a different RIM.  Complete analysis of the validity
+                           of RIM derivation includes identifying:
+                        </p>
+                        <ol>
+                           <li>Whether there is no valid RIM reference owing to a class or <b>attribute having been removed</b>; <br></li>
+                           <li>Whether the derivation is from an element that <b>has been deprecated from further use</b> in the RIM; <br></li>
+                           <li>Whether the data type declared for a derived attribute represents an <b>improper constraint of the data type</b>  asserted in the RIM; <br></li>
+                           <li>Whether the cardinality for a derived attribute represents an <b>improper constraint on the cardinality</b> asserted in the RIM; <br></li>
+                           <li>Whether the assertion that an <b>attribute is Mandatory</b> has been maintained provided such was asserted in the RIM; <br></li>
+                           <li>Whether the assertion that an <b>attribute is Required</b> has been maintained provided such was asserted in the RIM; <br></li>
+                        </ol>
+                     </li>
+                     <li><strong>Graphic and Other References to Subsidiary Files</strong><p>Each specification may, and usually does, have references to numerous subsidiary files that provide graphics or supplemental
+                           information for the specification.  This set of reference checks verifies that such files were included in the submission
+                           of the specification for publication.  Further it provides a set of "URL"s for hyper-links within the documents.  These cannot
+                           be automatically validated, but should be reviewed for continued for current validity.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="introFatalErrors"></a>1.3 </span><span class="title">Indication of "Fatal" Errors</span></div>
+               <div class="body">
+                  <p>In attempt to indicate to reviewers the <b><i>severity</i></b> of individual errors. Some of the results tables below have been set to indicate the presence of a "fatal" error by highlighting
+                     a portion of the error row in yellow. Items that are deemed "fatal" are those which fulfill one or more of the following criteria:
+                  </p>
+                  <ul>
+                     <li>The error will cause an interaction that includes the involved element to be constructed incorrectly.</li>
+                     <li>The error will cause the involved element to be invalid.</li>
+                     <li>The error will cause designs that "include" the involved element (such as a CMET) to be invalid.</li>
+                  </ul>
+                  <p>Note that in this context the term <b>"invalid"</b> means that one or more of the following will be true:
+                  </p>
+                  <ul>
+                     <li>The schema generated for the element in question or any higher order elements that include it will fail top validate.</li>
+                     <li>The MIF file created to represent the element will fail to validate.</li>
+                     <li>The model element in question will be invalid according the the HL7 design methodology. (Includes the inclusion of Deprecated
+                        components.
+                     </li>
+                     <li>The model is duplicated in the package and may cause fatal tooling errors when it is processed.</li>
+                  </ul>
+                  <p>As an example, selected rows of the vocabulary errors within static models table are flagged with yellow highlight.  In these
+                     rows, the data type of the RIM attribute is "CS", and the error detected will cause the schema for the that static model to
+                     fail to validate because the vocabulary schema (which enumerates the possible values for attributes of type "CS") does not
+                     represent the erroneous value.  If this static model is a CMET, the schema for any other static model that includes this CMET
+                     will also fail to validate, as will any interactions.  However, in many of these cases, the MIF file will validate against
+                     the MIF schemas, as these do not mandate checking vocabulary enumerations
+                  </p>
+               </div>
+            </div>
+            <div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="vocabRefGroup"></a>2 </span><span class="title">Vocabulary Reference Failure Tests</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="vr-intro"></a>2.1.</span><span class="title">Vocabulary Testing Overview</span></div>
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="vr-intro-testing"></a>2.1.1 </span><span class="title">Reference Testing</span></div>
+                     <div class="body">
+                        <p>The following sections list Vocabulary domain specifications for which a reference cannot be found in the current Vocabulary
+                           content. Almost half of the attributes used in HL7 static model (message) designs are coded attributes, and each of these
+                           requires a constraint specification that constitutes a reference to an element defined in the HL7 Vocabulary. As a consequence,
+                           an HL7 NormativeEdition will contain 50,000 to 100,000  (estimate) vocabulary constraint references.  Many of these references
+                           are the same. Nevertheless, there are almost 10,000 (measured) unique reference expressions in these designs.
+                        </p>
+                        <div class="header"><span class="title"><a name="vr-intro-sources"></a>Sources of Error</span></div>
+                        <p>In the HL7 "parallel development" environment these references are frequently inserted in model designs before their "target"
+                           has been added to the Vocabulary Content.  This portion of the quality review looks for places where the necessary target
+                           is not in the Vocabulary.  These arise for one of three reasons:
+                        </p>
+                        <ol>
+                           <li>The reference may be incorrectly entered.</li>
+                           <li>The necessary target has not been defined and approved (through Harmonization) in the Vocabulary.<br></li>
+                           <li>The necessary target has been approved through Harmonization, but has not yet been posted to the Vocabulary content.<br></li>
+                        </ol>
+                        <p><strong>Note:</strong> For Normative Edition 2009, there are about 100 reference errors (just over one per-cent of the unique instances).  Of these,
+                           over 1/3 (35) are incorrectly entered, and can be "fixed" by editing the static model design.  The remainder have either not
+                           been proposed (majority) or have been approved but not posted.
+                        </p>
+                        <div class="header"><span class="title"><a name="vr-intro-analysis"></a>Error Analysis</span></div>
+                        <p>The current analysis is based on a complete list of all vocabulary constraints cited in static model designs.  These are extracted
+                           from the "Visio" output (xml) files or the "hmd" files exported from RoseTree.  The MIF representation for all static model
+                           designs is drawn from one of these two sources.  The design process specifies whether the constraint is asserted as:
+                        </p>
+                        <ul>
+                           <li>A Code System constraint, usually with a specific code reference as well. (These are correct representations for constraints
+                              of structural attributes.)
+                           </li>
+                           <li>A Value Set constraint.</li>
+                           <li>A Concept Domain constraint.</li>
+                        </ul>
+                        <p>In matching these constraints, the mapping process takes into consideration the fact that early constraints were <strong>all expressed as domain constraints</strong>, whereas more recent tooling and vocabulary directions have made it easier to constrain directly to value sets or codes.
+                           Thus, any reference to a "domain" for which there is currently no Concept Domain is also tested to see if there is a Value
+                           Set of the same name.  If there is, this is treated as a correct reference.
+                        </p>
+                     </div>
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="vr-intro-correction"></a>2.1.2 </span><span class="title">Vocabulary Reference Correction</span></div>
+                     <div class="body">
+                        <p>In preparing a Normative Edition. an attempt is made to analyze <b>each unique error</b> and recommend a "resolution" for the error.  These resolutions may be specific corrections, such as"Use D:ControlActReason"
+                           or a simple "Need Proposal" for cases where no appropriate target can be identified in the current vocabulary content. As
+                           noted above, over a third of the errors represented invalid expressions for which a correct target could be identified.  In
+                           selected cases (a total of about 50 static model designs), these corrections were made as a "technical correction" to the
+                           Normative Edition content before publications.  The requirements for making such a technical correction were:
+                        </p>
+                        <ol>
+                           <li><strong>All</strong> of the vocabulary reference errors for that design must be correctable with simple editing of the reference expression
+                           </li>
+                           <li>The static model design must have been presented as "design xml" file from Visio, rather than having been processed through
+                              the design repository into an "hmd" file. (In this case, one can be sure that other design elements of the model were not
+                              affected by the correction.).<br></li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="vocRefErrors"></a>2.2 </span><span class="title">Vocabulary Reference Errors</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="vocRefErrors-Introduction"></a>2.2.1 </span><span class="title">Introduction</span></div>
+                  </div>
+                  <p>The invalid vocabulary constraint references are divided into one of four tables depending upon the type of error.  The columns
+                     for the tables are:
+                  </p>
+                  <ul>
+                     <li>For <b> invalid Code System references</b><ol>
+                           <li>Invalid Code System name</li>
+                           <li>Code reference (if any)</li>
+                           <li>RIM <i>Class.attribute</i> being constrained (If this field is highlighted in yellow, it indicates the data type of the attribute is CS.)
+                           </li>
+                           <li>Identifier of first design with this error</li>
+                           <li>List of content domains in which this error occurs</li>
+                           <li>Total number of designs with this error</li>
+                           <li>Guidance, if available, on how to resolve the error.</li>
+                        </ol>
+                     </li>
+                     <li>For <b>invalid Code references</b> within a valid Code System
+                        						
+                        <ol>
+                           <li>Code System name (correct)</li>
+                           <li>Invalid Code reference</li>
+                           <li>RIM <i>Class.attribute</i> being constrained (If this field is highlighted in yellow, it indicates the data type of the attribute is CS.)
+                           </li>
+                           <li>Identifier of first design with this error</li>
+                           <li>List of content domains in which this error occurs</li>
+                           <li>Total number of designs with this error</li>
+                           <li>Guidance, if available, on how to resolve the error.</li>
+                        </ol>
+                     </li>
+                     <li>For <b>invalid Value Set references</b><ol>
+                           <li>Invalid Value Set name</li>
+                           <li>RIM <i>Class.attribute</i> being constrained (If this field is highlighted in yellow, it indicates the data type of the attribute is CS.)
+                           </li>
+                           <li>Identifier of first design with this error</li>
+                           <li>List of content domains in which this error occurs</li>
+                           <li>Total number of designs with this error</li>
+                           <li>Guidance, if available, on how to resolve the error.</li>
+                        </ol>
+                     </li>
+                     <li>For <b>invalid Concept Domain references</b><ol>
+                           <li>Invalid Concept Domain name</li>
+                           <li>RIM <i>Class.attribute</i> being constrained (If this field is highlighted in yellow, it indicates the data type of the attribute is CS.)
+                           </li>
+                           <li>Identifier of first design with this error</li>
+                           <li>List of content domains in which this error occurs</li>
+                           <li>Total number of designs with this error</li>
+                           <li>Guidance, if available, on how to resolve the error.</li>
+                        </ol>
+                     </li>
+                  </ul>
+               </div>
+               <div class="body">
+                  <div class="subSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="vocRefs"></a>2.2.2 </span><span class="title">Results</span></div>
+                  </div><br><hr><br><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+                     <tbody>
+                        <tr>
+                           <td colspan="7"><font face="Arial" size="2"><strong>Invalid Code References&nbsp;&nbsp;(1 rows)</strong></font></td>
+                        </tr>
+                        <tr bgcolor="cornflowerblue">
+                           <th class="sm">Code System Name</th>
+                           <th class="sm">Code (invalid)</th>
+                           <th class="sm">RIM Element</th>
+                           <th class="sm">Design ID</th>
+                           <th class="sm">Used in Domains</th>
+                           <th class="sm">Total</th>
+                           <th class="sm">Resolution</th>
+                        </tr>
+                        <tr>
+                           <td class="sm">ActCode</td>
+                           <td class="sm">74045-6</td>
+                           <td class="sm">Act &nbsp;.code</td>
+                           <td class="sm">POQM_MT000001UV</td>
+                           <td class="sm">QM </td>
+                           <td class="sm">1</td>
+                           <td class="sm">none</td>
+                        </tr>
+                     </tbody>
+                  </table><br><hr><br><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+                     <tbody>
+                        <tr>
+                           <td colspan="6"><font face="Arial" size="2"><strong>Invalid Value Set References&nbsp;&nbsp;(1 rows)</strong></font></td>
+                        </tr>
+                        <tr bgcolor="cornflowerblue">
+                           <th class="sm">Value Set Name (invalid)</th>
+                           <th class="sm">RIM Element</th>
+                           <th class="sm">Design ID</th>
+                           <th class="sm">Used in Domains</th>
+                           <th class="sm">Total</th>
+                           <th class="sm">Resolution</th>
+                        </tr>
+                        <tr>
+                           <td class="sm">x_ActRelationshipDocumentHQMF</td>
+                           <td class="sm" bgcolor="yellow">ActRelationship &nbsp;.typeCode</td>
+                           <td class="sm"></td>
+                           <td class="sm">QM </td>
+                           <td class="sm">1</td>
+                           <td class="sm">none</td>
+                        </tr>
+                     </tbody>
+                  </table><br><hr><br><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+                     <tbody>
+                        <tr>
+                           <td colspan="6"><font face="Arial" size="2"><strong>Invalid Concept Domain References&nbsp;&nbsp;(2 rows)</strong></font></td>
+                        </tr>
+                        <tr bgcolor="cornflowerblue">
+                           <th class="sm">Concept Domain Name (invalid)</th>
+                           <th class="sm">RIM Element</th>
+                           <th class="sm">Design ID</th>
+                           <th class="sm">Used in Domains</th>
+                           <th class="sm">Total</th>
+                           <th class="sm">Resolution</th>
+                        </tr>
+                        <tr>
+                           <td class="sm">HQMFDocumentType</td>
+                           <td class="sm">Act &nbsp;.code</td>
+                           <td class="sm">POQM_MT000001UV</td>
+                           <td class="sm">QM </td>
+                           <td class="sm">3</td>
+                           <td class="sm">none</td>
+                        </tr>
+                        <tr>
+                           <td class="sm">_ActClassTemporallyPertains</td>
+                           <td class="sm" bgcolor="yellow">ActRelationship &nbsp;.typeCode</td>
+                           <td class="sm">POQM_MT000001UV</td>
+                           <td class="sm">QM </td>
+                           <td class="sm">1</td>
+                           <td class="sm">none</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="errantStaticModels"></a>2.3 </span><span class="title">Static Models with Vocabulary Reference Errors</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="errantStaticModels-Introduction"></a>2.3.1 </span><span class="title">Introduction</span></div>
+                  </div>
+                  <p>The previous listing showed the existing unique vocabulary reference errors and, if available, possible solutions.  The following
+                     table lists all of the defined static models that have erroneous vocabulary references, along with the specific errors and,
+                     if available, their resolution.  There are <strong>no new errors</strong> introduced in this table, rather it represents formulation that will facilitate repairing the flawed static models. The columns
+                     in the following table are:
+                  </p>
+                  <ol>
+                     <li>The identifier of flawed static model.  This entry appears <strong>only in the "header" row</strong> for the sub-table that holds the flawed references 
+                     </li>
+                     <li>The Name of the Code System, Concept Domain or Value Set that was referenced.  This name is prefaced with "C:", "D:", or "V:"
+                        to indicate which kind of reference was being made. If the name listed here is erroneous, it will be displayed in <strong>bold face</strong> type.
+                     </li>
+                     <li>The Code being referenced within a Code System (if any).  If the code reference is erroneous, it will be displayed in <strong>bold face</strong> type. If the error is that the code value is empty, this column will show <strong><i>--blank--</i></strong>.
+                     </li>
+                     <li>RIM <strong><i>Class.attribute</i></strong> being constrained
+                     </li>
+                     <li>Guidance, if available, on how to resolve the error.</li>
+                  </ol>
+               </div>
+               <div class="body">
+                  <div class="subSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="staticModelVocRefs"></a>2.3.2 </span><span class="title">Results</span></div>
+                  </div><br><hr><br><table rules="all" border="1px" cellpadding="2" cellspacing="0" bordercolor="lightgrey" class="homepage">
+                     <tbody>
+                        <tr>
+                           <td colspan="7"><font face="Arial" size="2"><strong>Static Models with Invalid Code System References&nbsp;&nbsp;(1 models)</strong></font></td>
+                        </tr>
+                        <tr>
+                           <th class="sm">POQM_MT000001UV</th>
+                           <th class="sm" bgcolor="cornflowerblue">Reference Name (C:, D:, or V:)</th>
+                           <th class="sm" bgcolor="cornflowerblue">Code</th>
+                           <th class="sm" bgcolor="cornflowerblue">RIM Element</th>
+                           <th class="sm" bgcolor="cornflowerblue">Resolution</th>
+                        </tr>
+                        <tr>
+                           <td class="sm"></td>
+                           <td class="sm"><strong>V: x_ActRelationshipDocumentHQMF</strong></td>
+                           <td class="sm"></td>
+                           <td class="sm" bgcolor="yellow">ActRelationship &nbsp;.typeCode</td>
+                           <td class="sm">none</td>
+                        </tr>
+                        <tr>
+                           <td class="sm"></td>
+                           <td class="sm">C: ActCode</td>
+                           <td class="sm"><strong>74045-6</strong></td>
+                           <td class="sm">Act &nbsp;.code</td>
+                           <td class="sm">none</td>
+                        </tr>
+                        <tr>
+                           <td class="sm"></td>
+                           <td class="sm"><strong>D: HQMFDocumentType</strong></td>
+                           <td class="sm"></td>
+                           <td class="sm">Act &nbsp;.code</td>
+                           <td class="sm">none</td>
+                        </tr>
+                        <tr>
+                           <td class="sm"></td>
+                           <td class="sm"><strong>D: HQMFDocumentType</strong></td>
+                           <td class="sm"></td>
+                           <td class="sm">Act &nbsp;.code</td>
+                           <td class="sm">none</td>
+                        </tr>
+                        <tr>
+                           <td class="sm"></td>
+                           <td class="sm"><strong>D: HQMFDocumentType</strong></td>
+                           <td class="sm"></td>
+                           <td class="sm">Act &nbsp;.code</td>
+                           <td class="sm">none</td>
+                        </tr>
+                        <tr>
+                           <td class="sm"></td>
+                           <td class="sm"><strong>D: _ActClassTemporallyPertains</strong></td>
+                           <td class="sm"></td>
+                           <td class="sm" bgcolor="yellow">ActRelationship &nbsp;.typeCode</td>
+                           <td class="sm">none</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div><br><div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="bindingRefGroup"></a>3 </span><span class="title">Dynamic Model Binding Reference Failures</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="br-Intro"></a>3.1.</span><span class="title">Binding Reference Analysis</span></div>
+                     <div class="body">
+                        <p>The following sections list message-to-message binding specifications from the dynamic models (interactions) in this package
+                           for which a target cannot be found in the current package content.
+                        </p>
+                        <p>As defined in the interaction specifications of the dynamic model, HL7 static models are assembled into complete communicable
+                           models by "wrapping" models within models.  Thus, a transmission wrapper surrounds a control act wrapper that surrounds a
+                           payload. These are bindings from "stubs" to their corresponding payload. In the HL7 "parallel development" environment these
+                           references are asserted by one Work Group while another Work Group is creating the target.  Thus, it is necessary to check
+                           that the referenced target exists.
+                        </p>
+                        <p>The incomplete bindings are presented in three categories, in declining order of severity.</p>
+                        <ol>
+                           <li>Complete interactions from a domain but where the binding fails owing to a mismatch between the "stub" type of the wrapper,
+                              and the root element type of the target
+                           </li>
+                           <li>Interactions that lack a pay-load, but that are probably "OK".  Check documentation of interaction,</li>
+                           <li>Incomplete interactions that lack either or both of a Transmission wrapper or ControlAct wrapper and that were probably created
+                              to illustrate a story board
+                           </li>
+                        </ol>
+                     </div>
+                  </div>
+               </div><a name="br-failed"></a><a name="failedInts"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="failedInteractions"></a>3.2 </span><span class="title">Interaction Binding Reference Failures</span></div>
+               <div class="body">
+                  <p>There are <strong>no failed interactions</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="br-warned"></a><a name="warnedInts"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="warningInteractions"></a>3.3 </span><span class="title">Interaction Binding Reference Warnings</span></div>
+               <div class="body">
+                  <p>There are <strong>no interactions with warnings</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="br-example"></a><a name="exampleInts"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="exampleInteractions"></a>3.4 </span><span class="title">Example Interactions with Incomplete Bindings</span></div>
+               <div class="body">
+                  <p>There are <strong>no incomplete example interactions</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div><br><div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="cmetRefGroup"></a>4 </span><span class="title">CMET Reference Failures</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="cr-Intro"></a>4.1.</span><span class="title">CMET Reference List</span></div>
+                     <div class="body">
+                        <p>The following section lists CMET references for which a target cannot be found in the current ballot content. HL7 static models
+                           include a significant amount of "re-use" in the form of Common Model Element Type (CMET) references. In the HL7 "parallel
+                           development" environment these references are asserted by one Work Group while another Work Group is creating the target.
+                           Thus, it is necessary to check that the referenced target exists.
+                        </p>
+                        <p>In the case of CMETs, there are three different sources that should agree.  Specifically:</p>
+                        <ol>
+                           <li>Every CMET should be listed in the "CMETinfo" file that defines the package of reusable artifacts from which designers can
+                              draw.
+                           </li>
+                           <li>Each CMET must have a valid static model design, in order that its schema may be defined and linked to the schemas that refers
+                              to it.
+                           </li>
+                           <li>Each CMET must be defined in the context of a publication database.</li>
+                        </ol>
+                        <p>The CMET reference checking looks at these three sources seeking to determine that each CMET is listed in all three places,
+                           and, further, that each design that references a CMET points to one of these documented designs.  The listings below show
+                           instances where a CMET is missing from one or more of these places.  (NOTE: There is no test that confirms whether or not
+                           a CMET is actually referenced or used within another static model.)
+                        </p>
+                     </div>
+                  </div>
+               </div><a name="cr-listErrs"></a><a name="cmetSpecErrors"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="cr-item1"></a>4.2 </span><span class="title">Incomplete Specification of Listed CMETs</span></div>
+               <div class="body">
+                  <p>There are <strong>no specification errors for listed CMETs</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="cr-listOmissions"></a><a name="cmetListErrors"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="cr-item2"></a>4.3 </span><span class="title">Incomplete Listing of Referenced CMETs</span></div>
+               <div class="body">
+                  <p>There are <strong>no unlisted CMETs</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="cr-refWarnErrs"></a><a name="cmetWarnErrors"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="cr-item3"></a>4.4 </span><span class="title">Mis-matched CMET References from Static Models</span></div>
+               <div class="body">
+                  <p>There are <strong>CMET reference warnings</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div><br><div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="staticDesignDefnLinks"></a>5 </span><span class="title">Static Model Design and Definition Failures</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="sr-Intro"></a>5.1.</span><span class="title">Static Model Design and Definition Issues</span></div>
+                     <div class="body">
+                        <p> The following section lists circumstances in which the package content contains a "non-serializable" static model or shows
+                           a mismatch between a static model design and a corresponding reference definition (from a Publication Database).  There are
+                           variants of these errors include:
+                        </p>
+                        <ol>
+                           <li>A static model design cannot be uniquely serialized because it contains one or more associations that are not blocked in either
+                              direction.
+                           </li>
+                           <li>A static model design contains names (class, association or attribute) whose pattern or length are not valid and will cause
+                              the MIF representation of the model to fail schema validation.
+                           </li>
+                           <li>A static model design exists (as part of a "Visio xml" or "hmd" file), but there is no equivalent definition in from a publication
+                              data base
+                           </li>
+                           <li>A definition is provided in a publication data base for which there is no corresponding static model design as part of a "Visio
+                              xml" or "hmd" file
+                           </li>
+                           <li>There is both a static model design and a definition whose base identifiers are the same (such as "REAL_MT987123UV") but where
+                              the version number (final two digits) do not match.
+                           </li>
+                           <li>A static model design is duplicated in the submitted package and thus may cause <b>fatal errors in the tooling</b> when it is processed.
+                           </li>
+                        </ol>
+                     </div>
+                  </div>
+               </div><a name="sr-nonSerializable"></a><a name="nonSerializable"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="stref-item0"></a>5.2 </span><span class="title">Static Model Designs That Cannot be Serialized</span></div>
+               <div class="body">
+                  <p>There are <strong>no non-serializable static models</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="sr-mifValidty"></a><a name="mifValidity"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="stref-item0a"></a>5.3 </span><span class="title">Static Model Designs With MIF-invalid Names</span></div>
+               <div class="body">
+                  <p>There are <strong>MIF-name-invalid static models</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="sr-missingStatic"></a><a name="missingStatic"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="stref-item1"></a>5.4 </span><span class="title">Missing or Mismatched Static Model Designs</span></div>
+               <div class="body">
+                  <p>There are <strong>no missing static model designs</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="sr-missingDefn"></a><a name="missingDefn"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="stref-item2"></a>5.5 </span><span class="title">Missing Definition for Static Model</span></div>
+               <div class="body">
+                  <p>There are <strong>no undefined static models</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="sr-duplicateDsgn"></a><a name="duplicateDsgn"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="stref-item3"></a>5.6 </span><span class="title">Duplicate Design for Static Model</span></div>
+               <div class="body">
+                  <p>There are <strong>no duplicated static model designs</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div><br><div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="invalidModelDerivation"></a>6 </span><span class="title">Invalid Model Derivation Tests</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="deriv-intro"></a>6.1.</span><span class="title">Model Derivation Overview</span></div>
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="deriv-intro-testing"></a>6.1.1 </span><span class="title">Reference Testing</span></div>
+                     <div class="body">
+                        <p>This section lists those attributes and classes of information models (static models) that are improperly derived from the
+                           HL7 Reference Information Model.  The testing is performed by the software in the "HL7 RMIM Designer" tool in Visio.  Each
+                           model in a ballot is included in a batch validation run, the results of which include documentation of all invalid derivations.
+                        </p>
+                        <div class="header"><span class="title"><a name="deriv-intro-sources"></a>Derivation Error Types (and codes)</span></div>
+                        <p>Briefly stated, the V3 Methodology specifies that all elements (classes and attributes) of an information model must be drawn
+                           from a class and attribute in the RIM, with attribute names unchanged, and with other properties (such as cardinality) being
+                           a proper restriction of the same property in the RIM.  In a following table, each information model that contains an invalidly
+                           derived attribute or class is listed with one row per invalid attribute.  The type of error(s) found is encoded with a letter
+                           signifying the error type. These letters are shown in brackets on the following list of errors: 
+                        </p>
+                        <ol>
+                           <li>The element in the model does not derive from an element that exists in the current RIM [<b>X</b>]; <br></li>
+                           <li>The listed attribute or class derives from an element that is deprecated from further use in the current RIM [<b>D</b>];<br></li>
+                           <li>The data type declared for a derived attribute is an improper constraint of the RIM data type [<b>T</b>];<br></li>
+                           <li>The cardinality of the derived attribute is an improper constraint on the RIM cardinality [<b>C</b>]; <br></li>
+                           <li>The attribute is not declared Mandatory even though the RIM attribute from which it derives is Mandatory [<b>M</b>]; <br></li>
+                           <li>The attribute is not declared Required even though the RIM attribute from which it derives is Required [<b>R</b>] ; <br></li>
+                           <li>The attribute is coded and the vocabulary constraint listed is not a proper restriction of the RIM vocabulary constraint [<b>V</b>] .
+                              									
+                           </li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="illDerivedStaticModels"></a>6.2 </span><span class="title">Information (Static) Models with Invalid RIM Derivations</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="illDerivedStaticModels-Introduction"></a>6.2.1 </span><span class="title">Introduction</span></div>
+                  </div>
+                  <p>The following table lists all of the defined static models that have invalid RIM derivations, along with the specific errors
+                     and, if available, their resolution.  The columns in the following table are:
+                  </p>
+                  <ol>
+                     <li>The Entry Point identifier of flawed static model. </li>
+                     <li>The name of the class clone in which there are invalidly derived  attributes.</li>
+                     <li>The name of the RIM class from which the clone is derived.</li>
+                     <li>The name of the invalidly derived attribute.</li>
+                     <li>A comma-delimited list of the applicable derivation error codes as <a href="#deriv-intro-sources">listed above.</a></li>
+                     <li>Guidance, if available, on how to resolve the error.</li>
+                  </ol>
+                  <p><b>Note:</b> The elements of this table are sorted on the Model identifier, class clone name, and attribute name.  In any row where the
+                     model id remains the same as the row above, the model id is left blank.  Similarly, in any row where the model id and class
+                     clone name remain the same as the row above, the class clone name and rim class name are also left blank. Also, attributes
+                     that are deprecated (code D) are flagged with yellow highlighting in the relevant row, while attributes that are not present
+                     in the current RIM at all (code X) are flagged with orange highlighting.
+                  </p>
+               </div>
+               <div class="body">
+                  <div class="subSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="erroneousModelDerivations"></a>6.2.2 </span><span class="title">Results</span></div>
+                  </div>
+                  <p>There are <strong>no models with invalid RIM derivations</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div><br><div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="otherRefGroup"></a>7 </span><span class="title">Missing Files for Graphics and Other References</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="or-Intro"></a>7.1.</span><span class="title">Other Reference Issues</span></div>
+                     <div class="body">
+                        <p> The following section lists files that are referenced in the specification, but which cannot be found in the appropriate
+                           directories submitted for publication; and references to external "URL"s that must be checked manually for current validity.
+                           Specifically::
+                        </p>
+                        <ol>
+                           <li>Missing graphic and "other" support files.</li>
+                           <li>External hyper-links that must be checked and maintained manually.  These are deprecated in the "best practices" recommended
+                              by the Publishing Work Group, because the continued validity of such links cannot be assured.
+                           </li>
+                        </ol>
+                     </div>
+                  </div>
+               </div><a name="or-missingFiles"></a><a name="missingFiles"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="otherRef-item0"></a>7.2 </span><span class="title">Missing Files in Content Submission</span></div>
+               <div class="body">
+                  <p>There are <strong>no missing files</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br><a name="or-uncertainURL"></a><a name="uncertainURL"></a><div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="otherRef-item1"></a>7.3 </span><span class="title">"Uncertain" Hyperlinks</span></div>
+               <div class="body">
+                  <p>There are <strong>no unvalidated hyper-links</strong> in this package.
+                  </p>
+               </div>
+               <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div><br><div class="subSection">
+               <div class="header"><span class="icon"><img xmlns="http://www.w3.org/1999/xhtml" src="../../support/graphics/Reference.gif" alt="Reference"></img></span><span class="number"><a name="errorSummary"></a>8 </span><span class="title">Summary of Raw Reference Errors Data</span></div>
+               <div class="body">
+                  <div class="subSubSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="raw-Intro"></a>8.1.</span><span class="title">Summary Table</span></div>
+                     <div class="body">
+                        <p> 
+                           The following is a summary report for <b>all domains in this publication</b> as it appeared in the console output stream of the V3 Generator.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="body">
+                  <div class="subSection">
+                     <div class="header"><span class="icon">&nbsp;</span><span class="number"><a name="rawContent"></a>8.2 </span><span class="title">Results</span></div>
+                  </div>
+                  <p></p>
+                  <p><strong>Error Listing from V3 Generator Console Listing for Ballot2012SEP</strong>:
+                  </p>
+                  <p><code>------------------------------------------------------------------------<br>
+                        Pre-Generation Report of Reference Errors in Generated Package (Summary)<br>
+                        ========================================================================<br>&nbsp;&nbsp;222 errors involving references to known CMETs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 CMETS in cmetInfo.txt, a PubDb and in an hmd/mif file but where the UVnn codes do not agree<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;222 CMETS in cmetInfo.txt but not in either PubDb or an hmd/mif file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 CMETS in cmetInfo.txt and in a PubDb but has no hmd/mif file.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 CMETS in cmetInfo.txt and in an hmd/mif file but not defined in a PubDb<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 CMETs referenced in an hmd/mif file but not listed in cmetInfo.txt<br>&nbsp;&nbsp;&nbsp;&nbsp;6 warnings for likely CMET reference errors in static models<br>&nbsp;&nbsp;&nbsp;&nbsp;0 errors for messages defined in PubDb but not in hmd/mif files<br>&nbsp;&nbsp;&nbsp;&nbsp;3 errors for messages in hmd/mif files that are not defined in a PubDb<br>&nbsp;&nbsp;&nbsp;&nbsp;4 errors for messages referenced in a PubDB or hmd/mif file that are not in an hmd/mif file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 messages referenced in a PubDB that are not in an hmd/mif file<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 CMETs referenced in an hmd/mif file that are not in another hmd/mif file.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;4 errors in vocabulary constraints in a design that are not in vocabulary source (2 fatal)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 errors for Code Systems used in a design that are not in vocabulary source (0 fatal)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 errors for individual Codes used in a design that are not in vocabulary source (0 fatal)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 errors for Concept Domains used in a design that are not in vocabulary source (1 fatal)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 errors for Value Sets used in a design that are not in vocabulary source (1 fatal)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;0 interactions fail to bind because of stub-target mis-matches<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 incomplete interaction specifications that cause binding failures<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 stub-target binding mis-matches that cause interaction binding failures<br><br>
+                        (for details see Reports/MessageReferenceTestResults  xml)<br>
+                        ------------------------------------------------------------------------</code></p>
+                  <p></p>
+               </div>
+            </div>
+            <div class="body"><a href="#top">Return to Table of Contents</a></div><br></div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml [
+	<!ENTITY nbsp "&#160;">
+	<!ENTITY ndash "&#150;">
+]>
+<publication packageKind="version" name="ANSI/HL7 RIM R4-2011" title="Health&nbsp;Level&nbsp;Seven Reference&nbsp;Information&nbsp;Model, Release&nbsp;4" schemaVersion="2.1.6" xmlns="urn:hl7-org:v3/mif2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd216/mif-COMPLETE.xsd">
+	<businessName name="Health informatics: &ndash; HL7 version 3 &ndash; Reference information model &ndash; Release 4"/>
+	<packageLocation root="PUB" artifact="RIM" realmNamespace="UV" version="ISO/HL7 21731:2011(E)"/>
+	<header>
+		<renderingInformation application="XMLspy by gwb" renderingTime="2011-11-18T00:00:01"/>
+		<legalese copyrightOwner="Health Level Seven" copyrightYears="2011">
+			<notation>
+				<div title="hl7 Copy" hl7Id="hl7-copy">
+					<p>Copyright (c) 2011 by Health Level Seven International. <b>ALL RIGHTS RESERVED</b>.</p>
+					<p>Health Level Seven and HL7 are registered trademarks of Health Level Seven International. Reg. U.S. Pat &amp; TM Off.</p>
+					<p>Comments or questions about this document may be may be addressed to: Health Level Seven International, 3300 Washtenaw Avenue, Suite 227, Ann&nbsp;Arbor,&nbsp;MI&nbsp;&nbsp;48104-4261;  Phone:&nbsp;&nbsp;734-677-7777; Fax:&nbsp;&nbsp;734-677-6622; Email:&nbsp;&nbsp;HQ@HL7.org; Internet:&nbsp;&nbsp;http://www.HL7.org</p>
+				</div>
+				<div title="Joint Copyright draft" hl7Id="joint-copy-draft">
+					<p>This HL7 document is an <b>approved standard of Health Level Seven International</b> and is copyright-protected by that organization. It is being circulated as a draft in preparation for a Draft International Standard (DIS) ballot to be conducted by <b>ISO TC 251 - Healthcare Informatics</b>. This ballot revises and will replace an existing ISO/HL7 joint standard &ndash; <b>ISO/HL7 21731:2006 Health informatics: &ndash; HL7 version 3 &ndash; Reference information model &ndash; Release 1.</b>
+					</p>
+					<p>Except as permitted under the applicable laws of the user’s country, neither this HL7 draft nor any extract from it may be reproduced, stored in a retrieval system or transmitted in any form or by any means, electronic, photocopying, recording or otherwise, without prior written permission being secured.</p>
+					<p>Requests for permission to reproduce should be addressed to HL7 at the address below.</p>
+				</div>
+				<div title="Joint Copyright Final" hl7Id="joint-copy-final">
+					<p>This ISO/HL7 document is a Draft International Standard and is copyright-protected by ISO and Health Level Seven. Except as permitted under the applicable laws of the user’s country, neither this ISO/HL7 draft nor any extract from it may be reproduced, stored in a retrieval system or transmitted in any form or by any means, electronic, photocopying, recording or otherwise, without prior written permission being secured.</p>
+					<p>Requests for permission to reproduce should be addressed to either ISO at the address below or ISO’s member body in the country of the requester. In the United States, such requests should be sent to HL7.</p>
+				</div>
+				<div title="Copyright Contacts" hl7Id="contact-copy">
+					<table hl7Id="copycontacts" style="Note">
+						<col width="5%"/>
+						<col width="45%"/>
+						<col width="45%"/>
+						<col width="5%"/>
+						<tbody>
+							<tr>
+								<td/>
+								<td>ISO copyright office</td>
+								<td>Health Level Seven, Inc.</td>
+							</tr>
+							<tr>
+								<td/>
+								<td>Case postale 56 - CH-1211 Geneva 20</td>
+								<td>Standards Publishing Department</td>
+							</tr>
+							<tr>
+								<td/>
+								<td>Tel. + 41 22 749 01 11</td>
+								<td>3300 Washtenaw Avenue, Suite 227</td>
+							</tr>
+							<tr>
+								<td/>
+								<td>Fax + 41 22 749 09 47</td>
+								<td>Ann Arbor, MI 48104</td>
+							</tr>
+							<tr>
+								<td/>
+								<td>E-mail copyright@iso.org</td>
+								<td>USA</td>
+							</tr>
+							<tr>
+								<td/>
+								<td>Web www.iso.org</td>
+								<td>E-mail hq@hl7.org</td>
+							</tr>
+							<tr>
+								<td/>
+								<td/>
+								<td>Web www.hl7.org</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Reproduction may be subject to royalty payments or a licensing agreement.</p>
+					<p>Violators may be prosecuted.</p>
+				</div>
+			</notation>
+		</legalese>
+		<responsibleGroup organizationName="Health Level Seven"/>
+		<contributor>
+			<role>ISO Project Lead</role>
+			<name key="Beeler, George Jr" name="George Beeler, Jr., PhD."/>
+			<affiliation>Health Level Seven, International</affiliation>
+		</contributor>
+		<approvalInfo approvalStatus="Approved Normative Standard" ballotOccurrence="4" approvingOrganization="HL7"/>
+		<realmNamespace value="UV"/>
+	</header>
+	<annotations>
+		<documentation>
+			<description>
+				<text>
+					<div hl7Id="open-rimdiv" title="Introduction">
+						<p>This introduction is confined to discussion of the requirement for a Reference Information Model (RIM) in standardization and a brief overview of the use of class hierarchies and related abstraction in the construction of the RIM.</p>
+						<div hl7Id="rimIntUses" title="Uses of a Reference Information Model (RIM) in Health Informatics">
+							<div hl7Id="rimIntIsoUse" title="Use of the RIM in ISO TC215">
+								<p>ISO TC215 – Health Informatics has previously advanced ISO 17113, a specification for a framework for developing health data interchange standards.  This framework specification calls for messaging standards to be based on a single, comprehensive model of health information.  The RIM presented in the current specification provides one such model.  The prior revision(s) of the RIM have been the primary reference model for a number of standards that have been advanced within ISO TC 215.</p>
+							</div>
+							<div hl7Id="rimIntH7use" title="Use of the RIM by HL7">
+								<p>The HL7 RIM is a critical component of the V3 development process.  It is the root of all information models and structures developed as part of the V3 development process.</p>
+								<p>The HL7 V3 standard development process is a model-driven methodology in which a network of inter-related models are developed that depict the static and behavioral aspects of the requirements and design of HL7 standards, as well as the underlying semantics and business rules that govern them.</p>
+								<p>The RIM provides a static view of the information needs of HL7 V3 standards.  It includes class and state-machine diagrams and is accompanied by use case models, interaction models, data type models, terminology models, and other types of models to provide a complete view of the requirements and design of HL7 standards.  The classes, attributes, state-machines, and relationships in the RIM are used to derive domain-specific information models that are then transformed through a series of constraining refinement processes to eventually yield a static model of the information content of an HL7 standard.</p>
+								<p>The HL7 V3 standard development process defines the rules governing the derivation of domain information models from the RIM and the refinement of those models into HL7 standard specifications.  The rules require that all information structures in derived models be traceable back to the RIM and that their semantic and related business rules not conflict with those specified in the RIM.  The RIM therefore is the ultimate source for all information content in HL7 V3 standards.</p>
+								<p>The RIM is used by HL7 international affiliates to extend HL7 V3 standards to meet local needs.  Through a process known as localization, V3 standard specifications are extended using the RIM as the source for new information content.  This new information is derived from the RIM and refined in the same manner used to create the original specification.</p>
+							</div>
+							<div hl7Id="RimIntOutUse" title="Uses of the RIM Outside of HL7">
+								<p>The RIM is primarily for use by HL7 and its international affiliates.  However, others outside of HL7 have also found the RIM useful.  Although HL7 maintains a copyright on the expression of this standard, HL7 does not seek to license or otherwise control the use of information structures or programs that implement this specification.  Early adopters of the V3 standards development process have used the RIM to develop HL7-like message specifications in their own environments.  These early adopters include vendors, large integrated delivery networks, and government agencies within the United States and internationally.  These same early adopters are extremely active in HL7 and provide practical input to the RIM and other aspects of V3 the development process.</p>
+								<p>Some HL7 member organizations have reported using the RIM as a source of input to their enterprise information architectures or as a starting place for systems analysis and design.  The RIM may indeed be useful for such purposes; however, HL7 provides no assurance that the RIM is useful for anything other than as a reference model for HL7 standards development.</p>
+								<p>The RIM is only one model of health care information needs.  The abstract style of the RIM and the ability to extend the RIM through vocabulary specifications make the RIM applicable to any conceivable health-care system information interchange scenario.  In fact, it is conceptually applicable to any information domain involving entities playing roles and participating in acts.</p>
+								<p>The universal applicability of the RIM makes it particularly useful for an organization like HL7 that has to consider the needs of a large and diverse membership.  The style of the RIM makes it extremely stable, which is another important characteristic for HL7.  The HL7 standards development process calls for the creation of domain specific models derived from the RIM and the incremental refinement of those models into design models that are specific to the problem area.  These problem area specific design models narrow the abstractness of the RIM and include constraints on attribute values and class relationships that are use case specific.  External organizations considering using the HL7 RIM are advised to adopt a similar process of deriving design models as a transformation of the RIM.</p>
+							</div>
+						</div>
+						<div hl7Id="rimUnderAbst" title="RIM as an abstract model">
+							<p>The "back-bone" of the RIM, which is used to express the clinical and administrative content of health care, is comprised of six classes:</p>
+							<ul>
+								<li>
+									<object name="classRef">
+										<param name="root" value="DEFN"/>
+										<param name="realmNamespace" value="UV"/>
+										<param name="artifact" value="RIM"/>
+										<param name="className" value="Act"/>
+									</object> which represents the actions that are executed and must be documented as health care is managed and provided;</li>
+								<li>
+									<object name="classRef">
+										<param name="root" value="DEFN"/>
+										<param name="realmNamespace" value="UV"/>
+										<param name="artifact" value="RIM"/>
+										<param name="className" value="Participation"/>
+									</object> which expresses the context for an act in terms such as who performed it, for whom it was done, where it was done, etc.;</li>
+								<li>
+									<object name="classRef">
+										<param name="root" value="DEFN"/>
+										<param name="realmNamespace" value="UV"/>
+										<param name="artifact" value="RIM"/>
+										<param name="className" value="Entity"/>
+									</object> which represents the physical things and beings that are of interest to, and take part in health care;</li>
+								<li>
+									<object name="classRef">
+										<param name="root" value="DEFN"/>
+										<param name="realmNamespace" value="UV"/>
+										<param name="artifact" value="RIM"/>
+										<param name="className" value="Role"/>
+									</object> which establishes the roles that entities play as they participate in health care acts;</li>
+								<li>
+									<object name="classRef">
+										<param name="root" value="DEFN"/>
+										<param name="realmNamespace" value="UV"/>
+										<param name="artifact" value="RIM"/>
+										<param name="className" value="ActRelationship"/>
+									</object> which represents the binding of one act to another, such as the relationship between an order for an observation and the observation event as it occurs; and</li>
+								<li>
+									<object name="classRef">
+										<param name="root" value="DEFN"/>
+										<param name="realmNamespace" value="UV"/>
+										<param name="artifact" value="RIM"/>
+										<param name="className" value="RoleLink"/>
+									</object> which represents relationships between individual roles.</li>
+							</ul>
+							<p>Three of these classes - Act, Entity and Role - are further represented by a set of specialized classes, where the set of sub-types are not fully enumerated in the class model . In the HL7 representation, a sub-type is only added to the RIM class model if it requires one or more attributes or associations that are not inherited from its parents. Classes that represent distinct concepts, but which need no further attributes or associations are represented solely as a unique code in the controlling vocabulary. Therefore, these three classes include the following coded attributes, which serve to further define the concept being modeled:</p>
+							<ul>
+								<li>
+									<b>classCode </b>(in Act, Entity and Role) represents the exact class or concept intended, whether or not that class is represented as a class in the RIM hierarchy;</li>
+								<li>
+									<b>moodCode </b>(in Act) and <b>determinerCode </b>(in Entity) an attribute that distinguishes whether the class represents an instance or a kind of Act or Entity. If the class is a specialization of Act then moodCode further delineates the instance as an occurrence or an intent;</li>
+								<li>
+									<b>code </b>(in Act, Entity and Role) provides for further classification within a particular classCode value, such as a particular type of observation within the Observation class.
+</li>
+							</ul>
+							<p>The other three RIM back-bone classes - Participation, ActRelationship and RoleLink - are not represented by enumerated generalization-specialization hierarchies. Nevertheless, these classes represent a variety of concepts, such as different forms of participation or different kinds of relationships between acts. These distinctions are represented by a <b>typeCode </b>attribute that is asserted for each of these classes.</p>
+						</div>
+					</div>
+				</text>
+			</description>
+			<appendix name="annex-read" title="Annex: Guide to Textual Representation of RIM Elements">
+				<text>
+					<div hl7Id="annex-read-intro" title="Introduction">
+						<p>This publication of the classes and attributes of the Reference Information Model uses a stylized textual representation that provides the entire specification, but seeks to both ease "navigation" through the model, and to minimize the number of "labels" used.  This annex summarizes the features of these representations.</p>
+					</div>
+					<div hl7Id="annex-read-class" title="Class Representation in Text">
+						<p>The representation of each RIM class has up to five sections:</p>
+						<ol>
+							<li>
+								<b>Header</b> line that starts with the class name; is followed by a parenthetic listing of the "classCode" for that class, if such is assigned; and concludes with a parenthetic link to the primary "subject area" in which that class resides.<br/>
+								<br/>
+							</li>
+							<li>
+								<b>Features</b> section that provides lists of each of the key features of the class with a hyper-link to each. The list of features may include:
+						<br/>
+								<br/>
+								<ul>
+									<li>A three-column listing of the <b>Attributes</b> of the class.  Each entry includes the name of the attribute (hyper-linked to the detailed attribute specification followed (after "::") by the formal ISO data type assigned to that attribute.<br/>
+										<br/>
+									</li>
+									<li>A listing of the <b>Associations</b> for that class (if any) listed as:<br/>
+										<b>relationshipNameToTarget</b>::&lt;multiplictyTo&gt;<b>TargetClassName</b>::<b>relationshipNameFromTarget</b>::&lt;multiplictyFrom&gt;<br/>
+								where the the target class name and both relationship names are hyper-linked to their own specifications.<br/>
+										<br/>
+									</li>
+									<li>The name of the class that is the <b>Generalization</b> of this class, if any.<br/>
+										<br/>
+									</li>
+									<li>A list of the names of the classes that are <b>Specializations</b> of this class, if any.<br/>
+										<br/>
+									</li>
+									<li>A hyper-link to the state machine for this class, if any.<br/>
+										<br/>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<b>Definition</b> section that provides the formal definition of the class along with any other annotations that have been assigned to it, such as Rationale or Examples.<br/>
+								<br/>
+							</li>
+							<li>
+								<b>Attributes</b> section that lists each of the attributes in the order of their assigned sort key.<br/>
+								<br/>
+							</li>
+							<li>
+								<b>State machine</b> section for those few classes that have a specified state machine.<br/>
+								<br/>
+							</li>
+						</ol>
+					</div>
+					<div hl7Id="annex-read-attr" title="Attribute Representation in Text">
+						<p>Representations of attributes in the RIM include:</p>
+						<ol>
+							<li>
+								<b>Header</b> line that starts with the fully qualified name of the attribute (Class.attribute); followed by the code for the ISO data type assigned to the attribute; the multiplicity for the attribute within its class; and finally, followed by the word "Mandatory" in those cases where the use of the attribute is declared mandatory for all derived models.<br/>
+								<br/>
+							</li>
+							<li>A list of attribute <b>properties</b> (as listed under <a href="#rimUnderAttRep">Representation of RIM attributes</a>) including the declaration of the Concept Domain binding for coded attributes.<br/>
+								<br/>
+							</li>
+							<li>The formal  <b>definition</b> for the attribute.<br/>
+								<br/>
+							</li>
+							<li>
+								<b>Other annotations</b> for the attribute.<br/>
+								<br/>
+							</li>
+						</ol>
+					</div>
+				</text>
+			</appendix>
+			<appendix name="annex-change" title="Annex: Changes to RIM DIS from Prior Release">
+				<text>
+					<div hl7Id="annex-change-intro" title="Introduction">
+						<p>In 2006, HL7 submitted to ISO TC-215 the first ANSI-approved normative version of the HL7 Reference Information Model. This was adopted as ISO/HL7 21731:2006.  Within, HL7, the RIM is updated three times a year.  Beginning in 2009, HL7 adopted the ANSI "continuous maintenance" process for the RIM.  Under this process, a new normative release of the RIM is ballot and adopted each year.  As a consequence of this change, the updated RIM that is available for DIS ballot by ISO TC-215 is release four (4) under ANSI. The following sections summarize the changes that have were made to the RIM content between Release 1 (ISO/HL7 21731:2006) and this DIS ballot.</p>
+					</div>
+					<div hl7Id="annex-change-scope" title="Scope Changes">
+						<p>The HL7 Reference Information Model has always had two distinct sections.  The representation of medical content occurs in those classes contained in the <a href="#FoundationClasses-sbj">Foundation Classes</a> subject area and its child subject areas, while the classes in the <a href="#CommunicationInfrastructure-sbj">Communication Infrastructure</a> subject area (and its descendants) represent technical content to support the definition of messages, documents, queries, etc.</p>
+						<p>In the first Normative release of the RIM for both ANSI and ISO, the content was limited to those classes descendant from the <a href="#FoundationClasses-sbj">Foundation Classes</a> subject area.  When the second Normative RIM release was prepared in 2009, HL7 determined to include all classes in the Normative RIM.  As a consequence of this scope change, the classes in the following subject areas and classes have now been added to the DIS.</p>
+						<ul>
+							<li>In the <a href="#CoreInfrastructure-sbj">CoreInfrastructure</a> subject area:<ul>
+									<li>
+										<a href="#ActHeir-cls">ActHeir</a>
+									</li>
+									<li>
+										<a href="#EntityHeir-cls">EntityHeir</a>
+									</li>
+									<li>
+										<a href="#InfrastructureRoot-cls">InfrastructureRoot</a>
+									</li>
+									<li>
+										<a href="#RoleHeir-cls">RoleHeir</a>
+									</li>
+								</ul>
+							</li>
+							<li>In the <a href="#MessageControl-sbj">MessageControl</a> subject area:<ul>
+									<li>
+										<a href="#Acknowledgement-cls">Acknowledgement</a>
+									</li>
+									<li>
+										<a href="#AcknowledgementDetail-cls">AcknowledgementDetail</a>
+									</li>
+									<li>
+										<a href="#Attachment-cls">Attachment</a>
+									</li>
+									<li>
+										<a href="#AttentionLine-cls">AttentionLine</a>
+									</li>
+									<li>
+										<a href="#Batch-cls">Batch</a>
+									</li>
+									<li>
+										<a href="#CommunicationFunction-cls">CommunicationFunction</a>
+									</li>
+									<li>
+										<a href="#Message-cls">Message</a>
+									</li>
+									<li>
+										<a href="#Transmission-cls">Transmission</a>
+									</li>
+									<li>
+										<a href="#TransmissionRelationship-cls">TransmissionRelationship</a>
+									</li>
+								</ul>
+							</li>
+							<li>In the <a href="#QueryControl-sbj">QueryControl</a> subject area:<ul>
+									<li>
+										<a href="#Parameter-cls">Parameter</a>
+									</li>
+									<li>
+										<a href="#ParameterItem-cls">ParameterItem</a>
+									</li>
+									<li>
+										<a href="#ParameterList-cls">ParameterList</a>
+									</li>
+									<li>
+										<a href="#QueryAck-cls">QueryAck</a>
+									</li>
+									<li>
+										<a href="#QueryByParameter-cls">QueryByParameter</a>
+									</li>
+									<li>
+										<a href="#QueryContinuation-cls">QueryContinuation</a>
+									</li>
+									<li>
+										<a href="#QueryEvent-cls">QueryEvent</a>
+									</li>
+									<li>
+										<a href="#QuerySpec-cls">QuerySpec</a>
+									</li>
+									<li>
+										<a href="#SortControl-cls">SortControl</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div hl7Id="annex-change-data-type" title="Data Type Changes">
+						<p>In 2010, HL7 changed the binding of all RIM attributes to the data types specified in <b>ISO 21090:2011</b>
+							<i>Health informatics - Harmonized data types for information interchange</i>.  This conversion causes changes in the data type representation of many attributes, but causes <b>no semantic change</b> in these attributes.</p>
+					</div>
+					<div hl7Id="annex-change-property" title="Property and Annotation Additions">
+						<p>Among the changes thaty have been undertaken since the first release is to formalize: (i) the set of properties assigned to RIM classes and attributes and that constitute an HL7 UML profile for the RIM model; and (ii) the parsing of the original "definitions" into a set of annotations, including a "definition" annotations. The set of properties are part of this DIS and are documented in the <a href="#SpecContents">Information Model Contents and Properties</a> sub-clause of this document.</p>
+						<p>The set of annotations used in the RIM are listed below, along with their purpose and thier status as to normative and informative. </p>
+						<ul>
+							<li>
+								<b>Definition </b>
+								<i>(Normative)</i> - An explanation of the meaning of the element.</li>
+							<li>
+								<b>Deprecation Information </b>
+								<i>(Normative)</i> - Information relating to the deprecation of the element, including instructions on why the element is no longer required and/or how the same information should now be handled.</li>
+							<li>
+								<b>Formal Constraint </b>
+								<i>(Normative)</i> - A formal, testable limitation on the use, representation or value associated with the current element.  The expression must be able to be evaluated within the context of a single instance.</li>
+							<li>
+								<b>Usage Notes </b>
+								<i>(Informative)</i> - Advice to designers and/or implementers on how to make use of an element and/or how <b>not</b> to make use of an element.</li>
+							<li>
+								<b>Rationale </b>
+								<i>(Informative)</i> - An explanation of why an element is necessary or potentially useful within a context.</li>
+							<li>
+								<b>Open Issue </b>
+								<i>(Informative)</i> - Notes to designers, balloters and implementers about outstanding concerns that remain to be resolved.</li>
+						</ul>
+					</div>
+					<div hl7Id="annex-change-model" title="Class Model Changes">
+						<p>In addition to the above overall changes, there have been a number of individual changes to the class model since the initial release.  These are listed below alphabetically by class name and, within a class, by attribute name. This list does not include classes or attributes that were deprecated from further use.  The deprecated items are listed separately under <a href="#annex-change-deprecated">Deprecated Model Elements</a>, below. Note further that the parsing of the previous definitions into annotation types are not included in this list of changes as that parsing did not alter the semantic intent of the classes and attributes.</p>
+						<p>The following <b>classes were added</b> to the RIM:</p>
+						<ul>
+							<li><a href="#Exposure-cls">Exposure </a> was added within the <a href="#Acts-sbj">Acts</a> subject area.</li>
+							<li><a href="#QualifiedEntity-cls">QualifiedEntity </a> was added within the <a href="#Roles-sbj">Roles</a> subject area.</li>
+						</ul>
+						<p>The following <b>class was moved within the inheritance hiearchy</b> under the <a href="#Act-cls">Act</a> class:</p>
+						<ul>
+							<li><a href="#SubstanceAdministration-cls">SubstanceAdministration </a> was moved from being a direct descendant of <a href="#Act-cls">Act</a> to being a child of <a href="#Procedure-cls">Procedure</a>.</li>
+						</ul>
+						<p>A <b>state machine was added</b> to the <a href="#RoleLink-cls">RoleLink</a> class.</p>
+						<p>The following <b>attributes were added</b> to classes in the RIM:</p>
+						<ul>
+							<li><a href="#Act-cls">Act</a>.<a href="#Act-actionNegationInd-att">actionNegationInd</a> was added.</li>
+							<li><a href="#Act-cls">Act</a>.<a href="#Act-isCriterionInd-att">isCriterionInd</a> was added.</li>
+							<li><a href="#Act-cls">Act</a>.<a href="#Act-title-att">title</a> was added.</li>
+							<li><a href="#ActRelationship-cls">ActRelationship</a>.<a href="#ActRelationship-actAttributeContextBlockedInd-att">actAttributeContextBlockedInd</a> was added.</li>
+							<li><a href="#ActRelationship-cls">ActRelationship</a>.<a href="#ActRelationship-blockedContextActRelationshipType-att">blockedContextActRelationshipType</a> was added.</li>
+							<li><a href="#ActRelationship-cls">ActRelationship</a>.<a href="#ActRelationship-blockedContextParticipationType-att">blockedContextParticipationType</a> was added.</li>
+							<li><a href="#ActRelationship-cls">ActRelationship</a>.<a href="#ActRelationship-subsetCode-att">subsetCode</a> was added.</li>
+							<li><a href="#ContextStructure-cls">ContextStructure</a>.<a href="#ContextStructure-setId-att">setId</a> was added.</li>
+							<li><a href="#ContextStructure-cls">ContextStructure</a>.<a href="#ContextStructure-versionNumber-att">versionNumber</a> was added.</li>
+							<li><a href="#Document-cls">Document</a>.<a href="#Document-bibliographicDesignationText-att">bibliographicDesignationText</a> was added.</li>
+							<li><a href="#Employee-cls">Employee</a>.<a href="#Employee-occupationCode-att">occupationCode</a> was added.</li>
+							<li><a href="#Observation-cls">Observation</a>.<a href="#Observation-valueNegationInd-att">valueNegationInd</a> was added.</li>
+							<li><a href="#Participation-cls">Participation</a>.<a href="#Participation-priorityNumber-att">priorityNumber</a> was added.</li>
+							<li><a href="#Participation-cls">Participation</a>.<a href="#Participation-subsetCode-att">subsetCode</a> was added.</li>
+							<li><a href="#PatientEncounter-cls">PatientEncounter</a>.<a href="#PatientEncounter-specialArrangementCode-att">specialArrangementCode</a> was added.</li>
+							<li><a href="#Role-cls">Role</a>.<a href="#Role-confidentialityCode-att">confidentialityCode</a> was added.</li>
+							<li><a href="#Role-cls">Role</a>.<a href="#Role-name-att">name</a> was added.</li>
+							<li><a href="#Role-cls">Role</a>.<a href="#Role-priorityNumber-att">priorityNumber</a> was added.</li>
+							<li><a href="#RoleLink-cls">RoleLink</a>.<a href="#RoleLink-id-att">id</a> was added.</li>
+							<li><a href="#RoleLink-cls">RoleLink</a>.<a href="#RoleLink-statusCode-att">statusCode</a> was added.</li>
+							<li><a href="#SubstanceAdministration-cls">SubstanceAdministration</a>.<a href="#SubstanceAdministration-administrationUnitCode-att">administrationUnitCode</a> was added.</li>
+						</ul>
+						<p>The following <b>attributes were removed</b> from classes in the RIM:</p>
+						<ul>
+							<li><a href="#Account-cls">Account</a>.name was removed.</li>
+							<li><a href="#Patient-cls">Patient</a>.confidentialityCode was removed.</li>
+							<li><a href="#PatientEncounter-cls">PatientEncounter</a>.specialAccommodationCode was removed.</li>
+							<li><a href="#SubstanceAdministration-cls">SubstanceAdministration</a>.approachSiteCode was removed because it is now inherited from <a href="#Procedure-cls">Procedure</a>.</li>
+						</ul>
+						<p>The following <b>attribute cardinality changes were made</b>:</p>
+						<ul>
+							<li><a href="#Act-cls">Act</a>.<a href="#Act-statusCode-att">statusCode</a> was changed from <b>0..*</b> to <b>0..1</b>.</li>
+							<li><a href="#Entity-cls">Entity</a>.<a href="#Entity-quantity-att">quantity</a> was changed from <b>0..*</b> to <b>0..1</b>.</li>
+							<li><a href="#Entity-cls">Entity</a>.<a href="#Entity-statusCode-att">statusCode</a> was changed from <b>0..*</b> to <b>0..1</b>.</li>
+							<li><a href="#Entity-cls">Entity</a>.<a href="#Entity-handlingCode-att">handlingCode</a> was changed from <b>0..1</b> to <b>0..*</b>.</li>
+							<li><a href="#ManagedParticipation-cls">ManagedParticipation</a>.<a href="#ManagedParticipation-statusCode-att">statusCode</a> was changed from <b>0..*</b> to <b>0..1</b>.</li>
+							<li><a href="#Observation-cls">Observation</a>.<a href="#Observation-value-att">value</a> was changed from <b>0..1</b> to <b>0..*</b>.</li>
+							<li><a href="#Role-cls">Role</a>.<a href="#Role-statusCode-att">statusCode</a> was changed from <b>0..*</b> to <b>0..1</b>.</li>
+						</ul>
+					</div>
+					<div hl7Id="annex-change-deprecated" title="Deprecated Model Elements">
+						<p>HL7 manages deletions or removals from the RIM in a two-step process.  In the first step, during RIM Harmonization an element - attribute, class, code in controlling vocabulary, etc. - is formally listed as "Deprecated".  This makes the element ineligible for use in RIM-derived models from that point forward. Subsequently, after a number of RIM releases during the which the element is listed as deprecated, the element will once again be presented at Harmonization as a candidate for removal or retirement.</p>
+						<p>During the interval between the first ISO RIM release, and the ballot for this revision, a number of elements of the HL7 RIM have been deprecated. Two of these were elements in the portion of the HL7 RIM that was <b>not in scope</b> for the first ISO RIM and therefore  do not appear in the earlier revision but are nonetheless listed below. The remaining deprecated elements are shown in this DIS in order that the documentation of the rationale for deprecation is available to users of the revised standard.  These elements are listed below and hyper-linked to the elements in the model.</p>
+						<p>
+							<b>Deprecated elements not in scope for previous ISO release:</b>
+						</p>
+						<ul>
+							<li>Message.attachmentText <i>(attribute)</i>
+							</li>
+							<li>QuerySpec.responseElementGroupId <i>(attribute)</i>
+							</li>
+						</ul>
+						<p>
+							<b>Deprecated elements in the proposed ISO RIM DIS:</b>
+						</p>
+						<ul>
+							<li>Act.<a href="#Act-negationInd-att">negationInd</a>
+								<i> (attribute)</i>
+							</li>
+							<li>Act.<a href="#Act-derivationExpr-att">derivationExpr</a>
+								<i> (attribute)</i>
+							</li>
+							<li>Act.<a href="#Act-levelCode-att">levelCode</a>
+								<i> (attribute)</i>
+							</li>
+							<li>ActRelationship.<a href="#ActRelationship-contextControlCode-att">contextControlCode</a>
+								<i> (attribute)</i>
+							</li>
+							<li>ActRelationship.<a href="#ActRelationship-contextConductionInd-att">contextConductionInd</a>
+								<i> (attribute)</i>
+							</li>
+							<li>
+								<a href="#Diet-cls">Diet</a>
+								<i> (class)</i>
+							</li>
+							<li>Diet.<a href="#Diet-energyQuantity-att">energyQuantity</a>
+								<i> (attribute)</i>
+							</li>
+							<li>Diet.<a href="#Diet-carbohydrateQuantity-att">carbohydrateQuantity</a>
+								<i> (attribute)</i>
+							</li>
+							<li>Participation.<a href="#Participation-contextControlCode-att">contextControlCode</a>
+								<i> (attribute)</i>
+							</li>
+							<li>PatientEncounter.<a href="#PatientEncounter-acuityLevelCode-att">acuityLevelCode</a>
+								<i> (attribute)</i>
+							</li>
+							<li>Person.<a href="#Person-livingArrangementCode-att">livingArrangementCode</a>
+								<i>(attribute)</i>
+							</li>
+							<li>Place.<a href="#Place-gpsText-att">gpsText</a>
+								<i> (attribute)</i>
+							</li>
+							<li>
+								<a href="#WorkingList-cls">WorkingList</a>
+								<i> (as a diagrammed class - will remain as a coded specialization)</i>
+							</li>
+							<li>WorkingList.<a href="#WorkingList-ownershipLevelCode-att">ownershipLevelCode</a>
+								<i> (attribute)</i>
+							</li>
+						</ul>
+						<p>
+							<b>Deprecated controlling terminology elements in the proposed ISO RIM DIS:</b>
+						</p>
+						<ul>
+							<li>
+								<a href="#cs-ActClass._SubjectBodyPosition">ActClass._SubjectBodyPosition</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.CNOD">ActClass.CNOD</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.DIET">ActClass.DIET</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.LLD">ActClass.LLD</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.PRN">ActClass.PRN</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.RLD">ActClass.RLD</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.SFWL">ActClass.SFWL</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.SIT">ActClass.SIT</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.STN">ActClass.STN</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.SUP">ActClass.SUP</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.RTRD">ActClass.RTRD</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActClass.TRD">ActClass.TRD</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActMood.CRT">ActMood.CRT</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-ActMood.EVN.CRT">ActMood.EVN.CRT</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-EntityDeterminer.QUANTIFIED_KIND">EntityDeterminer.QUANTIFIED_KIND</a>
+								<i> (coded concept)</i>
+							</li>
+							<li>
+								<a href="#cs-RoleClass.SUBS">RoleClass.SUBS</a>
+								<i> (coded concept)</i>
+							</li>
+						</ul>
+					</div>
+				</text>
+			</appendix>
+			<otherAnnotation type="foreword">
+				<text>
+					<div hl7Id="ForeWord" style="NonNumbered" title="Foreword">
+						<p>ISO (the International Organization for Standardization) is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.</p>
+						<p>Draft International Standards adopted by the technical committees are circulated to the member bodies for voting. Publication as an International Standard requires approval by at least 75 % of the member bodies casting a vote.</p>
+						<p>An agreement between ISO and Health Level Seven, Inc. (HL7) was undertaken to develop and maintain a group of ISO/HL7 standards in the field of medical informatics. Under this agreement, HL7 is responsible for the development and maintenance of these standards with participation and input from ISO member bodies.</p>
+						<p>Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights.</p>
+						<p>International Standard ISO/HL7 21731 was developed by HL7 and by Technical Committee ISO/TC 215, Health informatics.</p>
+					</div>
+				</text>
+			</otherAnnotation>
+		</documentation>
+	</annotations>
+	<publishedGroup name="scopeDiv" title="Scope" contentsLevel="Detailed">
+		<precedingText>
+			<p>The Health Level Seven (HL7) Reference Information Model (RIM) is a static model of health and health care information as viewed within the scope of HL7 standards development activities. It is the combined consensus view of information from the perspective of the HL7 working group and the HL7 international affiliates. The RIM is the ultimate source from which all HL7 version 3.0 protocol specification standards draw their information-related content. In the context of ISO TC215 – Health Informatics, the RIM provides a reference model that has been and will likely continue to be used in developing further health informatics specifications.</p>
+		</precedingText>
+		<publishedItem name="scopeDiv" title="Scope" contentsLevel="None">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="NormativeStandard" root="DEFN" filterType="Exclude" artifact="RIM" realmNamespace="UV" artifactName="//mif:staticModel/mif:historyItem/mif:description"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="conformance" title="Conformance" contentsLevel="Detailed">
+		<precedingText>
+			<p>An information model such as the RIM specified in this standard may serve as the basis for other information models that are directly derived from it, and may provide a foundation to support the design of data bases and other information structures.  Nevertheless, neither ISO TC 215 nor HL7 believe that it is reasonable to define tests of whether a particular implementation may conform to this standard.  Therefore users of this standard shall not claim conformance to this standard.  Further, ISO TC215 and HL7, as developers of this standard request that users inform them of particular requirements which caused the users to deviate from this standard or to extend it.  This will allow subsequent releases of the standard to meet a broader range of requirements.</p>
+		</precedingText>
+		<publishedItem name="conformance" title="Conformance" contentsLevel="None">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="NormativeStandard" root="DEFN" filterType="Exclude" artifact="RIM" realmNamespace="UV" artifactName="//mif:staticModel/mif:historyItem/mif:description"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="normativeReferences" title="Normative References" contentsLevel="Detailed">
+		<precedingText>
+			<p>The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+			<p>
+				<b>ISO/IEC 19501:2005 </b>Information technology -- Open Distributed Processing -- Unified Modeling Language (UML) Version 1.4.2</p>
+			<p>
+				<b>ISO 21090:2011</b> Health informatics - Harmonized data types for information interchange</p>
+			<p>	<b>ANSI/HL7 V3 DT, R2-2011</b>  HL7 Version 3 Standard: Data Types - Abstract Specification, Release 2</p>
+			<p>ISO 17113 (ISO TC 215 Message Development Framework specification)</p>
+		</precedingText>
+		<publishedItem name="normativeReferences" title="Normative References" contentsLevel="None">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="NormativeStandard" root="DEFN" filterType="Exclude" artifact="RIM" realmNamespace="UV" artifactName="//mif:staticModel/mif:historyItem/mif:description"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="TermsDefs" title="Terms and definitions" contentsLevel="Detailed">
+		<precedingText>
+			<p>For the purposes of this document, the following terms and definitions apply:</p>
+		</precedingText>
+		<publishedItem name="TermsDefs" title="Terms and definitions" contentsLevel="Detailed">
+			<itemReference root="DEFN" realmNamespace="UV" artifact="GL" name="rim"/>
+			<filter name="Reference" root="DEFN" filterType="Include" artifact="GL" realmNamespace="UV" artifactName="//mif:glossary/mif:termDefinition"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="RIMContent" title="Specification Components and Properties" contentsLevel="Detailed">
+		<precedingText>
+			<div hl7Id="SpecContents" title="Information Model Contents and Properties">
+				<p>The RIM consists of classes assigned to one or more subject area packages.  Attributes, Relationships, and State Machines are associated with classes.</p>
+				<p>Each class within the RIM represents information about a concept that must be documented and communicated within the health care environment.  The names that are assigned to these classes are drawn from normal language, but the use of these names is necessarily constrained to the "name space" of the RIM.  The meaning of these classes is entirely embodied in the definition of the class, and the definitions of the properties (attributes and associations) assigned to that class.   Thus, for example, the meaning of the "Role" class can only be understood by studying the definition provided and the properties assigned.  Definitions from another context or dictionary definitions for the name are not relevant within the context of the RIM name space.</p>
+				<p>The RIM is expressed using the Unified Modeling Language (UML),  with the addition of specific properties (extensions in a UML profile) that provide meta-data needed to support the use of the model in constructing information for inter-operable communications.   These extensions to the UML model element meta-data are listed below for each information model element.</p>
+				<p>Several years have elapsed since the Release 1 ballot of the HL7 RIM within ISO TC 215. In that period, a variety of changes were made to the content of the RIM, and are part of the rationale for the currently proposed revision.  More details of these changes can be found in the <a href="#annex-change">Annex: Changes to Normative RIM from Prior Release</a> at the end of this package.</p>
+				<div hl7Id="rimUnderClsRep" title="Representation of RIM class structure">
+					<p>As noted previously, the RIM is modeled using a subset of the semantics embodied in UML. The RIM is a set of UML classes, each containing one or more attributes, which are assigned a data type based on an independent specification of data types. The classes are linked either by a set of association relationships, identified by unique role names, or by generalization relationships.
+					</p>
+					<p>Selected classes have defined state machines.  The primary purpose of these state machines is to allow "trigger events" (events that initiate communication) to be defined with respect to the state transitions.  These state machines are not intended to represent a full behavioral model for their respective classes.  At present state machines are only defined for those "back bone" classes that have a unique identity, and thus represent persistent concepts. These classes are: Act, Managed Participation, Role and Entity.  A state machine is also defined for the QueryEvent class in the QueryControl subject area.  
+				</p>
+					<p>Each of these elements includes a textual definition. The appearance of attributes and associations is controlled by cardinality and related constraints applied to the attributes and to the roles that link the associations to the classes.
+				</p>
+					<div hl7Id="rimUnderClsProp" title="HL7 Properties for RIM classes">
+						<p>In order to meet the requirements of model-based development, the UML profile defined by HL7 includes two additional "properties" for RIM classes.  These are:
+						</p>
+						<ul>
+							<li>Property: <b>classCode</b> - For classes that have specializations and a coded attribute that designates which of the specializations is active (Act Role and Entity in the current RIM), this property contains the defined class code for each specialization.  Thus, for the Observation class in the RIM, the value of this property is "OBS."
+							</li>
+							<li>Property: <b>stateAttribute</b> - For classes with a state machine, this property names the attribute that will be encoded with the name of the state of the class.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div hl7Id="rimUnderAttRep" title="Representation of RIM attributes">
+					<p>As noted previously, the RIM draws its information model elements from UML. Thus the attributes of the RIM classes each have a definition (and related annotations), a specified cardinality, and a defined data type. As was the case with classes (see above), the UML profile defined by HL7 includes five additional "properties" for RIM attributes.  These are:
+					</p>
+					<ul>
+						<li>Property: <b>conductible</b> - Specific characteristics of this property are:
+							<ul>
+								<li>It applies to all attributes of the Act class and of the specializations of the Act class</li>
+								<li> It is a Boolean property;  conformance to it is mandatory; and its default value is false.</li>
+								<li>The interpretation of this property is that:
+									<ul>
+										<li>
+											<b>If the property is <i>true</i>  for a particular attribute</b> it asserts that the value of that attribute will conduct.  Conducted Act attributes are treated as propagating and overriding.</li>
+										<li>
+											<b>Example: </b>In an instance, ActA.confidentialityCode = I. The "conductible" property for the RIM attribute <a href="#Act-confidentialityCode-att">Act.confidentialityCode</a>  is <b>true</b> and therefore, in this instance,  the confidentialityCode value is conducted to ActB via a component act relationship. If ActB.confidentialityCode is not present, then ActB.confidentialityCode inherits the value “I” via conduction (<b>propagating</b>). If ActB.confidentialityCode were populated with a value of “N”, for instance, then the ActB value overrides the value conducted in, and propagates to subsequent acts (<b>overriding and propagating</b>).
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>Property: <b>conformance</b> - <ul>
+								<li>The conformance constraint specifies how a model element must be handled by sending or receiving applications. Every attribute and association element in a model has an explicit or implicit conformance indicator constraint. The constraint has one of three values: Required, Unspecified or Not Permitted. The <a href="../../infrastructure/conformance/conformance.html#CECconformInd3"> full specification of this property</a> can be found in the <a href="../../infrastructure/conformance/conformance.html">Refinement, Constraint and Localization</a> specification.</li>
+							</ul>
+						</li>
+						<li>Property: <b>defaultValue</b> - <ul>
+								<li>Selected RIM attributes, primarily those with a Boolean data type, have a designated "default value" specified with this property.  If the attribute is not otherwise specified applications should treat the class as though this attribute is equal to its default value.</li>
+							</ul>
+						</li>
+						<li>Property: <b>deprecated</b> - <ul>
+								<li>This is a property with a Boolean value and two sub-properties - an "effective version" (the version at which the deprecation took effect) and a technical description of the reason for deprecation. Once an element has been deprecated, it will remain as part of the RIM for a period of time, but SHALL no longer be used in RIM-derived models. Subsequently, after at least three releases in which the element is shown as deprecated, the element will be removed from the RIM and/or retired from the controlling vocabulary.</li>
+							</ul>
+						</li>
+						<li>Property: <b>isDocumentCharacteristic: </b>  - Specific characteristics of this property are:
+							<ul>
+								<li>Complete specification is in the document <a href="../../infrastructure/coreprinciples/v3modelcoreprinciples.html#Special_DocumentCharacteristic">Core Principles and Properties of HL7 Version 3 Models</a>, where the following definition is provided:<ul>
+										<li>If true, indicates that the Act attribute or association (as represented by a typeCode for either ActRelationship or Participation) is a descriptor of the document (record) represented by the act object.</li>
+										<li>If false, indicates the property is a descriptor of the action itself — actual, intended, or potential. Applies to interpretation of attributes and associations with respect to changes in the value of Act.actionNegationInd and Act.moodCode. (See descriptions of these attributes for further discussion.) </li>
+										<li>For example, in an order, the "id" attribute [isDocumentCharacteristic = true] is an identifier of the record of the order, not an identifier of the intended event. On the other hand, the "code" attribute [isDocumentCharacteristic = false] describes a characteristic of the intended event. </li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>Property: <b>isImmutable</b> - <ul>
+								<li>Selected attributes of the RIM are designated as "immutable" by setting this property true.  Once an object instance is defined that contains a value for an immutable attribute, that attribute cannot be changed for the life of that instance.  (Note that for coded attributes, the attribute can be expressed at greater and lesser levels of granularity.  For example, a public health case could be expressed with a classCode of CASE, OBS or ACT without violating the "no change" rule.</li>
+							</ul>
+						</li>
+						<li>Property: <b>mandatoryInclusion</b> - <ul>
+								<li>In an information model for communication, the mandatory  property indicates whether a particular attribute must always have a non-null value in any HL7 instance. This property is asserted as true for a limited number of RIM attributes. Thus these attributes must be included in any information model class that is derived from the RIM class that contains the attribute. </li>
+							</ul>
+						</li>
+						<li>Property: <b>vocabDomain</b>  - Specific characteristics of this property are:
+							<ul>
+								<li>Each attribute of the RIM that is assigned a data type indicating that the attributes are coded (or might be constrained to a coded data type - such as ANY) has a "vocabDomain" property designating the HL7-defined Concept Domain whose concept space satisfies the requirements of that attribute.   All of these concept domains are included as part of this ballot and are subject to the same voting principles as the other elements of the RIM.
+								</li>
+								<li>Further, several of the attributes in the RIM are coded with the CS data type.  In these cases the designated "vocabDomain" has been bound in the universal realm to a value set from which the codes for this SHALL be drawn.  Moreover, this value set is defined against a code system that SHALL be defined and maintained by HL7. The classCode and typeCode attributes mentioned above are examples of attributes with a CS data type. All of the code systems for these attributes are included as part of this ballot and are subject to the same voting principles as the other elements of the RIM.
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div hl7Id="rimUnderAssnRep" title="Representation of RIM associations">
+					<p>As noted previously, the RIM draws its information model elements from UML. Thus the associations of the RIM classes each have a definition (and related annotations), a specified cardinality, etc. As was the case with attributes (see above), the UML profile defined by HL7 includes one additional "property" for RIM associations.  This is:
+					</p>
+					<ul>
+						<li>Property: <b>conformance</b> - <ul>
+								<li>The conformance constraint specifies how a model element must be handled by sending or receiving applications. Every attribute and association element in a model has an explicit or implicit conformance indicator constraint. The constraint has one of three values: Required, Unspecified or Not Permitted. The <a href="../../infrastructure/conformance/conformance.html#CECconformInd3"> full specification of this property</a> can be found in the <a href="../../infrastructure/conformance/conformance.html">Refinement, Constraint and Localization</a> specification.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div title="Normative Vocabulary for the RIM" hl7Id="rimSpecVoc">
+				<p>The <a href="#terminology">Controlling Terminology clause</a> details a set of concept domains and code systems that are part of the normative RIM specification. Specifically:</p>
+				<div title="Normative Concept Domain and Constraints for RIM Attributes" hl7Id="rimSpecConceptDomain">
+					<p> Specifically, each RIM attribute that is assigned a coded data type also has a defined <b>Concept Domain</b> that is the RIM-level constraint for that attribute. At the point where each RIM attribute is defined in the <a href="#cls-rimdiv">Classes clause</a> (below), 
+the Concept Domain constraint for the coded attributes will be shown along with a hyper-link to the Concept Domain specification in the Controlling Terminology. Each of these Concept Domain definitions is part of this Normative specification.</p>
+				</div>
+				<div title="Normative Code Systems for RIM Attributes of Data Type CS" hl7Id="rimSpecCodeSystem">
+					<p>Where RIM attributes are assigned <b>data type "CS"</b> a further normative constraint arises. Each such attribute <b>SHALL</b> draw its coded content from an HL7-defined code system that is bound, through an "all-codes" value set, to the Concept Domain for that attribute. These code systems are the only ones included in the <a href="#terminology">Controlling Terminology clause</a> and are an integral part of the Normative RIM specification, and therefore subject to ballot as part of the RIM ballot.</p>
+					<!--table border="0" width="95%" cellspacing="10">
+						<col width="30%" span="3"/>
+						<tbody>
+							<tr>
+								<td>
+									<strong>
+										<a href="../../infrastructure/vocabulary/AcknowledgementCondition.html">AcknowledgementCondition</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/AcknowledgementDetailType.html">AcknowledgementDetailType</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/AcknowledgementType.html">AcknowledgementType</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActClass.html">ActClass</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActMood.html">ActMood</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActRelationshipCheckpoint.html">ActRelationshipCheckpoint</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActRelationshipJoin.html">ActRelationshipJoin</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActRelationshipSplit.html">ActRelationshipSplit</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActRelationshipSubset.html">ActRelationshipSubset</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActRelationshipType.html">ActRelationshipType</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ActStatus.html">ActStatus</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/CommunicationFunctionType.html">CommunicationFunctionType</a>
+									</strong>
+								</td>
+								<td>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ContextControl.html">ContextControl</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/EntityClass.html">EntityClass</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/EntityDeterminer.html">EntityDeterminer</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/EntityStatus.html">EntityStatus</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/HL7ContextConductionStyle.html">HL7ContextConductionStyle</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/HL7StandardVersionCode.html">HL7StandardVersionCode</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ManagedParticipationStatus.html">ManagedParticipationStatus</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ModifyIndicator.html">ModifyIndicator</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/NullFlavor.html">NullFlavor</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ParticipationType.html">ParticipationType</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ProcessingID.html">ProcessingID</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ProcessingMode.html">ProcessingMode</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/QueryPriority.html">QueryPriority</a>
+									</strong>
+								</td>
+								<td>
+									<strong>
+										<a href="../../infrastructure/vocabulary/QueryResponse.html">QueryResponse</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/QueryStatusCode.html">QueryStatusCode</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/RelationshipConjunction.html">RelationshipConjunction</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ResponseLevel.html">ResponseLevel</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ResponseModality.html">ResponseModality</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/ResponseMode.html">ResponseMode</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/RoleClass.html">RoleClass</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/RoleLinkStatus.html">RoleLinkStatus</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/RoleLinkType.html">RoleLinkType</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/RoleStatus.html">RoleStatus</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/Sequencing.html">Sequencing</a>
+									</strong>
+									<br/>
+									<br/>
+									<strong>
+										<a href="../../infrastructure/vocabulary/TransmissionRelationshipTypeCode.html">TransmissionRelationshipTypeCode</a>
+									</strong>
+								</td>
+							</tr>
+						</tbody>
+					</table-->
+				</div>
+			</div>
+			<div title="Governing Data Type Specification for the RIM" hl7Id="rimSpecData">
+				<p>In HL7, the data types for attributes in Release 4 of the RIM are bound to <b>ANSI/HL7 V3 DT, R2-2011</b> <i> HL7 Version 3 Standard: Data Types - Abstract Specification, Release 2</i>.  In the ISO community,  the data types for attributes are bound to <b>ISO 21090:2011</b> <i> Health informatics - Harmonized data types for information interchange</i>.  These two specifications are identical in both semantics and notation.</p>
+			</div>
+		</precedingText>
+		<publishedItem name="RIMContent" title="Specification Components and Properties" contentsLevel="None">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="NormativeStandard" root="DEFN" filterType="Exclude" artifact="RIM" realmNamespace="UV" artifactName="//mif:staticModel/mif:historyItem/mif:description"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="sbj-rimdiv" title="RIM Subject Areas and UML Diagrams of Content" contentsLevel="Detailed">
+		<publishedItem contentsLevel="None">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="Reference" root="DEFN" filterType="Include" artifact="RIM" realmNamespace="UV" artifactName="//mif:staticModel/mif:subjectAreaPackage"/>
+		</publishedItem>
+		<followingText>
+			<div title="UML Diagrams of Content" hl7Id="rimSpecDgms">
+				<p>The representations available for the RIM include a diagram for most of the subject areas, state-machine diagrams for classes and a reference to the full RIM "billboard" in a PDF file where 'zooming' is more readily supported. The diagrams for the subject areas and state machines are grouped below.</p>
+				<ul>
+					<li>
+						<a href="./Graphics/RIM_billboard.pdf">The RIM Billboard as a PDF file can be reached from here.</a>
+					</li>
+				</ul>
+				<div title="Graphic Diagrams of the RIM Back Bone content" hl7Id="RIM-CoreGraphics">
+					<p>The classes in the "back-bone" of the RIM are represented in the following diagrams:</p>
+					<div title="FoundationClasses Subject Area" hl7Id="FoundationClasses">
+						<img imageType="image/gif" class="graphic" src="./Graphics/RIM_NormativeContent.gif" alt="FoundationClasses Subject Area"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="Acts Subject Area" hl7Id="Acts">
+						<img imageType="image/gif" class="graphic" alt="Acts Subject Area" src="./Graphics/RIM_Acts.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="Entities Subject Area" hl7Id="Entities">
+						<img imageType="image/gif" class="graphic" alt="Entities Subject Area" src="./Graphics/RIM_Entities.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="Roles Subject Area" hl7Id="Roles">
+						<img imageType="image/gif" class="graphic" alt="Roles Subject Area" src="./Graphics/RIM_Roles.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="State-machine diagram for Act class" hl7Id="ActStatus">
+						<img imageType="image/gif" class="graphic" alt="State-machine diagram for Act class" src="./Graphics/RIM_ActStatus.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="State-machine diagram for Entity class" hl7Id="EntityStatus">
+						<img imageType="image/gif" class="graphic" alt="State-machine diagram for Entity class" src="./Graphics/RIM_EntityStatus.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="State-machine diagram for ManagedParticipation class" hl7Id="ManagedParticipationStatus">
+						<img imageType="image/gif" class="graphic" alt="State-machine diagram for ManagedParticipation class" src="./Graphics/RIM_ManagedParticipationStatus.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="State-machine diagram for Role class" hl7Id="RoleStatus">
+						<img imageType="image/gif" class="graphic" alt="State-machine diagram for Role class" src="./Graphics/RIM_RoleStatus.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="State-machine diagram for RoleLink class" hl7Id="RoleLinkStatus">
+						<img imageType="image/gif" class="graphic" alt="State-machine diagram for RoleLink class" src="./Graphics/RIM_RoleLinkStatus.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="StructuredDocuments Subject Area" hl7Id="StructuredDocuments">
+						<img imageType="image/gif" class="graphic" alt="StructuredDocuments Subject Area" src="./Graphics/RIM_StructuredDocuments.gif"/>
+						<br/>
+						<br/>
+					</div>
+				</div>
+				<div title="Graphic Diagrams of the RIM Infrastructure classes" hl7Id="RIM-AddlGraphics">
+					<p>The classes in the Communication Infrastructure subject areas are represented in the following diagrams:</p>
+					<div title="MessageCommunicationsControl Subject Area" hl7Id="MessageCommunicationsControl">
+						<img imageType="image/gif" class="graphic" alt="MessageCommunicationsControl Subject Area" src="./Graphics/RIM_MessageCommunicationsControl.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="MessageControl Subject Area" hl7Id="MessageControl">
+						<img imageType="image/gif" class="graphic" alt="MessageControl Subject Area" src="./Graphics/RIM_MessageControl.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="QueryControl Subject Area" hl7Id="QueryControl">
+						<img imageType="image/gif" class="graphic" alt="QueryControl Subject Area" src="./Graphics/RIM_QueryControl.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="CoreInfrastructure Subject Area" hl7Id="CoreInfrastructure">
+						<img imageType="image/gif" class="graphic" alt="CoreInfrastructure Subject Area" src="./Graphics/RIM_CoreInfrastructure.gif"/>
+						<br/>
+						<br/>
+					</div>
+					<div title="State-machine diagram for QueryEvent class" hl7Id="QueryEventStatus">
+						<img imageType="image/gif" class="graphic" alt="State-machine diagram for QueryEvent class" src="./Graphics/RIM_QueryEventStatus.gif"/>
+						<br/>
+						<br/>
+					</div>
+				</div>
+			</div>
+		</followingText>
+	</publishedGroup>
+	<publishedGroup name="cls-rimdiv" title="Classes" contentsLevel="Detailed">
+		<precedingText>
+			<p>Each of the classes is listed below. They are sorted in the alphabetic order of their names. Each class includes a hyper-link to its primary subject area adjacent to the class name. This link can be used to quickly locate similar classes.</p>
+		</precedingText>
+		<publishedItem name="cnt-Classes" title="All RIM Classes" contentsLevel="Detailed">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="NormativeStandard" root="DEFN" filterType="Include" artifact="RIM" realmNamespace="UV" artifactName="//mif:class"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="assoc-rimdiv" title="Associations" contentsLevel="Detailed">
+		<publishedItem contentsLevel="None">
+			<itemReference root="DEFN" artifact="RIM" realmNamespace="UV"/>
+			<filter name="NormativeStandard" root="DEFN" filterType="Include" artifact="RIM" realmNamespace="UV" artifactName="//mif:association"/>
+		</publishedItem>
+	</publishedGroup>
+	<publishedGroup name="terminology" title="Controlling Terminology" contentsLevel="Detailed">
+		<publishedGroup name="term-introduction" title="Introduction" contentsLevel="Detailed">
+			<precedingText>
+				<div title="Overview" hl7Id="term-overview">
+					<p>This clause presents the vocabulary that controls the definition and structure of the RIM. Consistent with the HL7 Version 3 philosophy of successively constraining an abstract information model,   the least constrained category in vocabulary is a <b>Concept Domain</b> - <i>a named category of like concepts (semantic type) that will be bound to one or more attributes in the RIM where the data types of those attributes are coded.</i> Concept Domains are independent of any specific vocabulary or code system.</p>
+					<p>The categorization of Concept Domains is hierarchical allowing for further constraint on the breadth of the semantic category covered by the Concept Domain. Such constrained domains are known as “sub-domains”.  Sub-domains allow for further specialization (constraint) on the intended values for a domain.</p>
+					<p>A list of intended values for a concept domain is referred to as a <b>Value Set</b>.   A Value Set consists of one or more coded concepts.  When a value set is associated with given concept domain. In the RIM controlling vocabulary, each value set is bound to a single Concept Domain and vice-versa.</p>
+					<p>A concept code is only unique within a particular context.  The context in which a concept is defined is called a <b>Code System</b>
+					</p>
+					<p>The HL7-defined vocabulary content is stored in dedicated repositories from which a number of views have been extracted to produce the listings for the RIM. The views are presented in table format and include the Concept Domains, Code Systems Value Sets, along with a Cross Reference between Concept Domains and Coded Attributes. </p>
+					<p>The Concept Domain name for each coded attribute in the RIM is specified in the RIM narrative. This specification occurs in the list of attribute properties in the format: <b>Concept Domain: MyConceptDomain</b> with the latter term linked to its entry in the Concept Domain table in this listing.</p>
+				</div>
+				<div title="Content" hl7Id="term-content">
+					<p>The Vocabulary that has been defined and bound to the RIM is presented below.  There are three primary sets of data. Each set consists of an index, with the listing linked to the definitions.  Each of the definitions is presented in tabular form, specific to the type being displayed.  Each of the following sub-clauses contains a "user's guide" section immediately below the index that describes in detail the table layout for that set of tables.  The three index sections are:</p>
+					<ul>
+						<li>Concept Domains:  This content is organized alphabetically by domain name.</li>
+						<li>Code Systems:  This content is organized alphabetically by code system name.</li>
+						<li>Value Sets: This content is organized alphabetically by value set name and is limited to those few value sets that are defined as containing all of the codes in one of the code systems bound to the Concept Domain for a particular RIM attribute.</li>
+					</ul>
+					<p>For each of these indexes, clicking on an entry will direct you to a tabular set of data about that entry.</p>
+				</div>
+			</precedingText>
+			<publishedItem contentsLevel="None">
+				<itemReference root="DEFN" artifact="VO" realmNamespace="UV"/>
+				<filter name="NormativeStandard" root="DEFN" filterType="Exclude" artifact="VO" subArtifact="VC" realmNamespace="UV"/>
+				<filter root="DEFN" filterType="Exclude" artifact="VO" subArtifact="VD" realmNamespace="UV"/>
+				<filter root="DEFN" filterType="Exclude" artifact="VO" subArtifact="VS" realmNamespace="UV"/>
+			</publishedItem>
+		</publishedGroup>
+		<publishedGroup name="voc-domains" title="Concept Domains" contentsLevel="Detailed">
+			<precedingText>
+				<div title="Concept Domains - Index and Content" hl7Id="VD-intro">
+					<p>
+				This table provides an index to the Concept Domains bound to a RIM attribute. The specific listing for a Concept Domain shows:</p>
+					<ul>
+						<li>its textual <b>definition</b>;</li>
+						<li>its <b>specializations and generalizations</b>, if any;</li>
+						<li>any <b>RIM attributes</b> for which it provides a constraint, along with their data types in parentheses; and</li>
+						<li>any <b>value set bindings</b> that are defined for it.</li>
+					</ul>
+				</div>
+			</precedingText>
+			<publishedItem contentsLevel="None">
+				<itemReference name="NormativeStandard" root="DEFN" artifact="VO" realmNamespace="UV"/>
+				<filter root="DEFN" filterType="Include" artifact="VO" subArtifact="VD" realmNamespace="UV"/>
+			</publishedItem>
+			<followingText>
+				<div title="Guide to Concept Domain Tables" hl7Id="VD-help">
+					<p>Each of the links in the index above will display the Concept Domain Table for the Concept Domain clicked.  Each of the tables is separate, and generated one per Concept Domain.   There is one row in the table for the Concept Domain that is in the index, and an additional row for each sub-domain (if any) that has been defined.  This continues for deeper levels in those cases where another sub-domain has been defined to further constrain a sub-domain.   Each table contains information about the Concept Domain in each column; the columns are numbered in the descriptions below.  Note that the column headings for the tables are shown in parentheses.</p>
+					<ol>
+						<li>Level (Lvl)
+					<p>This column indicates what sub-domain level the row is describing.  The first row in each table is '0', indicating that this row is for the parent domain, as listed in the Concept Domain Index.  A '1' in this column indicates a sub-domain one level down from the parent, a '2' indicates a sub-domain of a level-1 sub-domain, and so forth.</p>
+						</li>
+						<li>Name and Binding (Concept Domain Name <i>Value Set Binding</i>)
+					<p> This column shows the name of the Concept Domain and its Context Bindings, if any.  The name is in regular text, and the name of the value set is in italics.  Immediately following the name of the value set is the name of the binding context in parentheses and the coding strength of that binding, as either 'CNE' or 'CWE'.   For those Concept Domains with a value set Context Bound to the "unclassified" context, it is displayed as <strong>(nos)</strong>; this is an indication that the binding is under discussion in the responsible work group, and has not yet had the binding finalized to a Binding Realm.  The value set name is hyper-linked to the value set entry in the Value Set Tables.  Note also that there are a few entries with a value set OID in italics enclosed in square brackets; this is shown when the value set has no content in its definition.  Note that in most of these cases, the name of the value set is the same as the concept domain.</p>
+						</li>
+						<li>Attribute Domain Binding (RIM Attribute)
+					<p>This column identifies the RIM attribute (and its data type) that is constrained by the Concept Domain.   The name of the RIM attribute is hyper-linked to the attribute in the RIM in this set of documents.  The entry in parentheses is the data type, which in every case is a 'CD' or one of its specializations that can carry coded data in V3.  Note that in most cases, there is an attribute only for the level 0 Concept Domain; most sub-domains are used in the constraint process in modeling, and are constraints on attributes that have been constrained from the RIM attribute.   Also note that in most cases a Concept Domain constrains only a single RIM attribute.</p>
+						</li>
+						<li>Documentation (Definition/Description)
+					<p>This column contains all the documentation that has been captured about this Concept Domain.  There is a Definition of the Domain, followed by a Discussion or a Description.  Note that in some cases there is only the text "Description still needed", which is self-explanatory.  In other cases, the cell in the table is blank, indicating that there is no documentation on file for this Concept Domain.  The Description may contain Constraints, Examples, and other items of documentation to assist the reader in the understanding of the meaning and use of the Concept Domain.</p>
+						</li>
+					</ol>
+				</div>
+			</followingText>
+		</publishedGroup>
+		<publishedGroup name="voc-systems" title="Code Systems" contentsLevel="Detailed">
+			<precedingText>
+				<div title="Code Systems - Index and Content" hl7Id="VC-Intro">
+					<p>This table provides is an "index" to the HL7 Code Systems that provide values for RIM attributes whose data type is "coded simple" (CS). This list is alphabetically ordered by code system name. Each of these internally maintained code systems is listed in an individual sub-clause.  These may be accessed by clicking on the hyper-linked name of the coding system in the list.</p>
+				</div>
+			</precedingText>
+			<publishedItem contentsLevel="None">
+				<itemReference name="NormativeStandard" root="DEFN" artifact="VO" realmNamespace="UV"/>
+				<filter root="DEFN" filterType="Include" artifact="VO" subArtifact="VC" realmNamespace="UV"/>
+			</publishedItem>
+			<followingText>
+				<div title="Guide to Code System Tables" hl7Id="VC-help">
+					<p>Each of the links in the index above will connect to a table with the contents of the code system.  The list above is alphabetical by code system name.  Those code system names that are in <strong>bold</strong> typeface are those that  have their codes stored within the HL7 Vocabulary store.  This means either that they are code systems authored and maintained by HL7 through the harmonization and balloting process, or they are code systems whose coded content has been mirrored in the HL7 Vocabulary store for convenience.  The other code systems are those that are externally maintained, and their entries here are used for various bindings in the models and to the Concept Domains.  In these cases, the content is not available in the HL7 Vocabulary store; the terminology publishers of these must be contacted for a copy of their content.</p>
+					<p>Each of the code system tables is displayed with four columns; the column heading and their display details are described below; the column headings are in parentheses.  There is once concept code (coded term) on each row in a table.</p>
+					<ol>
+						<li>Hierarchy level and selectability type (Lvl-Typ)
+					<p>The first piece of data in this column is an integer indicating the hierarchical depth of the code value on this row.  This is followed by a hyphen and an upper case letter which is one of the following:</p>
+							<ul>
+								<li>
+									<strong>L</strong> Leaf; a term that has no children in the specialization hierarchy, and is selectable in the HL7 tooling, and therefore deemed to be a leaf.</li>
+								<li>
+									<strong>A</strong> Abstract; a term that has children in the specialization hierarchy, but is not, itself, selectable in the HL7 tooling and therefore deemed abstract.</li>
+								<li>
+									<strong>S</strong> Specializable; a term that has children in the specialization hierarchy, and is also selectable in the HL7 tooling and therefore deemed specializable.</li>
+							</ul>
+							<br/>
+						</li>
+						<li>Code/Term and Value Set Head Code reference (Concept Code  <i>Head Code-defined Value Set</i>)
+					<p>This column contains the string value of the concept code.  In those cases where this concept code is also used as a 'head code' for a value set that is defined as a 'head code and all its children' type of value set, then the name of the value set is shown in the same cell as the coded term, but in italics and placed beneath it.  The named value set is also hyper-linked to the value set in the value set tables.  For ease of readability of the hierarchies, there is a dot (period, 0x2E) for each level deeper in the hierarchy prepended to the code value.</p>
+						</li>
+						<li>Coded Concept Display Name (Print Name)
+					<p>This is the string that is associated with the coded concept term, and is the primary english designation for the concept.</p>
+						</li>
+						<li>Coded Concept Definition, Properties and Relationships
+					<p>This is the definition of the coded concept plus any assigned properties and relationships.  The properties provide additional values that describe or qualify the concept.  The relationships define semantic links between this concept and other concepts.  The two most common concept relationships are the "Specializes" and "Generalizes" relationships that define the sub-type hierarchies within a code system   Note that many concepts do not not have these definitions.</p>
+						</li>
+					</ol>
+				</div>
+			</followingText>
+		</publishedGroup>
+		<publishedGroup name="voc-sets" title="Value Sets" contentsLevel="Detailed">
+			<precedingText>
+				<div title="Value Sets - Index and Content" hl7Id="VS-Intro">
+					<p>This table is an "index" to the HL7 Value Sets that are defined as "all-codes" for one of the RIM-controlling code systems. They are listed here in alphabetic sequence. The index links to the specific Value Set definition.</p>
+				</div>
+			</precedingText>
+			<publishedItem contentsLevel="None">
+				<itemReference name="NormativeStandard" root="DEFN" artifact="VO" realmNamespace="UV"/>
+				<filter root="DEFN" filterType="Include" artifact="VO" subArtifact="VS" realmNamespace="UV"/>
+			</publishedItem>
+			<followingText>
+				<div title="Guide to Value Set Tables" hl7Id="VS-help">
+					<p>The information block describing a value set begins with the value set name followed by the value set OID in square brackets.  Following that is a summary of the code systems having content included in the value set.  This summary is numbered, with an increasing integer for each additional code system having content participating in the value set.  That is followed by the code system name, which is hyper-linked to the table entry for the code system that can also be accessed from the preceding section.   Last on that line is the code system OID in square brackets.</p>
+					<p>If there are Context Bindings defined for this value set, they are listed next.    This binding section starts with the line "Context Bindings to concept domain(s):", and is followed by the bindings, one per row.  Each binding is the name of the Concept Domain (which is hyper-linked to the entry in the Concept Domain tables), followed by the phrase "in Realm:", followed by the binding realm for the binding and the coding strength of that binding (CNE or CWE).  Note that when the Binding Realm has been set to 'unclassified' (indicating that a decision on the binding is still pending work group action), the word "undetermined" is used instead of the name of the Binding Realm.</p>
+					<p>Below that is the description of the value set as provided by the authors of the value set (some value sets are missing descriptions which need to be added at some future date).</p>
+					<p>Following the description of the value set is table of data describing the content definition for the value set.  This table has five columns showing information for each of the defining statements making up the value set definition, each of which is on its own row in this table.  The content definition is presented in a grouped fashion to hopefully make it more understandable to the reader.   The definition consists of a list of "content blocks" each one of which follows the same type of format.  A content block may also include an additional content block, which has the same type of format, including being able to include another content block; in this way the definition is inherently recursive, as the Value Set Model is designed to support.  A properly defined value set has no cycles in its recursive structure. </p>
+					<p>The table containing the value set definition renders this recursive structure accurately, but obviously suffers from the limitations of rendering a recursive nested structure as a linear tabulated list.  Special characters, indenting, and hyper-linking attempt to ameliorate these limitations.  The keywords, special characters, definitions, and other information rendered in each of these columns are described below.  The numbers identify the column in the table, with the heading text of the column in parentheses.</p>
+					<ol>
+						<li>Definition Depth (Lvl)
+					<p>  This is an integer that indicates the depth of a definition statement, and assists the reader in visualizing constructs such as nested value sets, included transitive closure sets, statements in a particular content block, etc. The number always starts at zero, which can be thought of as the definition 'root' of the value set.  The integers can be used to identify each of the 'content block' definitions.  Note however that the integers refer to the nesting level of the recursive structure and references; a particular content block will cover a range of integers, and thus must be thought of as 'greater than nn' rather than equal to a particular number.</p>
+						</li>
+						<li>Content Type (Content Type)
+					<p>  This column defines the type of content in a definition statement.  It contains a number of key phrases that indicate how the content declared in the remaining columns is incorporated into the value set.  Some of these phrases are flags in the definition expression, and some are links to sets of included codes.  Note that each entry in this column is preceded by one or more dots ('<strong>.</strong>') to give a visual aid for the depth of the defining entry, one dot per level of depth.  The key phrases that may appear in this column are:</p>
+							<p>
+								<strong>content</strong>  This is the root entry for the value set; for those based on multiple code systems, this entry is the first code system in the value set definition.  This is always used in the first row of the table, depth 0 (zero).  There is only ever one single row in the table with this label.  The rows following this row are the content definition for the first content section.  This first row with this keyword serves as the header for the initial content block.  Note that the value set definition is recursive; content blocks are contained within other content blocks.  Therefore the content block that is headed by this keyword in the definition for the entire value set, all other definitions are 'nested' within it. Any particular instance of <strong>content</strong> can only contain child elements from <strong>one of the following five types</strong>, and only one of these types, <i>codeBasedContent</i>, can repeat.  (Note that this restricted list of five sub-types also applies to  the elements <i>unionWithContent. intersectionWithContent,</i> and <i>excludedContent</i> discussed under <i>combinedContent</i>below.) 
+							</p>
+							<ol>
+								<li>
+									<strong>codeBasedContent</strong>  This sub-type indicates that a specific code from the coding system is to be included in the value set.  The identity of the code system from which the code is drawn is defined in the final row labeled with a Definition Depth of one less than the level of this row (indicating the 'current' code system set of content); the code system's definition is inherited by all rows in a content block.  The specific code is defined in the 'Primary Reference' column.  There may be an arbitrary number of codeBasedContent rows in a content block; there is one for every individual code that is explicitly listed to be included in the content block.  The identification of the precise code is on this same row.  Note that although each of these rows identifies a single code from a single coding system, a property of 'transitive closure' (identified in the 'Qualifiers/Identifiers' column) can result in a collection of codes for this one rows as the tree in the coding system hierarchy is followed.<br/>
+								</li>
+								<li>
+									<strong>propertyBasedContent</strong>  This sub-type is a header of a set of zero to many rows that will each be an include or exclude specification based on the properties of the concepts and or the properties of the code, as defined with the coding system in the vocabulary store.  Each of the rows in the list will have the element statement in this Concept Type column; these statements are:<br/>
+									<ul>
+										<li>
+											<strong>includeWithConceptProperty</strong>   The set of codes resulting from evaluating the property of the concept will be included in the value set.  The property referenced will be identified in the 'Primary Reference' column.  An expression with the value to be evaluated against the property will be in the 'Qualifiers/Identifiers' column.<br/>
+										</li>
+										<li>
+											<strong>excludeWithConceptProperty</strong>   The set of codes resulting from evaluating the property of the concept will be excluded from the value set.  The property referenced will be identified in the 'Primary Reference' column.  An expression with the value to be evaluated against the property will be in the 'Qualifiers/Identifiers' column.<br/>
+										</li>
+										<li>
+											<strong>includeWithCodeProperty</strong> The set of codes resulting from evaluating the property of the code will be included in the value set.  The property referenced will be identified in the 'Primary Reference' column.  An expression with the value to be evaluated against the property will be in the 'Qualifiers/Identifiers' column.<br/>
+										</li>
+										<li>
+											<strong>excludeWithCodeProperty</strong>  The set of codes resulting from evaluating the property of the code will be excluded from the value set.  The property referenced will be identified in the 'Primary Reference' column.  An expression with the value to be evaluated against the property will be in the 'Qualifiers/Identifiers' column.
+							<br/>
+										</li>
+									</ul>
+									<p>Note that the exact syntax of the expressions and arguments for these definition statements will be enumerated later (there are currently no value sets that use this type of defining statement in the HL7 vocabulary store).</p>
+								</li>
+								<li>
+									<strong>codeFilterContent</strong>  This sub-type identifies a row that uses an expression to define a collection of codes.  The expression is listed in the 'PrimaryReference' column.  There may be only one row of this type in a content block.  The definition of the filter is on the same row, and is an expression in a form supported by the coding system.  This expression is shown in the 'Primary Reference' column, with the expression language shown in parentheses following the expression. If the expression in the database is not a proper expression in one of the designated expression languages, it will be shown as a "comment" in one of the languages and will be prefaced with the phrase "invalid expression."  in this circumstance an OpenIssue is also registered against the parent content type.<br/>
+								</li>
+								<li>
+									<strong>valueSetReference</strong> This sub-type indicates that another value set is being referenced in this definition.  The name of the included value set is in the 'Primary Reference' column, and the OID of the value set is enclosed in square brackets in the 'Qualifiers/Identifiers' column, and the value set name is hyper-linked to the table for the included value set within this value set definitions file.  Note that occasionally there is no hyperlink to the named value set; in these cases, the value set referenced has no content (may be a dangling reference, an incomplete definition, or other kind of error).  In these cases, there is also no value set content definition table for such a referenced value set.<br/>
+								</li>
+								<li>
+									<strong>combinedContent</strong>  This sub-type indicates that the rows following it are the content definition of an additional set of content making up the value set.  Each of the rows following this sub-type (or the content keyword above) might be one of several different kinds of definition statements that must be evaluated to derive the list of coded concepts defined by the value set.   Each of the level numbers greater than the number of the row with this label are individual statements of content that are part of this content block, and must be combined for the codes from the specified coding system.  There is only one row with this sub-type in a content block, and this serves as the header for a content block.
+			<p>When an additional block of content which starts with this 'combinedContent' sub-type is to be included in a value set, there are additional keywords that may appear in this second column which apply only to how a particular content block is to be combined with the value set when evaluating its content.  The row immediately following the row with the 'combinedContent' keyword must contain one of the following keywords to indicate how the content specification is to be combined into the value set.  Note that in a content block which is headed with a 'combinedContent' row, each of the other content definition rows using the sub-types 'codeBasedContent', 'valueSetReference', 'propertyBasedContent', 'codeFilterContent' or a nested 'combinedContent' will be preceded by a row with one of the following three keywords in the first column, again indicated how the content defined by that row is to be combined to create the set of codes making up the resolved value set.  The three keywords defining the combination strategies are:</p>
+									<ul>
+										<li>
+											<strong>unionWithContent</strong>  This keyword indicates that the following statement row is to be joined as a union with the previous content.  The word 'union' is used in its set connotation, since a value set usually can be treated as a 'set' in the mathematical sense.  The code system which the content drawn from is always defined in the 'Code System' column in one of these rows.<br/>
+										</li>
+										<li>
+											<strong>intersectionWithContent</strong>  This keyword indicates that the following content definition row be joined with the value set by taking the set intersection of its evaluated list of codes and combining it with the evaluated list of codes from the preceding definition statements in this value set definition.<br/>
+										</li>
+										<li>
+											<strong>excludeContent</strong>  This keyword is used when an exclusionary definition statement is used in the value set definition.  It is most commonly used when a 'tree' of codes is included (eg codeBasedContent with transitive closure) and the top code of the tree is not to be included.  It may also be used when arbitrary lists of codes are to be excluded from a collection of content that is included with an earlier 'union' entry.<br/>
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</li>
+						<li>Coding System (Code System)
+					<p>  This column identifies the name of the coding system for the included content for the content block.  It is populated for each entry type of 'content' or 'unionWithContent' and contains no values for other rows.  The name is hyper-linked to the code system entry in the code system tables (see previous section).</p>
+						</li>
+						<li>Specific Included Content (Primary Reference)
+					<p>This column identifies the precise element that is to be operated on when evaluating the contents of the value set.  For rows of type 'codeBasedContent', this contains the code value from the current code system.  When it holds the name of a code from the current code system in the content block, the code name is hyper-linked to the specific row in which the code appears in the code system tables.  For rows of type 'valueSetReference', this column contains the name of the value set, which is hyper-linked to the corresponding entry in this section of value set tables.  For other types of rows, this may contain the name of a concept property or a code property. For those rows that do not have a reference to a vocabulary object (such as 'combinedContent') or refer to a coding system only (which is held in the 'Code System' column), this column is not populated.</p>
+						</li>
+						<li>Additional Data (Qualifiers/Identifiers)<p>This column contains additional specification information used in the value set definition entries.  This column usually contains expressions and arguments that are used in conjunction with the content definition in the 'Content Type' column, but there also may be specific keywords and phrases used to indicate certain control flags being set in the value set definition, and there may be some entries where other types of defining expressions have been entered into the value set definition by the value set authors.  This column may also contain an OID in square brackets, which is generally only present for entries of type "valueSetReference", although most entries of this type are completely unstructured.  One of the specific keywords used is:</p>
+							<ul>
+								<li>Relationship: Generalizes With: TransitiveClosure<p>    This indicates that a transitive tree walk of the hierarchy starting at the code identified in the 'Primary Reference' column must be performed to collect a set of codes for this entry,.  This key-phrase is used only for entries of type 'codeBasedContent', is on the same row as a specific coded term, and should be interpreted to mean that the value set includes all of descendant concepts of that coded term.</p>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</followingText>
+		</publishedGroup>
+	</publishedGroup>
+</publication>

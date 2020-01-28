@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:mif="urn:hl7-org:v3/mif2"
+                 schemaVersion="2.2.0"
+                 xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:packageLocation root="PUB" realmNamespace="UV" subSection="MF" domain="MI"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:28"/>
+      <mif:legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012">
+         <mif:notation>
+            <mif:text>All rights reserved.</mif:text>
+         </mif:notation>
+      </mif:legalese>
+   </mif:header>
+   <mif:publishedItem name="MI-domain" title="Domain: Master File / Registry Infrastructure">
+      <mif:itemReference root="DEFN" realmNamespace="UV" version="201405" domain="MI"/>
+   </mif:publishedItem>
+</mif:publication>

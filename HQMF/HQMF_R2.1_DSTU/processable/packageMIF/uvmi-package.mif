@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:mif="urn:hl7-org:v3/mif2"
+             title="Master File / Registry Infrastructure"
+             schemaVersion="2.2.0"
+             isComplete="true"
+             xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:historyItem dateTime="2008-08-04T13:06:56">
+      <mif:description>
+         <mif:text>
+            <mif:p>
+            The publication data base from which this content was extracted
+            shows a <mif:b>lastEdit</mif:b> date-time as shown in this <mif:i>historyItem</mif:i>.
+	         </mif:p>
+         </mif:text>
+      </mif:description>
+   </mif:historyItem>
+   <mif:packageLocation root="DEFN" realmNamespace="UV" subSection="MF" domain="MI"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:28"/>
+      <mif:legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012">
+         <mif:notation>
+            <mif:text>All rights reserved.</mif:text>
+         </mif:notation>
+      </mif:legalese>
+      <mif:responsibleGroup groupName="Infrastructure and Messaging Work Group" organizationName="HL7"/>
+      <mif:approvalInfo approvalStatus="memn" approvingOrganization="HL7" ballotOccurrence="1"/>
+   </mif:header>
+   <mif:content>
+      <mif:freehandDocument schemaVersion="2.2.0" title="Introduction &amp; Scope">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="DomainOverview"
+                              realmNamespace="UV"
+                              artifact="DC"/>
+         <mif:documentContent>
+            <mif:text>
+               <mif:div title="Introduction &amp; Scope" hl7Id="intro-MFMI_DO000000UV-ic">
+                  <mif:p>The Master File / Registry domain comprises the classes and attributes needed to support Master Files and Registries.  It does so by providing a Trigger Event Control Act that can be associated through a subject participation either with an entity (a Role) or with an act.</mif:p>
+                  <mif:p>This domain focuses on the Master File / Registry specific extensions to the generic Trigger Event Control Act.  Refer to the <mif:object name="externalSpecRef">
+                        <mif:param name="name" value="uvai"/>Message Control Act Infrastructure Introduction</mif:object> for general details on Trigger Event Control Acts.
+</mif:p>
+                  <mif:p>
+                     <mif:b>Master File / Registry Acts</mif:b>
+                  </mif:p>
+                  <mif:p>
+                     <mif:i>Definition:</mif:i>
+                  </mif:p>
+                  <mif:p>Represents the act of maintaining information about the registration of its associated registered subject. The subject can be either an Act or a Role, and includes Role Based subjects such as persons, patients, practitioners, and equipment, as well as Act-based subjects such as lab exam definitions, prescriptions and drug protocol definitions. 
+</mif:p>
+                  <mif:p>Note on Act-based subjects (FAQ): they may be in any mood, including, but not limited to, DEF.</mif:p>
+                  <mif:p>
+                     <mif:i>Background Discussion: </mif:i>
+                  </mif:p>
+                  <mif:p>Maintaining a Master File / Registry over time requires that one tracks changes to a registered subject above and beyond state changes to that subject.  Typically, the registered subject is reasonably static and serves as reference information within environments that employ trusted sources of such information such as masterfiles and registries.  The registration event may have a unique identifier - separate from the unique identification of the subject - as well as a core set of related participations and act relationships that characterize the registration event and aid in the disposition of the subject information by a receiving system. </mif:p>
+                  <mif:p>
+                     <mif:i>Registry acts compared with Master Files:</mif:i>
+                  </mif:p>
+                  <mif:p>Master File applications support notifications about changes to the Master File. The application role that supports just this set of notifications is the equivalent of an 'ordinary' Master Files application that sends only event-mood notifications. In such cases the Registry act part of the transaction is minimal, and most of the information is carried in the subject participation that carries the 'Master File' data.
+Besides the 'Master Files notification' application role, a Registry application also supports events in order mood, as well as queries. For these interactions, the Registry application needs to track the participations on a registry interaction with a greater degree of precision than is possible with a basic control act. The Registry may have roles (such as patient and staff) as its main content, or entities (in role of "registered entity"). It may also consist of acts (such as acts in definition mood for specializations of atomic acts, as well as protocols, and complex act structures).
+</mif:p>
+                  <mif:p>
+                     <mif:i>Use cases include: </mif:i>
+                  </mif:p>
+                  <mif:p>Applications such as the patient Registry and the master patient index (MPI) make use of the Registry act specialization. Typically these applications receive data from multiple sources, and will also need to document the sources of any changes to the records in the Registries that they manage.
+</mif:p>
+                  <mif:p>
+                     <mif:i>Registry examples include:</mif:i>
+                  </mif:p>
+                  <mif:ul>
+                     <mif:li>MPI (master patient index)</mif:li>
+                     <mif:li>staff/employee Registries</mif:li>
+                     <mif:li>accreditation/certificate maintenance Registries</mif:li>
+                     <mif:li>acts (or groups of acts) defining protocols/treatment plans, order sets, etc.</mif:li>
+                     <mif:li>Canadian Provider Registry</mif:li>
+                  </mif:ul>
+                  <mif:p>
+                     <mif:i>Master File examples include:</mif:i>
+                  </mif:p>
+                  <mif:ul>
+                     <mif:li>charge description Master File</mif:li>
+                     <mif:li>location Master File</mif:li>
+                     <mif:li>device Master File.</mif:li>
+                  </mif:ul>
+                  <mif:p>
+                     <mif:b>Note:</mif:b> These use cases are meant to be general examples only. They are NOT meant to specify the details of a given Registry or Master File application. Such details will be created when specific Master File / Registry applications are added to the applicable  HL7 Version 3 domain.</mif:p>
+               </mif:div>
+            </mif:text>
+         </mif:documentContent>
+      </mif:freehandDocument>
+      <mif:freehandDocument schemaVersion="2.2.0" title="Introduction">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="MasterFileRegistry"
+                              realmNamespace="UV"
+                              artifact="DC"/>
+         <mif:documentContent>
+            <mif:text>
+               <mif:div hl7Id="intro-MFMI_DO000000UV-MasterFileRegistry-ic" title="Introduction">
+                  <mif:p>This domain discusses the Master File / Registry infrastructure. Refer to the appropriate domain for their Master File / Registry artifacts.</mif:p>
+               </mif:div>
+            </mif:text>
+         </mif:documentContent>
+      </mif:freehandDocument>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="DMIM" id="700700"
+                       realmNamespace="UV"/>
+         <mif:businessName name="Master File / Registry Infrastructure"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:walkthrough>
+                  <mif:text>
+                     <mif:p>The Master File / Registry (MFMI) Control Act is a specialization of the Trigger Event Control Act and is centered around the ControlActProcess act.  Refer to the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MC"/>
+                           <mif:param name="domain" value="AI"/>
+                           <mif:param name="artifact" value="DMIM"/>
+                           <mif:param name="id" value="100000"/>
+                           <mif:param name="realmNamespace" value="UV"/>Message Control Act Infrastructure D-MIM R2 walk-through</mif:object> for general details on the ControlActProcess element. The remainder of this walk-through discusses that specialization.
+</mif:p>
+                     <mif:p>
+                        <mif:b>Focal Classes Exposed</mif:b>
+                     </mif:p>
+                     <mif:p>The ControlActProcess act, as constrained within the Master File / Registry Infrastructure domain, constitutes the Trigger Event Control Act.  Its associations facilitate the production of Master File and Registry related messages.</mif:p>
+                     <mif:p>The structure of the Master File / Registry D-MIM supports both Master File and Registry messages.  In both cases, the ControlActProcess is associated with one or more instances of the RegistrationProcess.  RegistrationProcess is associated either with an Act payload or a Role payload.  Only one, not both, of Act or AssignedEntity may be present in a message type instance of the Master File / Registry act.</mif:p>
+                     <mif:p>
+                        <mif:b>Stubs</mif:b>
+                     </mif:p>
+                     <mif:p>The Master File / Registry DMIM contains 3 stubs. Any interaction which uses this ControlAct Wrapper will replace these with a domain Message Type.</mif:p>
+                     <mif:ul>
+                        <mif:li>The RegisteredAct stub will be replaced by an Act-based Message Type in Act-registry based interactions.</mif:li>
+                        <mif:li>The RegisteredRole stub will be replaced by a Role-based Message Type in Role-registry based interactions.</mif:li>
+                        <mif:li>The QueryByParameter stub will be replaced by a QueryByParameter based Message Type in interactions used as a response to registry queries.</mif:li>
+                     </mif:ul>
+                     <mif:p>
+                        <mif:b>Master File / Registry Domain Information Model Classes</mif:b>
+                     </mif:p>
+                     <mif:p>
+                        <mif:b>ControlActProcess</mif:b>
+                     </mif:p>
+                     <mif:p> Refer to the <mif:object name="externalSpecRef">
+                           <mif:param name="name" value="uvai"/>Message Control Act Infrastructure </mif:object> for a description of ControlActProcess as well as its associated classes (e.g. the A_DetectedIssue CMET).  
+</mif:p>
+                     <mif:p>This class is described more fully in the Control Infrastructure class of the Message Control domain.
+</mif:p>
+                     <mif:p>
+                        <mif:b>RegistrationProcess
+</mif:b>
+                     </mif:p>
+                     <mif:p>This class contains information relevant to the registration of the payload item(s) into the Master File or Registry.  It also allows for this Registration Act to be associated with the domain-defined Master File entry stub (as Role) or (xor) Registry domain-defined entry point stub (as Act).  </mif:p>
+                     <mif:p>
+                        <mif:b>Note: </mif:b>The RegistrationProcess act is the focal act of the message. It has been included in the Master File / Registry (MFMI) Trigger Event control Act message type for reasons of convenience only. It is effectively a piece of predefined payload that has been included in a specialized version of the Trigger Event Control Act wrapper. Trigger Events are typically based on state changes of the RegistrationProcess class. 
+</mif:p>
+                     <mif:p>As noted below, Role and Act Master File / Registry payloads shall not be combined into the same message type. The following attributes are supported for this class: </mif:p>
+                     <mif:ul>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>classCode</mif:i>: A code specifying the major type of Act that this Act-instance represents. This attribute is required and constrained to the value REG. (mandatory)</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>moodCode</mif:i>:  A code distinguishing whether an Act is conceived of as a factual statement or in some other manner as a command, possibility, goal, etc. This attribute is required and constrained by the x_ActMoodIntentEvent domain. Commonly used moodCodes include EVN (this subject payload is/has been registered) and RQO (please register this subject payload). (mandatory)</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>id</mif:i>: A unique identifier for the Act. (Required) <mif:b>Version 2 mapping</mif:b>: MFE-2.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>statusCode</mif:i>: A code specifying the state of the registration of the payload. This attribute is required and constrained by the ActStatus domain. The default value is "active". If the Registration has been replaced, its value will be "obsolete". (optional) <mif:b>Version 2 mapping</mif:b>: MFE-1</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>effectiveTime  </mif:i>An interval of time specifying the operative time of the Registration. (optional) <mif:b>Version 2 mapping</mif:b>: MFE-3</mif:p>
+                        </mif:li>
+                     </mif:ul>
+                     <mif:p>The following associations are defined for a Master File / Registry Trigger Event RegistrationProcess class. </mif:p>
+                     <mif:ul>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>author</mif:i>: Who or what is performing the registration. This participation is not required. This participation associates the registration with an entity responsible for the registration. The identification of the author is mandatory for interactions where the Registration Act is in request (RQO) mood.
+</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>custodian</mif:i>: Who or what is responsible for maintenance of the registration. The custodian identifies responsibility for the registration over its entire life cycle, whereas an author is responsible for a one-off event of requesting a (change to a) registration. Note that the custodian of a Registration Act in event (EVN) or promise (PRMS) mood identifies the custodian of the actual registration, i.e. the custodian of the registry, the entity responsible for the maintenance of the registry application.
+</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>definition</mif:i>: Defines the registration. This act relationship associates the registration with the ActDefinition class, which is used to identify the kind of registry.
+</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>infulfillmentOf</mif:i>: : Identifies zero or more Acts that are fulfilled by the focal Registration Act of this message. The Act that is fulfilled is the original registration request (an order) to register roles or acts. See below for an explanation of the use of this Act relationship.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>subject2 </mif:i>
+                              <mif:b>[act relationship]</mif:b>: Relates the registration process to the Registry payload information (represented here by Act) for which it is a Trigger Event Control Act. 
+</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:i>subject1</mif:i>:  Relates the registration process to the Master File payload information (represented here by Role) for which it is a Trigger Event Control Act.  
+</mif:p>
+                        </mif:li>
+                     </mif:ul>
+                     <mif:p>
+                        <mif:b>Act
+</mif:b>
+                     </mif:p>
+                     <mif:p>This class represents the stub of a domain-defined Master File / Registry payload message type that is instantiated for interactions. </mif:p>
+                     <mif:p>
+                        <mif:b>ActDefinition</mif:b>
+                     </mif:p>
+                     <mif:p>This class identifies the kind of payload that is undergoing registration. This is directly related to the kind of Registry. For example, it could identify the kind of Person, Clinical Statement or CDA document being registered. The id attribute of this class (Mandatory) identifies the vocabulary used to specify the kind of registry or the kind of registration subject.  The code attribute (Required) of this class contains a code taken from the vocabulary identified by the id attribute. <mif:b>Note</mif:b>: This attribute does not identify a specific master file / registry application. If a message is sent to a master file / registry application, then that application is identified in the Transmission Wrapper. <mif:b>Version 2 mapping</mif:b>: MFI-1
+</mif:p>
+                     <mif:p>
+                        <mif:b>Role</mif:b>
+                     </mif:p>
+                     <mif:p>This class represents the stub of a domain-defined Master File / Registry payload message type that is instantiated for interactions. (Note: Instead of allowing the subject role to be of any type, CQ intends to create an x_RegistrySubjectRoleClass value set containing the leaf-concepts of the RoleClassPassive and RoleClassRelationshipFormal hierarchies) </mif:p>
+                     <mif:p>
+                        <mif:b>Act relationships and Mood Codes</mif:b>
+                     </mif:p>
+                     <mif:p>This section contains some diagrams to illustrate the use of the infulfillmentOf and replacementOf Act relationships between Registration classes in different moods. Note that these diagrams have been greatly simplified: the names of the cloned Registration classes are incorrect, and the standard Trigger Event Control Act classes as well as some of the mandatory/required attributes have been removed.
+</mif:p>
+                     <mif:ol>
+                        <mif:li>A registration request in RQO mood (MFMI_RM700720)<mif:img class="graphic" src="MFMI_walkthru_2.gif" alt="Registration Request"
+                                    imageType="image/gif"/>
+                        </mif:li>
+                        <mif:li>A registration event (EVN) notification, used either in the context of a change to the registration because of changes made by the Custodian of the registry, or in response to a (fulfillment) registration request (MFMI_RM700700). In the first case the inFulfillmentOf relationship won't be present. Note that a response to a registry query (MFMI_RM700710) has the same structure; it may however not have the infulFillmentOf relationship.<mif:img class="graphic" src="MFMI_walkthru_3.gif" alt="Registration Notification"
+                                    imageType="image/gif"/>
+                        </mif:li>
+                        <mif:li>A registration replacement request (MFMI_RM700720). This is a both a request to register a subject payload as well as a request to replace a prior registration. The registry sets the statusCode of the replaced registration to "obsolete" once it fulfills the new registration request. <mif:img class="graphic" src="MFMI_walkthru_1.gif"
+                                    alt="Registration Replacement Request"
+                                    imageType="image/gif"/>
+                        </mif:li>
+                        <mif:li>A registration replacement notification, used either in the context of a replacement action undertaken by the Custodian of the registry, or in response to a (fulfillment) registration replacement request (MFMI_RM700700). In the first case the inFulfillmentOf relationship won't be present.<mif:img class="graphic" src="MFMI_walkthru_3.gif"
+                                    alt="Registration Replacement Notification"
+                                    imageType="image/gif"/>
+                        </mif:li>
+                     </mif:ol>
+                     <mif:p>
+                        <mif:b>Version 2 mapping</mif:b>
+                     </mif:p>
+                     <mif:p>In version 2, a given master files message concerns only a single master file (e.g. patients only).  The provision of a record-level event code (and requested activation date) on the MFE segment allows a single message to contain several types of changes (events, e.g. update, delete) to that file. The Version 3 model allows for changes to multiple master files within one interaction (e.g. a change to the person master file as well as to a location master file). Record-level changes are supported by means of the RegistrationProcess class which may be related to multiple records. The closest equivalent of the RegistrationProcess class is the MFE segment. 
+</mif:p>
+                     <mif:p>MFI-1 = ActDefinition, subject Act/Role classCode
+</mif:p>
+                     <mif:p>MFI-2 = Custodian.
+</mif:p>
+                     <mif:p>MFI-3, MFI-4, MFI-5 = ControlActProcess attributes 
+</mif:p>
+                     <mif:p>MFI-6 = Receiver responsibility related to the interaction
+</mif:p>
+                     <mif:p>MFE-1 = registrationProcess.statusCode (loosely) 
+</mif:p>
+                     <mif:p>MFE-2 = RegistrationProcess.id 
+</mif:p>
+                     <mif:p>MFE-3 = RegistrationProcess.effectiveTime
+</mif:p>
+                     <mif:p>MFE-4/MFE-5 = in Payload 
+</mif:p>
+                     <mif:p>MFE-6 = Author.time
+</mif:p>
+                     <mif:p>MFE-7 = Author
+</mif:p>
+                  </mif:text>
+               </mif:walkthrough>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="DMIM" id="100000"
+                       realmNamespace="UV"/>
+         <mif:businessName name="Master File/Registry Infrastructure Domain R2"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>Refer to the walkthrough for <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MC"/>
+                           <mif:param name="domain" value="AI"/>
+                           <mif:param name="artifact" value="DMIM"/>
+                           <mif:param name="id" value="100000"/>
+                           <mif:param name="realmNamespace" value="UV"/>Trigger event Control Act Walkthrough</mif:object> for usage of this domain model</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:storyboard schemaVersion="2.2.0" title="Master File Notifications"
+                      sortKey="01|MASTER FILE NOTIFICATIONS">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="SB" id="000001"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This storyboard describes interaction pattern A as contained in the interaction diagram.</mif:p>
+                     <mif:p>A registry may notify other systems of changes or updates. These may be "real time" notifications, or batch releases. The Registry sends one or more Registration Records to a Tracking application. The trigger event may be based on a status change of a registration (e.g. the creation of a new registration), or on the simple fact that a timer has expired (e.g. send all registry entries at 04:00 every Wednesday). Registry Notifications are based on the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="RM"/>
+                           <mif:param name="id" value="700700"/>
+                           <mif:param name="realmNamespace" value="UV"/>MFMI_RM700700 Trigger Event Control Act</mif:object>.</mif:p>
+                     <mif:p>The notification interaction may have receiver responsibilities associated with it in the form of an application response to indicate acceptance of the contents of the notification.</mif:p>
+                     <mif:p>Not every system at every site will need all the fields contained in notification message. This also means that an application response from a receiving system that it accepted the notification does not imply that the receiving system has an exact copy of the information and state that is on the sending system: it means only that a relevant subset of that message's data is kept on the receiving system in such a manner that a new registry notification message with the same primary key can be applied unambiguously to that subset of information. Application Responses to Registry Notifications can be defined as the <mif:object name="interactionRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="CO"/>
+                           <mif:param name="domain" value="MT"/>
+                           <mif:param name="artifact" value="IN"/>
+                           <mif:param name="id" value="001103"/>
+                           <mif:param name="realmNamespace" value="UV"/>Act Generic Status - Event (COMT_IN001103)</mif:object> interaction as defined in the Shared Messages domain.</mif:p>
+                     <mif:p>Version 2 mapping: MFN message, followed by an optional MFK. </mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+         <mif:activityDiagramFigure src="MFMI_ST000001UV01.gif" imageType="image/gif" alt="Activity Diagram"/>
+      </mif:storyboard>
+      <mif:storyboard schemaVersion="2.2.0" title="Registration Request, Fulfillment, Notifications"
+                      sortKey="01|REGISTRATION REQUEST FULFILLMENT THEREOF NOTIFICATIONS">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="SB" id="000002"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This storyboard describes interaction pattern B as contained in the interaction diagram.</mif:p>
+
+An application not "owning" a particular master file, transmits update requests (e.g. add, update, merge, unmerge, unlink, and link) or replacement requests to the "owning" system, for review and possible inclusion.  Prior to the actual update request a query may (optionally) be used to retrieve the latest information. Querying the registry (i.e. the owner of a master file) for the latest information is the best guarantee that one has access to the latest information. This information is subsequently used as a basis for the update process. This part of the interaction pattern is typically used in those cases where updates are done interactively by a user.<mif:p>Registries receive data (in the form of update and replace requests) from multiple sources, and need to document the sources of any changes to the records in the registries that  they manage. Registration Requests are based on the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="RM"/>
+                           <mif:param name="id" value="700720"/>
+                           <mif:param name="realmNamespace" value="UV"/>MFMI_RM700720 Trigger Event Control Act</mif:object>.
+</mif:p>
+                     <mif:p>The request interaction always has a receiver responsibility attached to it in the form of an application response. In the case of an accept the interaction contains the registry entry created as the result of the request, in the case of a reject it contains the identification of the registration request being rejected. </mif:p>
+                     <mif:p>	An application response from a receiving system that it accepted the registry update request does not imply that the receiving system has an exact copy of the information and state that is on the sending system: it means only that a relevant subset of that message's data is kept on the receiving system in such a manner that a new registry update request message with the same primary key can be applied unambiguously to that subset of information. Application Responses to Registration Requests are based on the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="RM"/>
+                           <mif:param name="id" value="700700"/>
+                           <mif:param name="realmNamespace" value="UV"/>MFMI_RM700700 Trigger Event Control Act.</mif:object>
+                     </mif:p>
+                     <mif:p>Version 2 mapping: none. MFN messages are occasionally "misused" as request messages, there are however no registration request trigger events in HL7 version 2.
+</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+         <mif:activityDiagramFigure src="MFMI_ST000002UV01.gif" imageType="image/gif" alt="Activity Diagram"/>
+      </mif:storyboard>
+      <mif:storyboard schemaVersion="2.2.0" title="Registry Entry" sortKey="01|REGISTRY ENTRY">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="SB" id="000003"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This storyboard describes interaction pattern C as contained in the interaction diagram.</mif:p>
+                     <mif:p>Querying the registry (i.e. the owner of a master file) for the latest information is the best guarantee that one has access to the latest information. A Query interaction is responded to by one or more response interactions. Response interactions are based on the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="RM"/>
+                           <mif:param name="id" value="700710"/>
+                           <mif:param name="realmNamespace" value="UV"/>MFMI_RM700710 Trigger Event Control Act</mif:object>.
+</mif:p>
+                     <mif:p>Queries may be based on attribute values of the Registration (e.g. registration ID, registration status) or on attribute values of the registration subjects (e.g. role ID, person name). A query based on attribute values of the registered subject will ensure that the information of the latest registration is returned, even if registrations for the subject have been replaced multiple times.
+</mif:p>
+                     <mif:p>Version 2 mapping: MFQ message, followed by a MFR response.</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+         <mif:activityDiagramFigure src="MFMI_ST000003UV01.gif" imageType="image/gif" alt="Activity Diagram"/>
+      </mif:storyboard>
+      <mif:applicationRole title="Example, Requester, Master Files &amp; Registry Acts" schemaVersion="2.2.0"
+                           sortKey="01|10|99|05|REQUESTER EXAMPLE|">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000003"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is an application role example of a requester of Master Files / Registry registrations. This Application Role sends registration requests to registries.</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:applicationRole>
+      <mif:applicationRole title="Example, Query Placer, Master File &amp; Registry Acts"
+                           schemaVersion="2.2.0"
+                           sortKey="01|10|99|99||15|EXAMPLE">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000004"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is an application role example of a Query Placer of Master Files / Registry registrations. This Application Role sends queries related to registrations to registries.</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:applicationRole>
+      <mif:applicationRole title="Example, Tracker, Master Files &amp; Registry Acts" schemaVersion="2.2.0"
+                           sortKey="01|99|99|30|EXAMPLE|">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000002"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is an application role example of a tracker of Master Files / Registry acts.</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+         <mif:receivesInteractions root="DEFN" subSection="MF" domain="MI" artifact="IN" id="999999"
+                                   realmNamespace="UV"
+                                   version="01"/>
+      </mif:applicationRole>
+      <mif:applicationRole title="Example, Manager, Master Files &amp; Registry Acts" schemaVersion="2.2.0"
+                           sortKey="01|99|99|99|MANAGER EXAMPLE">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000001"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is an application role example of a manager of Master Files / Registry acts.  This Application Role sends notifications, responds to queries and fulfills registration requests.</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+         <mif:sendsInteractions root="DEFN" subSection="MF" domain="MI" artifact="IN" id="999999"
+                                realmNamespace="UV"
+                                version="01"/>
+      </mif:applicationRole>
+      <mif:triggerEvent title="Example Query Response" schemaVersion="2.2.0"
+                        sortKey="01|99|99||10|EXAMPLE">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="TE" id="000102"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This domain doesn't define trigger events, this trigger event has been defined for example purposes only.</mif:p>
+                     <mif:p>This example represents trigger events based on the receipt of a query interaction.</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:triggerEvent>
+      <mif:triggerEvent title="Example State Change" schemaVersion="2.2.0"
+                        sortKey="01|99|99||99|STATE CHANGE">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" artifact="TE" id="000101"
+                              realmNamespace="UV"
+                              version="01"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         </mif:header>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This domain doesn't define trigger events, this trigger event has been defined for example purposes only</mif:p>
+                     <mif:p>This example represents trigger events based on state transitions of the Registry Act: Examples include: null to active (create), active to active (revise), obsolete (replace), and nullified (nullification). These state transitions may occur in Registry Acts irrespective of the mood of the Registry Act (which is mostly used in request or event mood). </mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+         <mif:stateTransition root="DEFN" className="Registry Act" stateTransitionName="null to active"
+                              subSection="MF"
+                              domain="MI"
+                              artifact="RM"
+                              id="700700"
+                              realmNamespace="UV"
+                              version="01"/>
+      </mif:triggerEvent>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="RM" id="700720"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Reg Registration Request Control Act"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is the entry point for the Master File / Registry Trigger Event Control Act RMIM used to request a (replacement of a) registration.</mif:p>
+                  </mif:text>
+               </mif:description>
+               <mif:walkthrough>
+                  <mif:text>
+                     <mif:p>The base class is RegistrationRequest based on the Act class. RegistrationRequest is a clone of the RegistrationProcess base class of the D-MIM. Refer to the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="DMIM"/>
+                           <mif:param name="id" value="700700"/>
+                           <mif:param name="realmNamespace" value="UV"/>Master File / Registry Infrastructure D-MIM Walkthrough</mif:object> for details of the classes of the D-MIM. 
+The R-MIM is equal to the D-MIM, except for the following attributes/associations: </mif:p>
+                     <mif:ul>
+                        <mif:li>
+                           <mif:i>subject</mif:i>: The cardinality of the subject act-relationship (between ControlActProcess and RegistrationRequest) has been constrained to 1..1. There is a known open issue related the acknowledgement of individual registration requests contained within master file messages. This Order-related issue isn't limited to the registry domain. The cardinality will be set to 1..* again once a solution has been found.</mif:li>
+                        <mif:li>
+                           <mif:i>author</mif:i>: The identification of the Author of the registration request is mandatory (as opposed to being optional in the D-MIM). The participation has a 1..1 cardinality.
+</mif:li>
+                        <mif:li>
+                           <mif:i>custodian</mif:i>: The custodian isn't present in this R-MIM. Registration requests don't have a Custodian, any resulting registrations will have a Custodian.
+</mif:li>
+                        <mif:li>
+                           <mif:i>replacementOf </mif:i>/ PriorRegistration: optional Act Relationship between a new Registration Request and a Prior Registration. If a Prior Registration is identified in a message instance, its status will be set to obsolete by the receiver of the message. PriorRegistration is a clone of the RegistrationProcess base class of the D-MIM. Note for Role-based registries: The use, and identification of, the PriorRegisteredRole is mandatory in those cases where the ID of the Prior Registration is unknown. Note for Act-based registries: The use, and identification of, the PriorRegisteredAct is mandatory in those cases where the ID of the Prior Registration is unknown.
+</mif:li>
+                        <mif:li>
+                           <mif:i>statusCode</mif:i>: Contains the status of the Registration Request. In request messages its value will typically be 'active', which is also the default value. This attribute is Mandatory (as opposed to Required in the D-MIM). 
+</mif:li>
+                        <mif:li>
+                           <mif:i>subject1/subject2</mif:i>: the cardinality of this association/participation is 0..1 (as opposed to 0..* in the D-MIM). There are no known use-cases for registrations of multiple entries.
+</mif:li>
+                     </mif:ul>
+                     <mif:p>Please refer to the Storyboard section for a description of Registry related interaction patterns.
+</mif:p>
+                  </mif:text>
+               </mif:walkthrough>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="RM" id="700700"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Reg Event Notification Control Act"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is the entry point for the Master File / Registry Trigger Event Control Act RMIM used for reporting about Regsitrations in event mood. This includes Master File Notification interactions and Registry Notifications caused by state changes in registrations, as well as responses to Registration Requests or Registration replacement Requests.</mif:p>
+                  </mif:text>
+               </mif:description>
+               <mif:walkthrough>
+                  <mif:text>
+                     <mif:p>The base class is RegistrationEvent based on the Act class. RegistrationEvent is a clone of the RegistrationProcess base class of the D-MIM. Refer to the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="DMIM"/>
+                           <mif:param name="id" value="700700"/>
+                           <mif:param name="realmNamespace" value="UV"/>Master File / Registry Infrastructure D-MIM Walkthrough</mif:object> for details of the classes of the D-MIM. 
+The R-MIM is equal to the D-MIM, except for the following attributes/associations: </mif:p>
+                     <mif:ul>
+                        <mif:li>
+                           <mif:i>subject</mif:i>: The cardinality of the subject act-relationship (between ControlActProcess and RegistrationRequest) has been constrained to 1..* (as opposed to 0..* in the D-MIM).</mif:li>
+                        <mif:li>
+                           <mif:i>custodian</mif:i>: identification of the Custodian of the registration is mandatory (as opposed to being optional in the D-MIM). The participation has a 1..1 cardinality.
+</mif:li>
+                        <mif:li>
+                           <mif:i>infulFillmentOf </mif:i>/ RegistrationRequest: optional Act Relationship between a new Registration and a Prior Registration Request. RegistrationRequest is a clone of the RegistrationProcess base class of the D-MIM. 
+</mif:li>
+                        <mif:li>
+                           <mif:i>replacementOf </mif:i>/ PriorRegistration: optional Act Relationship between a new Registration Request and a Prior Registration. If a Prior Registration is identified in a message instance, its status will be obsolete. PriorRegistration is a clone of the RegistrationProcess base class of the D-MIM.
+			Note for Role-based registries: The use, and identification of, the PriorRegisteredRole is mandatory in those cases where the ID of the Prior Registration is unknown. Note for Act-based registries: The use, and identification of, the PriorRegisteredAct is mandatory in those cases where the ID of the Prior Registration is unknown.
+</mif:li>
+                        <mif:li>
+                           <mif:i>statusCode</mif:i>: Contains the status of the Registration Request. In request messages its value will typically be 'active', which is also the default value. This attribute is Mandatory (as opposed to Required in the D-MIM). 
+</mif:li>
+                        <mif:li>
+                           <mif:i>subject1/subject2</mif:i>: the cardinality of this association/participation is 0..1 (as opposed to 0..* in the D-MIM). There are no known use-cases for registrations of multiple entries.
+</mif:li>
+                     </mif:ul>
+                     <mif:p>Please refer to the Storyboard section for a description of Registry related interaction patterns.
+</mif:p>
+                  </mif:text>
+               </mif:walkthrough>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="RM" id="700710"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Registry Query Response Control Act"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>This is the entry point for the Master File / Registry Trigger Event Control Act RMIM used for responses to a registry query. </mif:p>
+                     <mif:p>Queries are specific to a domain. Examples may include a query for the registration status of a patient, a query for provider details based on a provider id and a query for the act-based definition of a specific Radiology examination. </mif:p>
+                     <mif:p>This R-MIM is only used in interactions created by a Registry in response to a query. Please refer to the Storyboard section for a description of Registry related interaction patterns.
+</mif:p>
+                  </mif:text>
+               </mif:description>
+               <mif:walkthrough>
+                  <mif:text>
+                     <mif:p>The base class is RegistrationEvent based on the Act class. RegistrationEvent is a clone of the RegistrationProcess base class of the D-MIM. Refer to the <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="DMIM"/>
+                           <mif:param name="id" value="700700"/>
+                           <mif:param name="realmNamespace" value="UV"/>Master File / Registry Infrastructure D-MIM Walkthrough</mif:object> for details of the classes of the D-MIM. 
+</mif:p>
+                     <mif:p>This R-MIM is equal to the Master File / Registry Trigger Event Control Act R-MIM (See <mif:object name="staticModelRef">
+                           <mif:param name="root" value="DEFN"/>
+                           <mif:param name="subSection" value="MF"/>
+                           <mif:param name="domain" value="MI"/>
+                           <mif:param name="artifact" value="RM"/>
+                           <mif:param name="id" value="700700"/>
+                           <mif:param name="realmNamespace" value="UV"/> Master File / Registry Trigger Event Control Act RMIM </mif:object> for details of this R-MIM) except for the following attributes/associations: </mif:p>
+                     <mif:ul>
+                        <mif:li>The QueryByParameter and QueryAck query  classes have been added. Refer to the <mif:object name="staticModelRef">
+                              <mif:param name="root" value="DEFN"/>
+                              <mif:param name="subSection" value="QU"/>
+                              <mif:param name="domain" value="QI"/>
+                              <mif:param name="artifact" value="DMIM"/>
+                              <mif:param name="id" value="000000"/>
+                              <mif:param name="realmNamespace" value="UV"/>Query Infrastructure D-MIM</mif:object> for details on these Query-related classes.</mif:li>
+                        <mif:li>
+                           <mif:i>subject</mif:i>: The cardinality of the subject act-relationship (between ControlActProcess and RegistrationRequest) is set to 0..*. The response to a query may contain zero or more matching registrations.</mif:li>
+                     </mif:ul>
+                  </mif:text>
+               </mif:walkthrough>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="HD" id="700720"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Registry Request Control Act"/>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="HD" id="700700"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Registry Event Notification Ctrl Act"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>Master File / Registry Event Notification</mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="HD" id="700710"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Registry Query Response Control Act"/>
+         <mif:annotations>
+            <mif:documentation>
+               <mif:description>
+                  <mif:text>
+                     <mif:p>The Master File / Registry <mif:b>should </mif:b>be used by Master File / Registry Query Response messages that have a Role as a payload entry point and it <mif:b>can </mif:b>be used by Master File / Registry Query Response messages that have an Act as a payload entry point if,next to the Act itself, information related to the Registration of the Act needs to be contained in the response (e.g. RegistrationProcess.statusCode, RegistrationProcess.code, RegistrationProcess.effectiveTime). </mif:p>
+                  </mif:text>
+               </mif:description>
+            </mif:documentation>
+         </mif:annotations>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700721"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Reg Request Control Act,Role Subject"/>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700722"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Reg Request Control Act,Act Subject"/>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700701"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Reg Notif. Control Act, Role Subject"/>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700702"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Reg. Notif Control Act, Act Subject"/>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700711"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Registry Query Response,Role Subject"/>
+      </mif:supplementedArtifact>
+      <mif:supplementedArtifact>
+         <mif:artifact root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700712"
+                       realmNamespace="UV"
+                       version="01"/>
+         <mif:approvalInfo approvalStatus="appn" approvingOrganization="HL7"/>
+         <mif:businessName name="Master File / Registry Query Response, Act Subject"/>
+      </mif:supplementedArtifact>
+   </mif:content>
+</mif:package>
