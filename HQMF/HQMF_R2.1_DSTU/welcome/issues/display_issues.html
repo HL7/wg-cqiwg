@@ -1,0 +1,72 @@
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style>
+<strong>Last Updated: 7/2/2012</strong><br/>
+<br/>
+<strong>Notes:</strong>
+	<ul>
+		<<li>The ballot is currently in its preview period.</li>
+		<!--li><small>At ballot open, there are no known issue.</small></li>>
+		<li><small>When patches are available for an issue those patches are cumulative, that is the most recent patch includes all patches for that issue or related issues.  
+		Any issue patches are also wrapped up and added to the full site and core downloads (when appropriate) so those downloading for the first time will always have 
+		patched and complete content.</small></li-->
+	</ul>
+
+<strong>Issues:</strong>
+<!--ol>
+	<li><strong>Nutrition Domain Analysis Model &ndash; Link to Storyboards PDF File Broken</strong><br />
+	The link to the Nutrition Services Storybards and Use Cases PDF was broken.  This link has been corrected and a patch is available. <strong>
+	<a href="#uvnut_link">Download the patch here.</a></strong></li>
+	<li><strong>Identification of Medicinal Produces (IDMP) Domain &ndash; Updated RMIM Diagrams, Corrected References to CMETs, Restored Diagram</strong>
+	After ballot open, several issues were discoved with the IDMP domain content.  These issues have been addressed and a 
+	patch is available.  <a href="#idmp_correction">Download the patch here.</a></strong></li>
+	<li><strong>Clinical Statement Pattern Domain &ndash; Clickable DMIM Graphic Missing</strong>
+	The clickable overlay for the Clinical Statement DMIM was missing.  This clickable overlay, allowing the user to click through to 
+	a Table View of the DMIM, has been restored and a patch is available  <a href="#cocs_overlay">Download the patch here.</a></strong></li>
+	<<li><strong>RMIM Links to CMETs &ndash; Links will not resolve correctly in all browsers.</strong><br/>
+	Links within RMIM models to CMETs will not resolve in all browsers.  This is because the relative links are are formed using &quot;..\..\&quot; rather than the 
+	correct &quot;../../&quot;.  While many browsers will correctly interprete the backslashes for forward slashes, many will not, including older versions
+	of IE, Firefox, Chrome and more recent browsers with stricter interpretation rules.  Two patches are now available.  The first is a limited set for the
+	two domains that are balloting, Patient Administration (PRPA) and Pharmacy (PORX).  The second patch corrects all RMIM diagram links in all domains.  The user can also edit the URL in the browser address
+	bar to amend the following portion of the address string &quot;domains/uvxx/..\..\domains/uvct/&quot; to read &quot;domains/uvct/&quot; and the URL should 
+	resolve.  <a href="#rmim_diagrams">Download the patches here.</a></strong></li>
+	<li><strong>Preoperative Anesthesiology Domain Analysis Model &ndash; Updated Models in the DAM</strong><br />
+	The models in the Preoperative Anesthesiology DAM document have been updated and an updated document is available.
+	<strong><a href="#anesth_dam">Download the patch here.</a></strong></li>
+	<li><strong>Identification of Medicinal Products: Medication Domain (POME) &ndash; Missing Storyboard Graphic Message Displaying for DOME_ST532000UV Where No Storyboard Graphic Was Intended</strong><br />
+	The transforms that build the topic output always expect a storyboard narrative graphic even though such a graphic is not always needed or intended.
+	Section 1.3.7, PhPID Update (DOME_ST532000UV), specifically states that there is &quot;no process required for updating a PhPID&quot; and therefore no graphic of the process is required; however,
+	an &quot;Diagram or Graphic Unavailable&quot; message is still displayed.  A graphic indicating that no diagram was intended has been prepared and will be posted.  A patch for this
+	is available. <strong><a href="#idmp_graphic">Download the patch here.</a></strong></li>
+	<li><strong>Regulated Product Submission: Regulated Products Domain (PORP) &ndash; Missing Graphic</strong><br />
+	In the Narrative Section for 2.5.1, Regulated Product Submission, following the RPS Submission Unit header, the figure 1 graphic illustrating
+	a regulatory transaction is missing.  In addition, graphics indicating that no storyboard is intended for a section replace missing graphic or diagram messages.
+	This graphic has been replaced and a patch is available.  <strong><a href="#RPS_graphic">Download the patch here.</a></strong></li>
+  <li><strong>Reference Information Model (Foundation) &ndash; Incorrect Version 235 Instead of 236</strong><br />
+	The display html of the Reference Information Model version 235 was initially posted.  The correct version is 236.  This issue did not affect the generated materials
+	as the generator was correctly using v236.  This issue has been corrected and a patch is available. <strong><a href="#rim">Download the patch here.</a></strong></li>
+	<li><strong>Vocabulary (Foundation) &ndash; Incorrect Version 1086 Instead of 1098</strong><br />
+	The display html of the Vocabulary version 1086 was initially posted.  The correct version is 1098.  
+	This issue has been corrected and a patch is available. <strong><a href="#vocab">Download the patch here.</a></strong></li>
+	<li><strong>IP Compliance Statement &ndash; Full Ballot Package</strong><br />
+	A new IP Compliance Statement reflecting current HL7 policy has been added to all Domains, Domain Analysis Models, Infrastructure and Foundation materials in the V3 Ballot Web Site.  
+	This issue has been corrected and a patch for this is available. <strong><a href="#ip_comply">Download the patch here.</a></strong></li>	
+	<li><strong>Clinical Statement Pattern &ndash; Clickable DMIM Table View Not Visible</strong><br/>
+	The COCS DMIM graphic page that allows the user to click-through to the Clinical Statement Pattern DMIM tble view was incorrectly overwritten with a page that does not include the 
+	links to the table view.  This issue only affected the Clinical Statement Pattern download package.  The version on the V3 Ballot Web site is correct.  This issue has been corrected
+	and a patch is available. <strong><a href="#cocs_dmim">Download the patch here.</a></strong></li>
+	<li><strong>hData Record Format &ndash; Extraneous Numbering Removed; Co-Chair Section Updated</strong><br/>
+	The hData Record Format document has been updated to remove numbering which duplicated the already present section numbering
+	and to correct some errors in the co-chair and contributors section.  A patch is available. <strong><a href="#hdata_rf">Download the patch here.</a></strong></li>
+	<li><strong>Medication Statement and Administration: Pharmacy Domain (PORX) &ndash; Corrected storyboard graphics</strong></strong><br />
+	Due to a numbering error, the storyboard graphics in the Medication Administration and Medication Statement subsections were the same.  The numbering has been
+	corrected and the domain storyboards now appear correctly for both subsections.  <strong><a href="#porx_medstatement2">Download the patch here.</a></strong></li>
+	<li><strong>All Domains &ndash; Structured Short Names</strong> &mdash; Currently, structured sort names are not displayed in any domain.  This is by design.
+	Structured Sort Names were deemed to be of limited value (by V3 Publishing) and were dropped from the HTML expression of the ballot.  </li>
+	<li><strong>Pharmacy Domain (PORX) &ndash; Missing Descriptive Elements for Trigger Events and  Receiver Responsibilities for Interactions</strong> &mdash; Currently, descriptions for 
+	Trigger Events and receiver responsibilities for Interactions are not appearing (this is the same issue as described below).  For convenience sake, both a PORX-only and an all-domains patch
+	are available.  <strong><a href="#porx_descriptiveelements">Download the PORX-only patch here.</a></strong></li>
+	
+</ol>-->

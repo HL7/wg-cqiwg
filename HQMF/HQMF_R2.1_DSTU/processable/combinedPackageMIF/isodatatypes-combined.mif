@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:mif="urn:hl7-org:v3/mif2"
+             title="ISO-Harmonized Data Types, Release 1"
+             isComplete="true"
+             schemaVersion="2.2.0"
+             xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:packageLocation root="BAL" realmNamespace="UV" name="isodatatypes"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:42"/>
+      <mif:responsibleGroup groupName="Implementable Technology Specifications Work Group"
+                            organizationName="HL7"/>
+      <mif:contributor>
+         <mif:role>Primary Contributer &amp; MnM Co Chair</mif:role>
+         <mif:name name="Grahame Grieve"/>
+         <mif:affiliation>Health Intersections Pty Ltd</mif:affiliation>
+         <mif:email>mailto:grahame@healthintersections.com.au</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>Primary Contributer</mif:role>
+         <mif:name name="Charlie McCay" key="McCay, Charlie"/>
+         <mif:affiliation>Ramsey Systems Ltd</mif:affiliation>
+         <mif:email>mailto:charlie@ramseysystems.co.uk</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>ITS Co Chair &amp; Editor</mif:role>
+         <mif:name name="Paul Knapp"/>
+         <mif:affiliation>Knapp Consulting Inc.</mif:affiliation>
+         <mif:email>mailto:pknapp@pknapp.com</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>ITS Co Chair</mif:role>
+         <mif:name name="Dale Nelson"/>
+         <mif:affiliation>Lantana Consulting Group</mif:affiliation>
+         <mif:email>mailto:dale.nelson@lantanagroup.com</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>ITS Co Chair</mif:role>
+         <mif:name name="Andy Stechishin"/>
+         <mif:affiliation>CANA Software &amp; Services Ltd.</mif:affiliation>
+         <mif:email>mailto:andy.stechishin@gmail.com</mif:email>
+      </mif:contributor>
+   </mif:header>
+   <mif:content>
+      <mif:freehandDocument schemaVersion="2.2.0" title="ISO-Harmonized Data Types, Release 1">
+         <mif:packageLocation root="DEFN" artifact="DC" realmNamespace="UV" name="isodatatypes"/>
+         <mif:header/>
+         <mif:documentContent>
+            <mif:text>
+               <mif:div hl7Id="ballotnote" title="Notice to Balloters">
+                  <mif:p>
+		No substantive changes have been made to the specification since it was last balloted at HL7 in September 2009 however, where appropriate,
+		ballot reconciliation suggestions have been applied to the final ISO document. This specification is being re-balloted due to the large time gap 
+		between the last public review and now. Balloters are not being asked to provide detailed ballot comments as the referenced specification is already 
+		a declared ISO standard, but rather to provide an "Up/Down" ballot vote on this specification for the HL7 context. Any comments provided may receive 
+		future consideration.
+	  </mif:p>
+               </mif:div>
+               <mif:div hl7Id="introduction" title="ISO 21090 Healthcare Datatypes">
+                  <mif:p>
+      		The ISO-Harmonized data types are effectively the XML ITS Data Types R2. They will replace the 
+      		XML ITS Data Types R1. The format differences between the specification provided here and conventional HL7 specifications
+			arise because of the need to align with ISO style requirements.
+      	</mif:p>
+                  <mif:p>
+			The ISO-Harmonized data types document is a shared document between HL7 and ISO. The final format of 
+			this document is as a full ISO specification (it is identified as ISO/FDIS 21090:2009(E)). This
+			document is the result of a jointly-balloted document by HL7, ISO, and CEN in a ballot that opened 
+			on Mar 29, 2008 and closed on Aug 29, 2008 (5 months, per ISO and CEN rules). Ballot Disposition was 
+			conducted at both HL7 and ISO meetings through 2008 and 2009. 
+		</mif:p>
+                  <mif:p>
+      		The linked ISO-Harmonized Data Types, Release 1 document is a pdf: 
+      		<mif:a href="ISO 21090 Healthcare Datatypes.pdf">ISO Datatypes Standard.pdf</mif:a> (for HL7 
+			Normative Ballot) (Hint: right-click and select 'Save Target As' to download, or 'Open in New Window'.)  
+		</mif:p>
+                  <mif:p>Because the material would become an ISO standard, the ITS Work Group petitioned the Technical Steering Committee to move the document from DSTU to full Normative ballot and that petition was granted.</mif:p>
+                  <mif:p>Please note that the reconciliation spreadsheet from the September 2009 ballot has been posted on the Ballot Desktop.</mif:p>
+               </mif:div>
+               <mif:div hl7Id="guide" title="ITS R2 Guide">
+                  <mif:p>
+		   The guide has been previously balloted as an informative specification (September 2012) and will be published separately.
+		</mif:p>
+               </mif:div>
+               <mif:div hl7Id="attachment" title="Additional Information">
+                  <mif:p>
+      	Some additional useful supporting material can be found in an <mif:a href="ISO 21090 resources.zip">attachments
+		zip file</mif:a> (Hint: right-click and select 'Save Target As...' to save this file to your hard drive.) Note that these materials are Informative whereas the datatypes specification referred to above is Normative. 
+	  </mif:p>
+                  <mif:p>
+      	The additional information includes: 
+      </mif:p>
+                  <mif:ul>
+                     <mif:li>
+                        <mif:p>Schema for the datatypes</mif:p>
+                     </mif:li>
+                     <mif:li>
+                        <mif:p>Examples for the datatypes</mif:p>
+                     </mif:li>
+                  </mif:ul>
+               </mif:div>
+            </mif:text>
+         </mif:documentContent>
+      </mif:freehandDocument>
+   </mif:content>
+</mif:package>

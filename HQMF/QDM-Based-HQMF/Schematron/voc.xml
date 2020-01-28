@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RetrieveMultipleValueSetsResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:ihe:iti:svs:2008">
+  <DescribedValueSet ID="2.16.840.1.113883.1.11.20367" displayName="ObservationMeasureScoring" version="">
+    <ConceptList>
+      <Concept code="COHORT" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="cohort measure scoring" />
+      <Concept code="CONTVAR" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="continuous variable measure scoring" />
+      <Concept code="PROPOR" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="proportion measure scoring" />
+      <Concept code="RATIO" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="ratio measure scoring" />
+    </ConceptList>
+    <Source />
+    <SourceURI />
+    <Type>Expanded</Type>
+    <Binding>Static</Binding>
+  </DescribedValueSet>
+  <DescribedValueSet ID="2.16.840.1.113883.1.11.20368" displayName="ObservationMeasureType" version="">
+    <ConceptList>
+      <Concept code="OUTCOME" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="outcome measure type" />
+      <Concept code="PROCESS" codeSystem="2.16.840.1.113883.5.1063" codeSystemName="ObservationValue" displayName="process measure type" />
+    </ConceptList>
+    <Source />
+    <SourceURI />
+    <Type>Expanded</Type>
+    <Binding>Static</Binding>
+  </DescribedValueSet>
+  <DescribedValueSet ID="2.16.840.1.113883.1.11.16927" displayName="RoleClassServiceDeliveryLocation" version="">
+    <ConceptList>
+      <Concept code="SDLOC" codeSystem="2.16.840.1.113883.5.110" codeSystemName="RoleClass" displayName="service delivery location" />
+      <Concept code="DSDLOC" codeSystem="2.16.840.1.113883.5.110" codeSystemName="RoleClass" displayName="dedicated service delivery location/health care facility" />
+      <Concept code="ISDLOC" codeSystem="2.16.840.1.113883.5.110" codeSystemName="RoleClass" displayName="incidental service delivery location" />
+    </ConceptList>
+    <Source />
+    <SourceURI />
+    <Type>Expanded</Type>
+    <Binding>Static</Binding>
+  </DescribedValueSet>
+</RetrieveMultipleValueSetsResponse>

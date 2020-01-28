@@ -1,0 +1,4 @@
+<li><strong>DataAccess Consent CMET &ndash; Incorrect Walkthrough and Missing Attribute Level Descriptions</strong> &mdash; The walkthrough posted for the 
+	A_DataConsent universal CMET (COCT_RM580000UV) was initially an older version and the attribute level descriptions in the table and excel views
+	were missing; both issues have been corrected and a patch has been issued.  <a href="#DAC_CMET_patch">Download the patch here.</a>
+	</li>
