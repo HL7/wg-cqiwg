@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="qrda.xsl"?>
+<?xml-stylesheet type="text/xsl" href="cda.xsl"?>
 <!-- 
 	Title: Example Category III Sample File
-	Filename: CDAR2_QRDAIII_R1_2020DEC_Sample.xml
+	Filename: Sample_CDAR2_QRDAIII_N1_2021JAN.xml
 		
 	Version: 1.0 
 	Revision History: December, 2020
-	Standard complied with: HL7 QRDA Category III Normative Release 1 (ballot)
+	Standard complied with: 
+		HL7 CDA R2 Implementation Guide: Quality Reporting Document Architecture (QRDA III), Release 1 – US Realm
+		January 2021
+		HL7 Normative Ballot
 
-    Total Errors Expected: 0
-    Total Warnings Expected: 1
-    
    	THIS SAMPLE FILE IS NOT A NORMATIVE SPECIFICATION. IT IS INFORMATIVE ONLY.  
 
  	=====================================================================================================================================================     
@@ -38,7 +38,7 @@
 	<code code="55184-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
 		displayName="Quality Reporting Document Architecture Summary Report"/>
 	<title>Sample QRDA Category III Summary Report - (Informative)</title>
-	<effectiveTime value="20220105061231"/>
+	<effectiveTime value="20210101061231"/>
 	<confidentialityCode codeSystem="2.16.840.1.113883.5.25" code="N"/>
 	<languageCode code="en"/>
 	<versionNumber value="1"/>
@@ -49,11 +49,11 @@
 	</recordTarget>
 	<!--Device Author Example-->
 	<author>
-		<time value="20220111061231"/>
+		<time value="20210101061231"/>
 		<assignedAuthor>
 			<id root="3d0a32f3-5164-4a6f-8922-de3badf83de4"/>
 			<assignedAuthoringDevice>
-				<softwareName>SOME Data Aggregator Transform Tool AS00016dev</softwareName>
+				<softwareName>Some QRDA III Tool</softwareName>
 			</assignedAuthoringDevice>
 			<representedOrganization>
 				<id root="2.16.840.1.113883.19.5" extension="223344"/>
@@ -62,14 +62,14 @@
 		</assignedAuthor>
 	</author>
 	<!--Person Author Example-->
-	<author>
-		<time value="20220111061231"/>
+<!--	<author>
+		<time value="20210101061231"/>
 		<assignedAuthor>
 			<id root="2.16.840.1.113883.4.6" extension="1234567893" assigningAuthorityName="NPI"/>
 			<assignedPerson>
 				<name>
-					<given>Trevor</given>
-					<family>Philips</family>
+					<given>Author</given>
+					<family>Name</family>
 				</name>
 			</assignedPerson>
 			<representedOrganization>
@@ -77,7 +77,7 @@
 				<name>Good Health Clinic</name>
 			</representedOrganization>
 		</assignedAuthor>
-	</author>
+	</author>-->
 	<custodian>
 		<assignedCustodian>
 			<representedCustodianOrganization>
@@ -87,7 +87,7 @@
 		</assignedCustodian>
 	</custodian>
 	<legalAuthenticator>
-		<time value="20220111061231"/>
+		<time value="20210101061231"/>
 		<signatureCode code="S"/>
 		<assignedEntity>
 			<id root="bc01a5d1-3a34-4286-82cc-43eb04c972a7"/>
@@ -159,162 +159,165 @@
 						</table>
 						<list>
 							<item>
-								<content styleCode="Bold">Initial Population</content>:1000<list>
+								<content styleCode="Bold">Performance Rate: </content>0.842105
+							</item>
+							<item>
+								<content styleCode="Bold">Initial Population: </content>1000<list>
 									<item>
-										<content styleCode="Bold">Gender - Male</content>400</item>
+										<content styleCode="Bold">Gender - Male: </content>400</item>
 									<item>
 										<content styleCode="Bold">Gender -
-										Female</content>600</item>
+										Female: </content>600</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Not Hispanic or
-											Latino</content>350</item>
+											Latino: </content>350</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Hispanic or
-											Latino</content>650</item>
+											Latino: </content>650</item>
 									<item>
 										<content styleCode="Bold">Race - Black or African
-											American</content>300</item>
+											American: </content>300</item>
 									<item>
-										<content styleCode="Bold">Race - White</content>350</item>
+										<content styleCode="Bold">Race - White: </content>350</item>
 									<item>
-										<content styleCode="Bold">Race - Asian</content>350</item>
+										<content styleCode="Bold">Race - Asian: </content>350</item>
 									<item>
 										<content styleCode="Bold">Race - American Indian or Alaska
-											Native</content>0</item>
+											Native: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander</content>0</item>
+										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Other</content>0</item>
-									<item>
-										<content styleCode="Bold">Payer -
-										Medicare</content>350</item>
+										<content styleCode="Bold">Race - Other: </content>0</item>
 									<item>
 										<content styleCode="Bold">Payer -
-										Medicaid</content>250</item>
+										Medicare: </content>350</item>
+									<item>
+										<content styleCode="Bold">Payer -
+										Medicaid: </content>250</item>
 									<item>
 										<content styleCode="Bold">Payer - Private Health
-											Insurance</content>350</item>
+											Insurance: </content>350</item>
 									<item>
-										<content styleCode="Bold">Payer - Other</content>50</item>
+										<content styleCode="Bold">Payer - Other: </content>50</item>
 								</list>
 							</item>
 							<item>
-								<content styleCode="Bold">Denominator Exclusions</content>:50<list>
+								<content styleCode="Bold">Denominator Exclusions: </content>50<list>
 									<item>
-										<content styleCode="Bold">Gender - Male</content>30</item>
+										<content styleCode="Bold">Gender - Male: </content>30</item>
 									<item>
-										<content styleCode="Bold">Gender - Female</content>20</item>
+										<content styleCode="Bold">Gender - Female: </content>20</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Not Hispanic or
-											Latino</content>40</item>
+											Latino: </content>40</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Hispanic or
-											Latino</content>10</item>
+											Latino: </content>10</item>
 									<item>
 										<content styleCode="Bold">Race - Black or African
-											American</content>10</item>
+											American: </content>10</item>
 									<item>
-										<content styleCode="Bold">Race - White</content>20</item>
+										<content styleCode="Bold">Race - White: </content>20</item>
 									<item>
-										<content styleCode="Bold">Race - Asian</content>20</item>
+										<content styleCode="Bold">Race - Asian: </content>20</item>
 									<item>
 										<content styleCode="Bold">Race - American Indian or Alaska
-											Native</content>0</item>
+											Native: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander</content>0</item>
+										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Other</content>0</item>
-									<item>
-										<content styleCode="Bold">Payer -
-										Medicare</content>15</item>
+										<content styleCode="Bold">Race - Other: </content>0</item>
 									<item>
 										<content styleCode="Bold">Payer -
-										Medicaid</content>10</item>
+										Medicare: </content>15</item>
+									<item>
+										<content styleCode="Bold">Payer -
+										Medicaid: </content>10</item>
 									<item>
 										<content styleCode="Bold">Payer - Private Health
-											Insurance</content>15</item>
+											Insurance: </content>15</item>
 									<item>
-										<content styleCode="Bold">Payer - Other</content>10</item>
+										<content styleCode="Bold">Payer - Other: </content>10</item>
 								</list>
 							</item>
 							<item>
-								<content styleCode="Bold">Denominator</content>:1000<list>
+								<content styleCode="Bold">Denominator: </content>1000<list>
 									<item>
-										<content styleCode="Bold">Gender - Male</content>400</item>
+										<content styleCode="Bold">Gender - Male: </content>400</item>
 									<item>
 										<content styleCode="Bold">Gender -
-										Female</content>600</item>
+										Female: </content>600</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Not Hispanic or
-											Latino</content>350</item>
+											Latino: </content>350</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Hispanic or
-											Latino</content>650</item>
+											Latino: </content>650</item>
 									<item>
 										<content styleCode="Bold">Race - Black or African
-											American</content>300</item>
+											American: </content>300</item>
 									<item>
-										<content styleCode="Bold">Race - White</content>350</item>
+										<content styleCode="Bold">Race - White: </content>350</item>
 									<item>
-										<content styleCode="Bold">Race - Asian</content>350</item>
+										<content styleCode="Bold">Race - Asian: </content>350</item>
 									<item>
 										<content styleCode="Bold">Race - American Indian or Alaska
-											Native</content>0</item>
+											Native: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander</content>0</item>
+										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Other</content>0</item>
-									<item>
-										<content styleCode="Bold">Payer -
-										Medicare</content>350</item>
+										<content styleCode="Bold">Race - Other: </content>0</item>
 									<item>
 										<content styleCode="Bold">Payer -
-										Medicaid</content>250</item>
+										Medicare: </content>350</item>
+									<item>
+										<content styleCode="Bold">Payer -
+										Medicaid: </content>250</item>
 									<item>
 										<content styleCode="Bold">Payer - Private Health
-											Insurance</content>350</item>
+											Insurance: </content>350</item>
 									<item>
-										<content styleCode="Bold">Payer - Other</content>50</item>
+										<content styleCode="Bold">Payer - Other: </content>50</item>
 								</list>
 							</item>
 							<item>
-								<content styleCode="Bold">Numerator</content>:800<list>
+								<content styleCode="Bold">Numerator: </content>800<list>
 									<item>
-										<content styleCode="Bold">Gender - Male</content>300</item>
+										<content styleCode="Bold">Gender - Male: </content>300</item>
 									<item>
 										<content styleCode="Bold">Gender -
-										Female</content>500</item>
+										Female: </content>500</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Not Hispanic or
-											Latino</content>250</item>
+											Latino: </content>250</item>
 									<item>
 										<content styleCode="Bold">Ethnicity - Hispanic or
-											Latino</content>550</item>
+											Latino: </content>550</item>
 									<item>
 										<content styleCode="Bold">Race - Black or African
-											American</content>250</item>
+											American: </content>250</item>
 									<item>
-										<content styleCode="Bold">Race - White</content>300</item>
+										<content styleCode="Bold">Race - White: </content>300</item>
 									<item>
-										<content styleCode="Bold">Race - Asian</content>250</item>
+										<content styleCode="Bold">Race - Asian: </content>250</item>
 									<item>
 										<content styleCode="Bold">Race - American Indian or Alaska
-											Native</content>0</item>
+											Native: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander</content>0</item>
+										<content styleCode="Bold">Race - Native Hawaiian or Other Pacific Islander: </content>0</item>
 									<item>
-										<content styleCode="Bold">Race - Other</content>0</item>
-									<item>
-										<content styleCode="Bold">Payer -
-										Medicare</content>300</item>
+										<content styleCode="Bold">Race - Other: </content>0</item>
 									<item>
 										<content styleCode="Bold">Payer -
-										Medicaid</content>200</item>
+										Medicare: </content>300</item>
+									<item>
+										<content styleCode="Bold">Payer -
+										Medicaid: </content>200</item>
 									<item>
 										<content styleCode="Bold">Payer - Private Health
-											Insurance</content>250</item>
+											Insurance: </content>250</item>
 									<item>
-										<content styleCode="Bold">Payer - Other</content>50</item>
+										<content styleCode="Bold">Payer - Other: </content>50</item>
 								</list>
 							</item>
 						</list>
@@ -327,8 +330,8 @@
 							<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
 								displayName="Observation Parameters"/>
 							<effectiveTime>
-								<low value="20210101"/>
-								<high value="20211231"/>
+								<low value="20200101"/>
+								<high value="20201231"/>
 							</effectiveTime>
 						</act>
 					</entry>
@@ -2199,7 +2202,7 @@
 										displayName="Performance Rate"
 										codeSystemName="2.16.840.1.113883.6.1"/>
 									<statusCode code="completed"/>
-									<value xsi:type="REAL" value="0.833333"/>
+									<value xsi:type="REAL" value="0.842105"/>
 									<reference typeCode="REFR">
 										<externalObservation classCode="OBS" moodCode="EVN">
 											<!-- 
@@ -2387,8 +2390,8 @@
 							<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
 								displayName="Observation Parameters"/>
 							<effectiveTime>
-								<low value="20210101"/>
-								<high value="20211231"/>
+								<low value="20200101"/>
+								<high value="20201231"/>
 							</effectiveTime>
 						</act>
 					</entry>
@@ -2467,8 +2470,8 @@
 							<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
 								displayName="Observation Parameters"/>
 							<effectiveTime>
-								<low value="20210101"/>
-								<high value="20211231"/>
+								<low value="20200101"/>
+								<high value="20201231"/>
 							</effectiveTime>
 						</act>
 					</entry>
