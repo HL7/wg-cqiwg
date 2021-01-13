@@ -4,4 +4,4 @@ Published January 2021
 
 Version 1.1 Added a test enforcing having at most one diagnosis of rank = 1 in Encounter Performed template
 
-When  using the schematron, the vocabulary file voc.xml mudy be placed in the same location as the schematron file.
+When  using the schematron, the vocabulary file voc.xml must be placed in the same location as the schematron file.
