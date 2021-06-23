@@ -2,14 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="cda.xsl"?>
 <!-- 
 	Title: Example Category III Sample File
-	Filename: Sample_CDAR2_QRDAIII_N1_2021JAN.xml
+	Filename: Sample_CDAR2_QRDAIII_N1_2021MAY.xml
 		
 	Version: 1.0 
 	Revision History: December, 2020
 	Standard complied with: 
-		HL7 CDA R2 Implementation Guide: Quality Reporting Document Architecture (QRDA III), Release 1 – US Realm
-		January 2021
-		HL7 Normative Ballot
+		HL7 CDA R2 Implementation Guide: Quality Reporting Document Architecture (QRDA III), Normative Release 1 – US Realm
 
    	THIS SAMPLE FILE IS NOT A NORMATIVE SPECIFICATION. IT IS INFORMATIVE ONLY.  
 
