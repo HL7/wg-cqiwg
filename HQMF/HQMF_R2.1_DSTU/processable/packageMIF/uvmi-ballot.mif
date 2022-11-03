@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:mif="urn:hl7-org:v3/mif2"
+             isComplete="true"
+             schemaVersion="2.2.0"
+             xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:historyItem dateTime="2008-08-04T13:06:56">
+      <mif:description>
+         <mif:text>
+            <mif:p>
+            The publication data base from which this content was extracted
+            shows a <mif:b>lastEdit</mif:b> date-time as shown in this <mif:i>historyItem</mif:i>.
+	         </mif:p>
+         </mif:text>
+      </mif:description>
+   </mif:historyItem>
+   <mif:packageLocation root="BAL" realmNamespace="UV" domain="MI"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:28"/>
+      <mif:legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012">
+         <mif:notation>
+            <mif:text>All rights reserved.</mif:text>
+         </mif:notation>
+      </mif:legalese>
+      <mif:responsibleGroup groupName="Infrastructure and Messaging Work Group" organizationName="HL7"/>
+      <mif:contributor>
+         <mif:role>InM Co-Chair</mif:role>
+         <mif:name name="Graham Grieve" key="Grieve, Graham"/>
+         <mif:affiliation>Kestral Computing Pty Ltd.</mif:affiliation>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>InM Co-Chair</mif:role>
+         <mif:name name="Anthony Julian" key="Julian, Anthony"/>
+         <mif:affiliation>Mayo Clinic</mif:affiliation>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>InM Co-Chair</mif:role>
+         <mif:name name="Jingdong Li" key="Li, Jingdong"/>
+         <mif:affiliation>SAIC</mif:affiliation>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>InM Co-Chair</mif:role>
+         <mif:name name="Scott Robertson" key="Robertson, Scott"/>
+         <mif:affiliation>Kaiser Permanente</mif:affiliation>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>InM Co-Chair</mif:role>
+         <mif:name name="Dave Shaver" key="Shaver, Dave"/>
+         <mif:affiliation>Neotool LLC</mif:affiliation>
+      </mif:contributor>
+      <mif:approvalInfo approvalStatus="memn" approvingOrganization="HL7" ballotOccurrence="1"/>
+   </mif:header>
+   <mif:annotations>
+      <mif:documentation>
+         <mif:description>
+            <mif:text>
+               <mif:div hl7Id="prefNotes" title="Notes to Readers">
+                  <mif:p>This is the normative material for Version 3, Release 2.</mif:p>
+                  <mif:p>This includes the addition of <mif:object name="staticModelRef">
+                        <mif:param name="root" value="DEFN"/>
+                        <mif:param name="subSection" value="MF"/>
+                        <mif:param name="domain" value="MI"/>
+                        <mif:param name="artifact" value="DMIM"/>
+                        <mif:param name="id" value="100000"/>
+                        <mif:param name="realmNamespace" value="UV"/>Trigger Event ControlAct Infrastructure R2</mif:object>.</mif:p>
+               </mif:div>
+               <mif:div hl7Id="Acknow" title="Acknowledgements">
+                  <mif:p>The committee is indebted to the following past co-chairs, facilitators and primary contributors for their contributions towards the Public Health domain and the material presented here. </mif:p>
+               </mif:div>
+               <mif:table>
+                  <mif:tr>
+                     <mif:th>Name</mif:th>
+                     <mif:th>Role</mif:th>
+                     <mif:th>Organization</mif:th>
+                  </mif:tr>
+                  <mif:tr>
+                     <mif:td>John Kufuor-Boakye</mif:td>
+                     <mif:td>Primary Contributor</mif:td>
+                     <mif:td>Gordon Point Informatics</mif:td>
+                  </mif:tr>
+                  <mif:tr>
+                     <mif:td>Joann Larson</mif:td>
+                     <mif:td>Past InM Co-Chair</mif:td>
+                     <mif:td>Kaiser Permanente</mif:td>
+                  </mif:tr>
+                  <mif:tr>
+                     <mif:td>Douglas Pratt</mif:td>
+                     <mif:td>Past InM Co-Chair</mif:td>
+                     <mif:td>Siemens</mif:td>
+                  </mif:tr>
+                  <mif:tr>
+                     <mif:td>Rene Spronk</mif:td>
+                     <mif:td>Past InM Co-Chair</mif:td>
+                     <mif:td>Ringholm GmbH</mif:td>
+                  </mif:tr>
+               </mif:table>
+            </mif:text>
+         </mif:description>
+      </mif:documentation>
+   </mif:annotations>
+   <mif:content>
+      <mif:package isComplete="true" schemaVersion="2.2.0" title="Overview" sortKey="00">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="Overview" realmNamespace="UV"/>
+         <mif:content>
+            <mif:artifactRef root="DEFN" subSection="MF" domain="MI" name="DomainOverview"
+                             realmNamespace="UV"
+                             artifact="DC"/>
+            <mif:package isComplete="true" schemaVersion="2.2.0"
+                         title="Domain Message Information Models">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI"
+                                    name="Domain Message Information Models"
+                                    realmNamespace="UV"
+                                    artifact="DMIM"/>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="DMIM" id="700700"
+                                   realmNamespace="UV"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="DMIM" id="100000"
+                                   realmNamespace="UV"/>
+               </mif:content>
+            </mif:package>
+         </mif:content>
+      </mif:package>
+      <mif:package schemaVersion="2.2.0" isComplete="true" title="Master File - Registry"
+                   sortKey="01">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="MasterFileRegistry"
+                              realmNamespace="UV"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="appn"/>
+         </mif:header>
+         <mif:content>
+            <mif:artifactRef root="DEFN" subSection="MF" domain="MI" name="MasterFileRegistry"
+                             realmNamespace="UV"
+                             artifact="DC"/>
+            <mif:package isComplete="true" schemaVersion="2.2.0" title="Storyboards">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="Storyboards" realmNamespace="UV"
+                                    artifact="SB"/>
+               <mif:annotations>
+                  <mif:documentation>
+                     <mif:otherAnnotation type="Reference">
+                        <mif:text>
+                           <mif:p>For details on the interpretation of this section, see <mif:object name="publicationRef">
+                                 <mif:param name="name" value="v3guide"/>
+                                 <mif:param name="linkToEnd" value="v3gstory"/>the storyboard discussion</mif:object> in the Version 3 Guide.</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                     <mif:otherAnnotation type="Introduction">
+                        <mif:text>
+                           <mif:img class="graphic" src="MFMI_NA000005.gif"
+                                    alt="Master File / Registry Interaction Exchange Patterns"
+                                    imageType="image/gif"/>
+                           <mif:p>The above figure represents the interaction exchange patterns used by registries. The Master File / Registry domain doesn't define any interactions itself; this is up to other HL7 domains. The subsequent sections describe the most commonly used 3 interaction exchange patterns.
+</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                  </mif:documentation>
+               </mif:annotations>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="SB" id="000001"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="SB" id="000002"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="SB" id="000003"
+                                   realmNamespace="UV"
+                                   version="1"/>
+               </mif:content>
+            </mif:package>
+            <mif:package isComplete="true" schemaVersion="2.2.0" title="Application Roles">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="Application Roles"
+                                    realmNamespace="UV"
+                                    artifact="AR"/>
+               <mif:annotations>
+                  <mif:documentation>
+                     <mif:otherAnnotation type="Reference">
+                        <mif:text>
+                           <mif:p>For details on the interpretation of this section, see <mif:object name="publicationRef">
+                                 <mif:param name="name" value="v3guide"/>
+                                 <mif:param name="linkToEnd" value="v3gapprole"/>the discussion of application roles</mif:object> and their relationships in the Version 3 Guide.</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                     <mif:otherAnnotation type="Introduction">
+                        <mif:text>
+                           <mif:p>This domain discusses the Master Files infrastructure. Refer to the appropriate domain for their Master File / Registry application roles.  The roles listed here are for example/publication purposes.</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                  </mif:documentation>
+               </mif:annotations>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000003"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000004"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000002"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="AR" id="000001"
+                                   realmNamespace="UV"
+                                   version="1"/>
+               </mif:content>
+            </mif:package>
+            <mif:package isComplete="true" schemaVersion="2.2.0" title="Trigger Events">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="Trigger Events"
+                                    realmNamespace="UV"
+                                    artifact="TE"/>
+               <mif:annotations>
+                  <mif:documentation>
+                     <mif:otherAnnotation type="Reference">
+                        <mif:text>
+                           <mif:p>For details on the interpretation of this section, see <mif:object name="publicationRef">
+                                 <mif:param name="name" value="v3guide"/>
+                                 <mif:param name="linkToEnd" value="v3gtrigger"/>the discussion of trigger events</mif:object> in the Version 3 Guide.</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                  </mif:documentation>
+               </mif:annotations>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="TE" id="000102"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="TE" id="000101"
+                                   realmNamespace="UV"
+                                   version="1"/>
+               </mif:content>
+            </mif:package>
+            <mif:package isComplete="true" schemaVersion="2.2.0"
+                         title="Refined Message Information Models">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI"
+                                    name="Refined Message Information Models"
+                                    realmNamespace="UV"
+                                    artifact="RM"/>
+               <mif:annotations>
+                  <mif:documentation>
+                     <mif:otherAnnotation type="Reference">
+                        <mif:text>
+                           <mif:p>For details on the interpretation of this section, see <mif:object name="publicationRef">
+                                 <mif:param name="name" value="v3guide"/>
+                                 <mif:param name="linkToEnd" value="v3grmim"/>the description of RMIMs</mif:object> in the Version 3 Guide.</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                  </mif:documentation>
+               </mif:annotations>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="RM" id="700720"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="RM" id="700700"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="RM" id="700710"
+                                   realmNamespace="UV"
+                                   version="1"/>
+               </mif:content>
+            </mif:package>
+            <mif:package isComplete="true" schemaVersion="2.2.0"
+                         title="Hierarchical Message Descriptions">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI"
+                                    name="Hierarchical Message Descriptions"
+                                    realmNamespace="UV"
+                                    artifact="HD"/>
+               <mif:annotations>
+                  <mif:documentation>
+                     <mif:otherAnnotation type="Reference">
+                        <mif:text>
+                           <mif:p>For details on the interpretation of this section, see <mif:object name="publicationRef">
+                                 <mif:param name="name" value="v3guide"/>
+                                 <mif:param name="linkToEnd" value="v3ghmd"/>the description of HMDs</mif:object> in the Version 3 Guide.</mif:p>
+                        </mif:text>
+                     </mif:otherAnnotation>
+                  </mif:documentation>
+               </mif:annotations>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="HD" id="700720"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="HD" id="700700"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="HD" id="700710"
+                                   realmNamespace="UV"
+                                   version="1"/>
+               </mif:content>
+            </mif:package>
+            <mif:package isComplete="true" schemaVersion="2.2.0" title="Message Type Definitions">
+               <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="Message Type Definitions"
+                                    realmNamespace="UV"
+                                    artifact="MT"/>
+               <mif:content>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700721"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700722"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700701"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700702"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700711"
+                                   realmNamespace="UV"
+                                   version="1"/>
+                  <mif:artifactRef root="DEFN" subSection="MF" domain="MI" artifact="MT" id="700712"
+                                   realmNamespace="UV"
+                                   version="1"/>
+               </mif:content>
+            </mif:package>
+         </mif:content>
+      </mif:package>
+      <mif:package schemaVersion="2.2.0" isComplete="true" title="Quality Analysis Report"
+                   sortKey="99">
+         <mif:packageLocation root="DEFN" subSection="MF" domain="MI" name="Qareview" realmNamespace="UV"/>
+         <mif:header>
+            <mif:approvalInfo approvalStatus="ref"/>
+         </mif:header>
+         <mif:content/>
+      </mif:package>
+   </mif:content>
+</mif:package>

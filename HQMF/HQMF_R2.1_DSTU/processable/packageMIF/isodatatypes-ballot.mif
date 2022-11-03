@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:mif="urn:hl7-org:v3/mif2"
+             isComplete="true"
+             schemaVersion="2.2.0"
+             xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:packageLocation root="BAL" realmNamespace="UV" name="isodatatypes"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:42"/>
+      <mif:responsibleGroup groupName="Implementable Technology Specifications Work Group"
+                            organizationName="HL7"/>
+      <mif:contributor>
+         <mif:role>Primary Contributer &amp; MnM Co Chair</mif:role>
+         <mif:name name="Grahame Grieve"/>
+         <mif:affiliation>Health Intersections Pty Ltd</mif:affiliation>
+         <mif:email>mailto:grahame@healthintersections.com.au</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>Primary Contributer</mif:role>
+         <mif:name name="Charlie McCay" key="McCay, Charlie"/>
+         <mif:affiliation>Ramsey Systems Ltd</mif:affiliation>
+         <mif:email>mailto:charlie@ramseysystems.co.uk</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>ITS Co Chair &amp; Editor</mif:role>
+         <mif:name name="Paul Knapp"/>
+         <mif:affiliation>Knapp Consulting Inc.</mif:affiliation>
+         <mif:email>mailto:pknapp@pknapp.com</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>ITS Co Chair</mif:role>
+         <mif:name name="Dale Nelson"/>
+         <mif:affiliation>Lantana Consulting Group</mif:affiliation>
+         <mif:email>mailto:dale.nelson@lantanagroup.com</mif:email>
+      </mif:contributor>
+      <mif:contributor>
+         <mif:role>ITS Co Chair</mif:role>
+         <mif:name name="Andy Stechishin"/>
+         <mif:affiliation>CANA Software &amp; Services Ltd.</mif:affiliation>
+         <mif:email>mailto:andy.stechishin@gmail.com</mif:email>
+      </mif:contributor>
+   </mif:header>
+   <mif:content/>
+</mif:package>

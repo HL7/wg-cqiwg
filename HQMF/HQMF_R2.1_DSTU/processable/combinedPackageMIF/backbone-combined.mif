@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:mif="urn:hl7-org:v3/mif2"
+             title="Package Note to Readers"
+             isComplete="true"
+             schemaVersion="2.2.0"
+             xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:packageLocation root="BAL" realmNamespace="UV" name="backbone"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:40"/>
+      <mif:responsibleGroup groupName="V3 Publishing Work Group" organizationName="HL7"/>
+   </mif:header>
+   <mif:content>
+      <mif:freehandDocument schemaVersion="2.2.0" title="Package Note to Readers">
+         <mif:packageLocation root="DEFN" artifact="DC" realmNamespace="UV" name="backbone"/>
+         <mif:header/>
+         <mif:documentContent>
+            <mif:text>
+               <mif:div hl7Id="bbforeword" title="Foreword">
+                  <mif:div hl7Id="bbcopyright" title="Copyright Notice">
+                     <mif:p>The 2011-2012 Health Level Seven V3 Publication is copyrighted by Health Level Seven, Inc. (HL7) and is therefore protected by the Copyright Law of the United States and copyright provisions of various international treaties.  The effect of such laws and treaties is that you may not, without a license from Health Level Seven, Inc., copy or distribute HL7's publication Product. HL7 Organizational members are authorized to reproduce the publication for internal use in their organization.  This authorization use does not include reproduction of any part of this publication for inclusion in products for direct commercial resale.  HL7 Individual members may not reproduce or redistribute any part of this publication.</mif:p>
+                  </mif:div>
+                  <mif:div hl7Id="standdisclaimer" title="Standards Disclaimer Notice">
+                     <mif:p>The content of this document is not intended to be an alternative to, or replacement for, standards mandated for use within any jurisdiction.</mif:p>
+                  </mif:div>
+                  <mif:div hl7Id="bbwelcoack" title="HL7 Special Acknowledgments">
+                     <mif:p>In addition to acknowledging the Work Group Co-chairs and Facilitators, special credit is due a number of contributors:</mif:p>
+                     <mif:p>Special thanks go to George Beeler for serving as the V3 project leader and tools developer, Lloyd McKenzie for developing the Visio tool set for development of CMETs and Austin Kreisler with SAIC for development of the Publication Database.  George Beeler is also acknowledged for his leadership of the Publishing Work Group. The following individuals are also acknowledged for their intellectual contributions: Wes Rishel with Gartner Group, Jim Case with University of California, Ken McCaslin with Quest Diagnostics, and Dale Nelson with Zed-Logic Informatics, LLC.  The following individuals are acknowledged for their technical support in the production of this publication: Charlie McCay with Ramsey Systems, Ltd, Karen Van Hentenryck and Don Lloyd with HL7, Matthew Stephens with Ramsey Systems, Ltd.</mif:p>
+                  </mif:div>
+                  <mif:div hl7Id="bbBallotQuestions" title="Ballot Questions">
+                     <mif:p>If you have urgent questions regarding this publication or the V3 material you may contact the HL7 office at (+1) 734-677-7777 directly. When you call, identify to the operator that you are phoning regarding the V3 Ballot and you will be routed to immediate assistance.</mif:p>
+                  </mif:div>
+                  <mif:div hl7Id="bbovervcon" title="Contact Us">
+                     <mif:p>Need further information, please contact us:<mif:br/>
+                        <mif:br/>
+				Health Level Seven, Inc. 3300 Washtenaw Avenue, Suite 227,   Ann Arbor, MI 48104, USA<mif:br/>
+				(+1) 734-677-7777 (phone)      (+1) 734-677-6622 (fax)    E-mail <mif:a href="mailto:HQ@HL7.org">HQ@HL7.org</mif:a>
+                     </mif:p>
+                  </mif:div>
+               </mif:div>
+               <mif:div hl7Id="bbwelco" title="Welcome">
+                  <mif:p>Welcome to the HL7 Version 3 Standard and to this ballot of the Version 3 (V3) messaging standard! This package is the result of many years of work within the HL7 community and an increasingly focused effort with each new ballot cycle. We believe it is a major step forward for global health information standards. </mif:p>
+                  <mif:p>V3 is comprised of many separate documents.  The document you are currently reading is the Package Note to Readers.  It contains the following sections:</mif:p>
+                  <mif:p>
+                     <mif:a href="#bbballo">HL7 V3 Ballot Instructions</mif:a> - this section provides information helpful in completing the HL7 V3 ballot. If you plan to submit ballot comments, be sure to review this section.</mif:p>
+                  <mif:p>
+                     <mif:a href="#ExecSummary">V3 Ballot Packages</mif:a> - this section lists ballotable documents in this ballot web site.  You can use it to quickly identify the location of ballot items.  <mif:b>
+                        <mif:i>GO HERE FIRST!!!</mif:i>
+                     </mif:b>
+                  </mif:p>
+                  <mif:p>
+                     <mif:a href="#bbV3int">HL7 Version 3 Overview</mif:a> - review this section to understand what HL7 Version 3 is, why we developed HL7 Version 3, and the principles underlying the Version 3 Standard.</mif:p>
+                  <mif:p>
+                     <mif:a href="#bbstart">Getting Started</mif:a> - provides guidelines and recommendation on how you can approach the HL7 V3 Publication.
+			</mif:p>
+                  <mif:p>
+                     <mif:a href="#bbintro">HL7 Organizational Overview</mif:a> - provides a brief overview of the HL7 Organization, its mission and philosophy.</mif:p>
+                  <mif:p>The V3 Publication is composed of two types of documents: Foundation and Domain.  The Foundation documents are those documents that are broader in scope and tend to apply to all domain documents.  The Version 3 Guide, the HL7 Vocabulary Domain and Reference Information Model, for example, are Foundation documents.  Foundation documents also include the documents found in the Specification Infrastructure, the Implementation Technology Specifications and Services areas of the site.  Domain documents are produced for a specific domain such as pharmacy or scheduling and contain the messages relevant to that domain.  Most of the domain information currently in the V3 site are for the Universal Realm.  When they are available, Realm-specific domain content is presented in a section following the Universal Domains section.  </mif:p>
+                  <mif:p>Below is a graphical representation of the Foundation documents.<mif:br/>
+                     <mif:img class="graphic" src="bb_Backbone.gif" alt="bb_Backbone.gif"
+                              imageType="image/gif"/>
+                  </mif:p>
+                  <mif:p>Below are two graphical representations of the Domain content.  The first graphics displays the various domains with their logical groupings.  Please note that the domains are not organized this way in the site, but rather listed alphabetically underneath the Universal Domains section.  The second graphic displays common content types you will find in each domain, such as such as storyboards, DMIMs, Rmims, etc.<mif:br/>
+                     <mif:img class="graphic" src="bb_backbone_3.gif" alt="bb_backbone_3.gif"
+                              imageType="image/gif"/>
+                     <mif:img class="graphic" src="bb_backbone_2.gif" alt="bb_backbone_2.gif"
+                              imageType="image/gif"/>
+                  </mif:p>
+               </mif:div>
+               <mif:div hl7Id="bbballo" title="HL7 V3 Ballot Instructions">
+                  <mif:p>The HL7 V3 Ballot Package is available for download from the HL7 website. The Package will change from ballot cycle to ballot cycle dependent upon the standards being balloted. Due to the size of the V3 ballot material and the availability of extensive supporting materials, it is not necessary to download the entire package. You can choose the parts that are most important to you. Please refer to the ballot cycle <mif:a href="../../welcome/downloads/downloads.htm">download page</mif:a> for a listing of items available for download. (Hint: Please right-click and select "Open in New Window.")</mif:p>
+                  <mif:div hl7Id="bbballovot" title="V3 Voting Procedures">
+                     <mif:p>For this ballot cycle, the standard ANSI-required HL7 balloting procedure is followed:</mif:p>
+                     <mif:ol>
+                        <mif:li>
+                           <mif:p>HL7 announces opening of balloting period (at least 30 days prior to ballot period start).</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p> Voters may register to vote in any of the available ballot pools.  Voters must sign up for each specific pool in which they wish to participate. Ballot pools are available for sign up on the <mif:a href="http://www.hl7.org/ctl.cfm?action=ballots.home">HL7 Ballot Desktop</mif:a>.  (Hint: Please right-click and select "Open in New Window.")  <mif:i>Special Note — New Deadline:</mif:i> Please note that the Ballot Pool Sign Up period <mif:i>ends</mif:i> one week before the Ballot Pool Close deadline.  This means that ballot signup will end on September 1.  Please be sure to sign up for any pools you are interested in before this deadline.</mif:p>
+                           <mif:p>(<mif:i>Special Note:</mif:i> If you have signed up for ballot pools and you do not see those ballot pools when you return to the Ballot Desktop, please be sure to click the "September 2008 Ballot Cyle" link in the left-hand navigation; this will resolve most user issues.)  There are separate ballot pools for each of the ballot documents. Please note that several domain documents may be included in a single ballot document. You must log on to the HL7 Ballot Desktop in order to vote.  All HL7 members can use their HL7 logins and passwords for this purpose.  Non-members wishing to vote should contact HL7 to arrange for voting access by emailing Don Lloyd (<mif:a href="mailto:dlloyd@hl7.org">dlloyd@hl7.org</mif:a>) and Diana Stephens (<mif:a href="mailto:dstephens@hl7.org">dstephens@hl7.org</mif:a>) or calling (+1) 734-677-7777.</mif:p>
+                           <mif:p>The following apply to Ballot Cycle Voting:</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>The voting period is open for at least 30 days.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>Voters may download ballot documents from the HL7 ballot cycle <mif:a href="../../welcome/downloads/downloads.htm">download page</mif:a>.  (Hint: Please right-click and select "Open in New Window.")</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>Voters may download a template of the ballot comment spreadsheet (a Microsoft Excel (tm) file) from the <mif:a href="http://www.hl7.org/ctl.cfm?action=ballots.home">HL7 Ballot Desktop</mif:a>.   (Hint: Please right-click and select "Open in New Window.")  The spreadsheet should be used to communicate comments about the draft standards back to the work group when logging a vote.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>Upon reviewing a ballot document of interest, a voterlogs his or her vote on the Ballot Desktop and has the option of providin a text comment with their vote or uploading a comment spreadsheet.  When using the comment spreadsheet, a voter will manually identify the section or sections to which each comment applies and indicate the severity of the comment. Severity levels included:</mif:p>
+                           <mif:ul>
+                              <mif:li>
+                                 <mif:p>Neg-Mj: Negative Vote with Reason - Major.  Use this in situations where the content of the material is non-functional, oncomplete or requires correction before final publication.  All Neg-Mj votes in normative ballots must be resolved by the work group.  However, the reconciliation rules are no longer as strict for DSTU and Informative ballots, although work groups must consider all Neg-Mj votes.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>Neg-Mi: Negative Vote with Reason- Minor.  Use this when the comment needs to be resolved, but is not as significant as a negative major.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>A-S: Affirmative Vote with Comment -Suggestion.  Use this if the work group is to consider a suggestion such as additional background information or justification for a particular solution.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>A-T: Affirm Vote with Comment - Typo.. If the material contains a typo such as a misspelled word, enter A-T.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>A-C: Affirm Vote with Comment</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>A-Q: Affirm Vote with Question</mif:p>
+                              </mif:li>
+                           </mif:ul>
+                           <mif:p>The ballot comment spreadsheet contains further instructions on completing it to ensure that comments are communicated to the appropriate work group.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>Organizational members may compile and combine comments for each pool and one representative from that organization can submit the collated spreadsheet on behalf of the organization to HL7. However, each organizational member must return and log his or her vote on that pool and, in the case of negative votes, indicate in the text comment that this vote refers to the comment spreadsheet already uploaded by another voter.  Voters should be aware that if they refer to a voter who has not returned to vote or has not uploaded a comments spreadsheet by the end of that balloting period that their negative votes will be counted as "negative without comment" in accordance with HL7 Policy 14.04.01.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>Voters submit their votes via the <mif:a href="http://www.hl7.org/ctl.cfm?action=ballots.home">HL7 Ballot Desktop</mif:a> indicating an overall Affirm or Negative vote.  (Hint: Please right-click and select "Open in New Window.")  Note: all voters have the option of submitting comments, however, for voters submitting a negative vote, the voter must support that negative by providing a text comment or uploading a completed comment spreadsheet for that ballot document.</mif:p>
+                        </mif:li>
+                     </mif:ol>
+                  </mif:div>
+                  <mif:div hl7Id="bbballokey"
+                           title="What do the Colors on the Master Table of Contents Mean?">
+                     <mif:p>On the V3 Ballot page, there are menus displayed on the left pane. You will notice that six colors are used.  The colors determine the type of ballot document. The different types are enumerated below:</mif:p>
+                     <mif:table>
+                        <mif:tr>
+                           <mif:td>Icon</mif:td>
+                           <mif:td>Description</mif:td>
+                        </mif:tr>
+                        <mif:tr>
+                           <mif:td>
+                              <mif:p>
+                                 <mif:img class="graphic" src="book-closed-yellow.gif" alt="book-closed-yellow.gif"
+                                          imageType="image/gif"/>
+                              </mif:p>
+                           </mif:td>
+                           <mif:td>Yellow identifies an informative document.  Informative documents are balloted according to a procedure outlined by HL7.  While calling for consensus, the ballot procedure for informative documents is not as stringent as that for normative documents.  Information documents are not submitted to ANSI for approval.</mif:td>
+                        </mif:tr>
+                        <mif:tr>
+                           <mif:td>
+                              <mif:img class="graphic" src="book-closed-green.gif" alt="book-closed-green.gif"
+                                       imageType="image/gif"/>
+                           </mif:td>
+                           <mif:td>Green identifies a reference document.  Reference documents are not balloted and are included with the ballot material to assist with understanding and comprehension.  The Glossary, for example, is a reference document.</mif:td>
+                        </mif:tr>
+                        <mif:tr>
+                           <mif:td>
+                              <mif:img class="graphic" src="book-closed-red.gif" alt="book-closed-red.gif"
+                                       imageType="image/gif"/>
+                           </mif:td>
+                           <mif:td>Red identifies a normative document. Normative documents are balloted according to procedures that adhere to ANSI's procedures.  Normative documents must pass a full normative level ballot.  Normative documents, once they've passed ballot, are submitted to ANSI for approval.</mif:td>
+                        </mif:tr>
+                        <mif:tr>
+                           <mif:td>
+                              <mif:img class="graphic" src="book-closed-blue.gif" alt="book-closed-blue.gif"
+                                       imageType="image/gif"/>
+                           </mif:td>
+                           <mif:td>Blue identifies a group of documents that fall into one or more of the categories listed above.  Many of the domain documents are grouped together under a blue section heading.  This is simply an easy way to group documents.</mif:td>
+                        </mif:tr>
+                        <mif:tr>
+                           <mif:td>
+                              <mif:img class="graphic" src="book-closed-gray.gif" alt="book-closed-gray.gif"
+                                       imageType="image/gif"/>
+                           </mif:td>
+                           <mif:td>Gray identifies a draft only document.  Ultimately, this document may become normative, informative or reference but at the time of balloting, a gray book means that this document or document group will be draft only and not ballotable.</mif:td>
+                        </mif:tr>
+                        <mif:tr>
+                           <mif:td>
+                              <mif:img class="graphic" src="book-closed-orange.gif" alt="book-closed-orange.gif"
+                                       imageType="image/gif"/>
+                           </mif:td>
+                           <mif:td>Purple identifies a normative document that is (or will be) Draft Standard for Trial Use (DSTU).</mif:td>
+                        </mif:tr>
+                     </mif:table>
+                     <mif:p/>
+                  </mif:div>
+                  <mif:div hl7Id="bbballostatuskey"
+                           title="What do the Colored Symbols in the Documents Mean?">
+                     <mif:p>Within the documents, you may find several icons that are designed or colored in such a way as to introduce the ballot status of that particular item.  Most commonly, main headings will have an icon for their ballot status.  By hovering over the icons, you 
+				will find a descriptive term to better understand what this icon means.  Here is a list of the ballot status icons used in these documents.</mif:p>
+                     <mif:p>
+                        <mif:img class="graphic" src="bb_backbone_ballotstatus1.gif"
+                                 alt="Ballot Status Icon Descriptions"
+                                 imageType="image/gif"/>
+                     </mif:p>
+                     <mif:p>
+                        <mif:img class="graphic" src="bb_backbone_ballotstatus2.gif"
+                                 alt="Ballot Status Icon Descriptions (continued)"
+                                 imageType="image/gif"/>
+                     </mif:p>
+                  </mif:div>
+               </mif:div>
+               <mif:div hl7Id="ExecSummary" title="V3 Packages">
+                  <mif:div hl7Id="ballotitems" title="Ballotable Documents in this V3 Ballot Package">
+                     <mif:p>The following material contains the content for the distinct ballot groups in different stages of Informative, Draft Standard for Trial Use(DSTU), and Normative ballot in this cycle that you may find in this V3 ballot standard:</mif:p>
+                     <mif:div hl7Id="ballotitems_services"
+                              title="Specification Infrastructure, Implementation Technology Specification and Services Documents">
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../infrastructure/rlus/rlus"/>Resource Location and Updating Service (RLUS), Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                     <mif:div hl7Id="ballotitems_dam" title="Domain Analysis Models">
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../dams/uvcrd/uvcrd"/>Cardiology Domain Analysis Model, Release 2</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../dams/uvimz/uvimz"/>Immunization Domain Analysis Model, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../dams/uvreg/uvreg"/>Patient Administration: Interdependent Registries Domain Analysis Model, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../dams/uvsec/uvsec"/>WITHDRAWN FROM BALLOTING: Security Domain Analysis Model, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                     <mif:div hl7Id="ballotitems_domain" title="Universal Domain Documents">
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvqm/uvqm"/>WITHDRAWN FROM BALLOTING: Health Quality Measure Format (eMeaures), Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvqm/uvqm"/>WITHDRAWN FROM BALLOTING: Health Quality Measure Format Implementation Guide, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvme/uvme"/>Medication; Identification of Medicinal Products (IDMP) Topics, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvpa/uvpa_patientencounter"/>Patient Administration; Patient Encounter, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvrx/uvrx_medicationknowledge-basequery"/>Pharmacy: Medication Knowledge—Base Query, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvrt/uvrt"/>Regulated Studies: Clinical Research Filtered Query Service Functional Model, Release 1</mif:object>
+                              </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>
+                                 <mif:object name="externalSpecRef">
+                                    <mif:param name="spec" value="../../domains/uvrp/uvrp"/>Regulated Product Submission, Release 2</mif:object>
+                              </mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                  </mif:div>
+                  <mif:div hl7Id="nonballotitems"
+                           title="Other Foundation and Background Documents in the V3 Package">
+                     <mif:p>In addition to the above ballot documents the following are included in this publication to assist in the comprehension and application of Version 3 (which are not up for ballot):</mif:p>
+                     <mif:p>
+                        <mif:a href="#bbcopyright">
+						Package Note to Readers (this document)
+					</mif:a>
+                     </mif:p>
+                     <mif:p>This document is the introduction or "home page" of the HL7 V3 publication and includes introductory information relevant to the entire V3 publication.  This includes an HL7 Overview, and Introduction to V3, Ballot Instructions, and Getting Started sections.</mif:p>
+                     <mif:p>
+                        <mif:object name="externalSpecRef">
+                           <mif:param name="spec" value="../../help/v3guide/v3guide"/>HL7 Version 3 Guide</mif:object> - This document is a primer of the concepts and artifacts found in V3. This document is recommended reading for all V3 voters.
+				</mif:p>
+                     <mif:p>
+                        <mif:object name="externalSpecRef">
+                           <mif:param name="spec" value="../../infrastructure/vocabulary/vocabulary"/>HL7 Concept Domains</mif:object> - This document includes listing of all vocabularies used in the HL7 standard.  This includes structured vocabulary that defines the valid (or invalid) relationships between classes in the RIM and Code Set Vocabularies used to define attribute code sets.</mif:p>
+                     <mif:p>
+                        <mif:object name="externalSpecRef">
+                           <mif:param name="spec" value="../../help/glossary/glossary"/>Glossary</mif:object> - The Glossary contains a comprehensive list of terms and acronyms used throughout V3.</mif:p>
+                  </mif:div>
+               </mif:div>
+               <mif:div hl7Id="bbV3int" title="HL7 Version 3 Overview">
+                  <mif:div hl7Id="bbV3intwhy" title="Why a Major New Version?">
+                     <mif:p>HL7 V3, like V2.x, is a standard for exchanging messages among information systems that implement healthcare applications. However, V3 strives to improve the v2 process and its outcomes. The original process for defining HL7 messages was established in 1987. It has served well since. However, as HL7 membership grew and its standards became more widely used, HL7 has become aware of opportunities to revolutionize healthcare interface computing. HL7 interfaces substantially reduce costs and implementation times when compared to the industry's experience with proprietary interfaces. However, these costs and times vary considerably by vendor, and the industry sees a need for improvement. Substantial optionality in HL7 makes it difficult to specify precise contract terms for HL7 interfaces. This can lead to unrealistic expectations that hurt vendors and buyers equally. The development principles behind HL7 V3 lead to a more robust, fully specified standard.</mif:p>
+                     <mif:div hl7Id="bbV3intwhydif" title="Difficulties with the Existing Process">
+                        <mif:p>The HL7 v2.x development process is entirely ad hoc. There is no explicit methodology. Members receive no formal guidance in constructing messages. Trigger events and data fields are described solely in natural language. The structural relationships among data fields are not clear. Segments are reused in many messages and message definitions are reused for many trigger events. In order to accommodate this extensive reuse, most data fields are optional. Chapters are inconsistent in their use of trigger events versus status codes. There is no specification as to when a specific kind of healthcare information system should be expected to honor a trigger event or accept a message.</mif:p>
+                        <mif:p>With v2.x, a Work Group creates messages by editing word processing documents directly. The metadata is not available in a structured form until the staff and volunteers tediously extract it from the word processing documents after publication.</mif:p>
+                        <mif:p>In summary, there is substantial need to improve this old process in order to handle the breadth and complexity of the challenges HL7 faces today. Our industry will benefit because this new process results in a more rigorous specification.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbV3intwhyopp" title="Opportunities to Improve">
+                        <mif:p>Fortunately, software practitioners have learned a lot since 1987. There are better methodologies. Computer support is far more available and cost-effective. However, HL7 cannot take advantage of these developments solely by minor tweaks to the old process.</mif:p>
+                        <mif:p>HL7 spent four years characterizing its revised goals and creating a methodology to adapt modern analysis techniques from system building to message design. Initially the HL7 Board of Directors chartered an independent task force to establish the broad outline of the approach. In January 1996, the Technical Steering Committee (TSC) agreed to adopt the main features of the approach and take over its management. Planning work continued in the Modeling and Methodology Work Group and the Infrastructure and Management Work Group. At the completion of v2.3, in the spring of 1997, the HL7 Technical Work Groups all began to use the Version 3 process.</mif:p>
+                     </mif:div>
+                  </mif:div>
+                  <mif:div hl7Id="bbV3intpri" title="V3 Principles">
+                     <mif:p>The HL7 V3 standard development methodology is based on a set of principles providing a common philosophy for all HL7 V3 standard developers.</mif:p>
+                     <mif:ul>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Internationalization</mif:b>: V3 SHALL include mechanisms that support the need for local variants of HL7 messages to be used by HL7 Affiliates. It SHALL be possible for affiliates to use the messages created by the worldwide HL7 organization. It SHALL also be possible for affiliates to develop and use localized variants.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Legacy Systems Support</mif:b>: As with prior versions, V3 SHALL be designed using a technological approach that permits implementation in "legacy systems."  These are systems that have been implemented in technical environments that do not necessarily conform to or provide support for recent or pending "open systems" standards, such as those published by ISO, Open Systems Foundation, Object Management Group, etc. Similarly, HL7 will not require proprietary features of any operating system or software vendor. In practical terms, this means that V3 SHALL be able to exchange messages formatted in strings of printable characters, as is the case for all previous versions. This does not preclude HL7 from deciding to develop variants of its specification that make use of the modern technologies provided that 1) System builders will not be required to buy software from a sole source in order to implement V3, and 2) Messages generated in these formats have the same data content so that translation between the printable character format and other formats is easy.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Loosely Coupled Systems</mif:b>: As with HL7 v2.x, V3 SHALL NOT be a standard for the functionality of the systems that exchange HL7 messages. However, where V3 includes a requirement to accept or send certain data or to send specific messages in response to trigger events or other messages, the application system MAY have to develop functionality to support those requirements.</mif:p>
+                           <mif:p>V3 messages MAY be sent using many modes and topologies. Messages MAY be sent in a manner that requires an immediate response, as unsolicited updates through a store and forward network, or in batches where the manner and timing of message transfer is not specified. V3 includes support for "one-to-many," store-and-forward distribution of messages by an external software agent.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>V2.x Functional Compatibility</mif:b>: HL7 V3 goals cannot be achieved while maintaining full compatibility with previous versions. However, upon completion, V3 SHALL cover the information content of the last version in the V2.x series including attributes and trigger events. This should not be construed to mean that all attributes and trigger events will be included in V3 in exactly the same form as within the v2.x series.</mif:p>
+                           <mif:p>A network that includes a mixture of systems that implement v2 and V3 will require message translation. Because the v2 standards have substantial optionality, the translations will use rules specific to the systems on that network. It is expected that interface engines and other translation software will be able to provide the translations between site-specific interpretations of v2.x and any implementation of V3.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Upward Compatibility Among V3.x</mif:b>: HL7 will provide the maximum degree possible of interoperability among systems operating on older and newer versions of HL7 protocols in the V3 family through compatible enhancement.</mif:p>
+                           <mif:ul>
+                              <mif:li>
+                                 <mif:p>A message structure that is modified in a newer version of the protocol must be acceptable to a system designed for the prior V3 release. However, a system built for the prior release will only extract the information that was defined for that prior release.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>A message structure created in accordance with an older version of the V3 protocol must be acceptable to a system designed for a later V3 release. In some cases, this will mean that the system built for the newer release will not receive certain information fields because they were not a part of the older version of the message structure in use by a specific sender.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>Where compatible enhancement is not possible, HL7 will require evolution in the protocol to happen gradually, so that users can introduce the change into their networks gradually.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>The messages associated with all interactions that are newly defined in a version of HL7 SHALL NOT be sent to a receiver that conforms to the older version.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>A message structure MAY be declared obsolescent in one release, with a stated alternative message structure. Both the obsolescent message structure and its alternative can be used by all systems supporting that release.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>The obsolescent message structure MAY be declared obsolete and dropped when still another HL7 version is issued.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>An obsolescent message structure SHALL NOT be declared obsolete for at least two years from the date of the version that first declared it obsolescent.</mif:p>
+                              </mif:li>
+                              <mif:li>
+                                 <mif:p>The above notwithstanding, if a new Implementation Technology Specification (ITS) is introduced, HL7 may specify that conformance to the ITS does not require dealing with message structures that are obsolescent when the new ITS is introduced. To the maximum degree possible, these restrictions should not impose limitations on the evolution of the overall reference model. There are no restrictions on making changes to the information model if those changes do not impact the message structures that were described in a prior version of the Standard.</mif:p>
+                              </mif:li>
+                           </mif:ul>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Determining Conformance</mif:b>: Application roles are the basis for conformance claims. An application role is an abstraction that expresses a portion of the messaging behavior of an information system. Application role names are different than the names generally used to describe healthcare information system products, since they describe messaging interfaces as opposed to application behavior. A typical healthcare information system will probably fill several or many application roles.</mif:p>
+                           <mif:p>In making a conformance claim, a system developer identifies the application roles to which it wishes to claim conformance. For these application roles, the V3 specification will state directly the trigger events the system SHALL recognize, messages that the system SHALL send in response to trigger events or other messages, and the data content of these messages. The specification also states the messages that a system conforming to the application role SHALL receive and process.</mif:p>
+                           <mif:p>All conformance claims SHALL be sufficiently specific to be used as contractual terms in system acquisitions and to be the basis for testing by an independent testing organization.</mif:p>
+                           <mif:p>User sites may contract with vendors to implement deviations from the HL7 conformance claims. Such arrangements are outside the scope of HL7. Such an arrangement will not be considered a failure of the application to conform to HL7.</mif:p>
+                           <mif:p>All sequences of messages in V3 SHALL be related to a trigger event. The trigger event SHALL be clearly identified in a common field in all messages.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Confidentiality of Patient Information</mif:b>: It is expected that healthcare application systems that implement V3 will be required to have significantly more functionality to protect the confidentiality of patient information than has been common in the past. The new functions may include, but are not limited to, limiting the right to view or transfer selected data to users with specific kinds of authorization and auditing access to patient data. V3 will seek out and adopt industry security standards that support conveying the necessary information from one healthcare application system to another, so that these systems may perform the confidentiality functions. The Functional Work Groups, the Infrastructure and Messaging Work Group and the Modeling and Methodology Work Group shall consult with the Security Work Group while developing the HL7 Data Model and V3 messages.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Authenticated Authorization for Services</mif:b>: It is expected that the healthcare application systems that implement V3 will be required to have significantly more functionality to authenticate requests for services and reports of data than has been common in the past. The new functions may include, but are not limited to, electronic signature and authentication of users based on technologies more advanced than passwords. V3 will seek out and reference standards such as X.500 and RFC 1510 to support conveying the necessary information from one healthcare application system to another, so that these systems may perform the authorization and authentication functions. The Functional Work Groups, the Infrastructure and Messaging Work Group and the Modeling and Methodology Work Group shall consult with the Security Work Group while developing the HL7 Data Model and V3 transactions.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Security, Privacy, Non-Repudiation and Integrity</mif:b>: It is expected that the technological platforms upon which V3 information systems developers implement applications that use HL7 will be required to have significantly more capability to protect the confidentiality and integrity of patient information than has been common in the past. The new functions may include, but are not limited to, public- and private-key encryption, and correspondent system authentication and non-repudiation. The Control Work Group is monitoring these developments to ensure that V3 can be implemented on technological platforms that support these new functions.</mif:p>
+                        </mif:li>
+                     </mif:ul>
+                  </mif:div>
+                  <mif:div hl7Id="bbV3intnew" title="What's New with HL7 V3?">
+                     <mif:ul>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>HL7 V3 adopts an Object Oriented (OO) approach using Unified Modeling Language (UML) principles.</mif:b> HL7 employs a completely new development approach with V3. HL7 V3 uses an OO approach that is model and repository-based. This OO approach is supported with trained facilitators, formal education classes, and computerized tools. This approach leads to increased detail, clarity and precision of the specification and finer granularity in the ultimate message. This helps functional work groups meet the challenges of de novo interface design, and increases functional breadth and evolution of assumptions. It helps new members become productive in a shorter period of time. This is an enormous aid to providing institutional memory and sharing work in progress across work groups and to the membership at large.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>HL7 isn't just Level 7 any more!</mif:b> After years of implementing HL7 v2.x, HL7 standard developers realized it was virtually impossible to develop a comprehensive standard without including other levels of the International Organization for Standardization (ISO) Open Systems Interconnect (OSI) Model. Today, work groups exist for XML, Security, Modeling &amp; Methodology, Arden Syntax, CCOW and Vocabulary.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Reduced Optionality.</mif:b> Limiting optionality is a primary goal of HL7 V3. Within HL7 v2.x, almost every field is optional. This optionality is necessary since optionality is defined by segment and segments are reused in multiple messages. Declaration of a data field as optional within a segment allows that segment to be used in many different messages without any further definition. However, the wide use of optionality, while helpful in gaining consensus and in writing a somewhat more compact specification, imposes significant costs on interface implementers. In fact, optionality, as a "feature" of HL7 v2.x, is associated with most of the issues that V3 is trying to solve. Optionality makes it harder to precisely define the semantics of a specific message and makes it virtually impossible to generate conformance claims for messaging.</mif:p>
+                        </mif:li>
+                        <mif:li>
+                           <mif:p>
+                              <mif:b>Conformance to HL7 V3 will be testable.</mif:b> It is difficult to measure compliance of HL7 v2.x interfaces. Often vendors claim compliance to HL7 without providing any supporting documentation of how they conform. Terms such as HL7-like or HL7-ish are used to describe HL7 interfaces. With HL7 V3, conformance is specified in terms of application roles. Application roles are abstractions that express a portion of the messaging behavior of an information system. A vendor of a healthcare application describes its conformance by asserting that it completely supports all trigger events, messages and data elements associated with one or more application roles. This level of specificity allows clearer pre-contractual understanding between vendors and buyers and will serve as a basis for conformance testing.</mif:p>
+                        </mif:li>
+                     </mif:ul>
+                  </mif:div>
+                  <mif:div hl7Id="bbV3intmmd" title="Managing HL7 V3 Message Development">
+                     <mif:p>This section outlines the procedures used to develop the HL7 V3 messages. These procedures are based on the V3 Methodology and the HL7 Bylaws. The goal is to assure that the standard is developed expediently, appropriately documented, consistent with the requirements for an approval by a balanced consensus, and that it complies with the requirements for certification by the American National Standards Institute (ANSI).</mif:p>
+                     <mif:div hl7Id="bbV3intmmdsco" title="Project Scope Definition">
+                        <mif:p>When a Work Group undertakes a project to develop new material in V3 it creates a brief description of the project for approval by the process defined in the Project Scope Statement Template, at <mif:a href="http://www.hl7.org/permalink/?ProjectScopeStatement">//www.hl7.org/permalink/?ProjectScopeStatement</mif:a>. 
+The project scope statement contains a concise description of the needs to be met by the transactions. This project scope statement is also be used for coordination of projects with other standards organizations. In fact, project scope statements must be reported to the ANSI so that ANSI can fulfill its standards coordination role.<mif:object name="footnote">
+                              <mif:p>The project scope statement should not be confused with the Technical Work Group charter to which it is related. The WG charter defines the scope of an HL7 work group and is subject to approval by the HL7 TSC. The key criterion for a project scope statement is that it should be consistent with the charter of the work group that works on it.</mif:p>
+                           </mif:object>
+                        </mif:p>
+                        <mif:p>Project scope statements are reviewed by the Architectural Review Board (ARB) and must be approved by the HL7 Technical Steering Committee.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbV3intmmdmet" title="HL7 V3 Methodology">
+                        <mif:p>The development of V3 messages follows the methodology specified by the HL7 Modeling and Methodology Work Group. HL7 may amend the methodology from time to time. The methodology includes a definition of work products delivered by the Technical Work Groups. Portions of these work products are be designated for three different treatments:</mif:p>
+                        <mif:ol>
+                           <mif:li>
+                              <mif:p>included as a normative portion of the eventual standard,</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>included as an informative portion of the eventual standard,</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>not included with the standard, but published with minutes and archived.</mif:p>
+                           </mif:li>
+                        </mif:ol>
+                        <mif:p>The methodology specifies the following requirements. These are annotated to indicate the work products described in the V3 Guide that meet the requirements. The annotations further state whether the work product is normative or informative.</mif:p>
+                        <mif:table border="1">
+                           <mif:thead>
+                              <mif:tr>
+                                 <mif:th>Requirement</mif:th>
+                                 <mif:th>V3 Guide Construct(s)</mif:th>
+                                 <mif:th>Level</mif:th>
+                              </mif:tr>
+                           </mif:thead>
+                           <mif:tbody>
+                              <mif:tr>
+                                 <mif:td>A means of providing context to the definitions of trigger events</mif:td>
+                                 <mif:td>Storyboards, state diagrams</mif:td>
+                                 <mif:td>Informative</mif:td>
+                              </mif:tr>
+                              <mif:tr>
+                                 <mif:td>A means of specifying the information content of messages through a common information model that clarifies the definitions and ensures that they are used consistently across all V3 messages defined by all Technical Work Groups</mif:td>
+                                 <mif:td>Reference Information Model</mif:td>
+                                 <mif:td>Reference</mif:td>
+                              </mif:tr>
+                              <mif:tr>
+                                 <mif:td>A means of specifying responsibilities of the senders and receivers of messages</mif:td>
+                                 <mif:td>Interaction model</mif:td>
+                                 <mif:td>Normative</mif:td>
+                              </mif:tr>
+                              <mif:tr>
+                                 <mif:td>A common description of the exact fields of a message and their grouping, sequence, optionality, and cardinality</mif:td>
+                                 <mif:td>Hierarchical Message Descriptions</mif:td>
+                                 <mif:td>Normative</mif:td>
+                              </mif:tr>
+                              <mif:tr>
+                                 <mif:td>Separate syntax specifications, describing the algorithms used to encode and transmit the messages in an XML based character stream syntax.</mif:td>
+                                 <mif:td>Implementation Technology Specifications</mif:td>
+                                 <mif:td>Normative</mif:td>
+                              </mif:tr>
+                           </mif:tbody>
+                        </mif:table>
+                        <mif:p>The Modeling and Methodology Work Group does not have the right to determine the contents of work products created by the Technical Work Groups. It serves to facilitate their development, and to negotiate changes among the functional Technical Work Groups to ensure standard-wide consistency. If disputes cannot be resolved by the Technical Work Groups and/or the Modeling and Methodology Work Group, they shall be resolved by the TSC.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbV3intmmdqap" title="Quality Assurance Process">
+                        <mif:p>In order to ensure the highest quality of the work products produced during the course of V3 message development, the HL7 Board of Directors has created the ARB.</mif:p>
+                        <mif:p>The ARB works with the Technical Work Groups and Modeling and Methodology Work Group to define quality measures for the HL7 work products, measure the work products again them, and that adherence to the defined message development process is documented in a manner consistent with HL7 bylaws and procedures. The ARB does not have the right to amend work products or disallow their distribution. It does have the right to include with any work product a statement describing areas where it has determined that the work product has not met established measures of quality.</mif:p>
+                        <mif:p>As a general matter, the ARB is expected to include a statement of its findings in an HL7 general ballot package. However, in order to assist Technical Work Groups, and to avoid delaying the balloting process, the ARB attempts to make any significant comments as early in the ballot cycle as possible.</mif:p>
+                        <mif:p>Disputes with the findings of the ARB are resolved through the TSC and, if necessary, the Board of Directors.</mif:p>
+                     </mif:div>
+                  </mif:div>
+               </mif:div>
+               <mif:div hl7Id="bbstart" title="Getting Started">
+                  <mif:p>The Getting Started section provides guidelines and recommendation for how you should approach the HL7 V3 Publication. Each section below depicts a type of HL7 customer based on his or her relationship to the HL7 standard/organization. Locate the type of user that most closely reflects your experience level. The documentation includes recommended reading that will help you build the HL7 V3 knowledge base you desire.</mif:p>
+                  <mif:div hl7Id="bbstartimp" title="New Implementer">
+                     <mif:p>A New Implementer is unfamiliar with HL7 terminology, methodology, and organization. A New Implementer may or may not be a member of the HL7 organization.</mif:p>
+                     <mif:div hl7Id="bbstartimpbas" title="Learn the Basics">
+                        <mif:p>Learning the basics means becoming familiar with the basic terminology and methodology behind HL7. You would expect to learn the basic principles upon which HL7 V3 was constructed. Upon completion of this use case, you would be prepared to learn more detailed information about V3.</mif:p>
+                        <mif:p>While learning the basics, refer to:</mif:p>
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>The Overview sections in the Backbone (this document)</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Glossary</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>HL7 Version 3 Guide</mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                  </mif:div>
+                  <mif:div hl7Id="bbstartmgt" title="Management">
+                     <mif:div hl7Id="bbstartmgtmgr" title="Manager">
+                        <mif:p>Managers are responsible for hiring qualified HL7 analysts and programmers. They must supervise interface development and implementation efforts. They do not need to understand all of the details of creating an HL7 message, but they need to understand the concepts enough to review contacts, conformance statements, and assess the skills of their team.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbstartmgtpmr" title="Project Manager">
+                        <mif:p>The Project Manager is responsible for ensuring the project is completed within budget, on time, and within scope. Project Managers are not interested in all the details of creating an HL7 V3 message, but he needs to understand the concepts enough to review contacts, conformance statements, and assess the skills of his team.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbstartmgtmkt" title="Marketer">
+                        <mif:p>A Marketer is responsible for selling HL7 interfaces. He does not need to know the details, but must understand the major concepts and terminology.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbstartmgtsit" title="Construct Site Agreement">
+                        <mif:p>Constructing a site agreement involves creating a specification for two or more parties to communicate using HL7 messages and documents.</mif:p>
+                        <mif:p>When constructing a site agreement, refer to:</mif:p>
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>Backbone (this document)</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Glossary</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Refinement, Extension and Conformance to Version 3 document.</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>The Interaction Model chapter in the Version 3 Guide</mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                     <mif:div hl7Id="bbstartmgtsig" title="Sign a Deal">
+                        <mif:p>The deal requires HL7 interfaces, so in order to sign it a basic understanding of trigger events and message types, but not a detailed understanding of message fields, is required.</mif:p>
+                        <mif:p>When signing a deal, refer to:</mif:p>
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>The What's New in V3? section of the Backbone (this document)</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Refinement, Extension and Conformance to Version 3 document.</mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                  </mif:div>
+                  <mif:div hl7Id="bbstartidv" title="Interface Developer">
+                     <mif:div hl7Id="bbstartidvian" title="Interface Analyst">
+                        <mif:p>Interface Analysts review the interface requirements and write detailed interface specifications.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbstartidvipg" title="Interface Programmer">
+                        <mif:p>Interface Programmers code and test interface based on the interface specifications.</mif:p>
+                     </mif:div>
+                     <mif:div hl7Id="bbstartidvdev" title="Develop Interface">
+                        <mif:p>Developing an interface requires gathering the interface requirements, analyzing those requirements, developing detailed interface specifications, coding, and testing the interface against the interface specifications and defining the conformance statement.</mif:p>
+                        <mif:p>When developing an interface, you must identify the application section you are working within:</mif:p>
+                        <mif:p>Health &amp; Clinical Management Section - This includes the Blood Bank, Care Provision, Clinical Document Architecture, Clinical Genomics, Laboratory, Medical Records, Medication, Pharmacy, Public Health Reporting, Regulated Studies, Specimen, Therapeutic Devices domain documents.</mif:p>
+                        <mif:p>Administrative Management Section - This includes the Accounting and Billing, Claims &amp; Reimbursement, Patient Administration, Personnel Management, Scheduling domain documents. </mif:p>
+                        <mif:p>Specification Infrastructure / Messaging Section - This includes the Master File / Registry, Message Control Act, Query and Transmission Infrastructure domain documents.</mif:p>
+                        <mif:p>Common Domains Section - This include the Common Message Element Types, Shared Messages and Clinical Statement Pattern domain documents.</mif:p>
+                        <mif:p>Once you identify the section you can drill down through to the domain messages.</mif:p>
+                        <mif:p>To complete your message development analysis, you will also need to fully understand:</mif:p>
+                        <mif:p>XML Implementation Technology Specification - The Implementation Technology Specification describes how HL7 messages are sent using a specific method of encoding.</mif:p>
+                        <mif:p>HL7 Concept Domains - HL7 Concept Domains are concepts you are most likely already familiar with. HL7 Concept Domains are the sets of allowable values for a coded field. For example, if a message contains a marital status field, then the vocabulary domain for that field would consist of the allowed values for that field, such as, single, married, divorced, and separated. Each coded attribute in the RIM will be associated with one and only one vocabulary domain.</mif:p>
+                        <mif:p>For additional reference, be sure to review:</mif:p>
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>Version 3 Glossary</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>The Vocabulary chapter and the HL7 Message Components section of the Version 3 Guide.</mif:p>
+                           </mif:li>
+                        </mif:ul>
+                     </mif:div>
+                  </mif:div>
+                  <mif:div hl7Id="bbstartsdv" title="HL7 Standard Developer">
+                     <mif:p>Standard Developers attend HL7 Working Group Meetings and participate in the creation of the HL7 V3 Standard Specification.</mif:p>
+                     <mif:div hl7Id="bbstartsdvdev" title="Develop the Standard">
+                        <mif:p>Developing the HL7 Standards involves an understanding of the HL7 Organization and its development methods.</mif:p>
+                        <mif:p>Before committing to HL7 Standards development, review:</mif:p>
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>the scopes and mission statements of each HL7 Technical Work Group on the HL7 web site: <mif:a href="http://www.hl7.org">http://www.hl7.org</mif:a>. This will help you pinpoint to which work group your knowledge and interest will be most compatible.</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Version 3 Guide</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Reference Information Model</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>HL7 Version 3 Data Types: Abstract</mif:p>
+                           </mif:li>
+                        </mif:ul>
+                        <mif:p>Identify the section in which you are most interested.</mif:p>
+                        <mif:ul>
+                           <mif:li>
+                              <mif:p>Health &amp; Clinical Management Section - This includes the Blood Bank, Care Provision, Clinical Document Architecture, Clinical Genomics, Laboratory, Medical Records, Medication, Pharmacy, Public Health Reporting, Regulated Studies, Specimen, Therapeutic Devices domain documents.</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Administrative Management Section - This includes the Accounting and Billing, Claims &amp; Reimbursement, Patient Administration, Personnel Management, Scheduling domain documents. </mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Specification Infrastructure / Messaging Section - This includes the Master File / Registry, Message Control Act, Query and Transmission Infrastructure domain documents.</mif:p>
+                           </mif:li>
+                           <mif:li>
+                              <mif:p>Common Domains Section - This include the Common Message Element Types, Shared Messages and Clinical Statement Pattern domain documents.</mif:p>
+                           </mif:li>
+                        </mif:ul>
+                        <mif:p>Once you identify the section you can drill down to the domain messages.</mif:p>
+                        <mif:p>
+						XML Implementation Technology Specification - The XML Implementation Technology Specification defines the representation of HL7 Version 3 data types and messages in XML, including the method to derive XML Schemas plus additional processing rules from HL7 V3 Hierarchical Message Descriptions (HMDs).
+					</mif:p>
+                     </mif:div>
+                  </mif:div>
+               </mif:div>
+               <mif:div hl7Id="bbintro" title="HL7 Organizational Overview">
+                  <mif:div hl7Id="bbintromsn" title="Mission">
+                     <mif:p>HL7's mission is to provide standards for the exchange, management and integration of data that supports clinical patient care and the management, delivery and evaluation of healthcare services. Specifically, to create flexible, cost effective approaches, standards, guidelines, methodologies, and related services for interoperability between healthcare information systems.</mif:p>
+                  </mif:div>
+                  <mif:div hl7Id="bbintrohl7" title="What is HL7?">
+                     <mif:p>HL7 is one of several ANSI-accredited Standards Developing Organizations (SDOs) operating in the healthcare arena. Most SDOs produce standards (sometimes called specifications or protocols) for a particular healthcare domain such as clinical data, pharmacy, medical devices, imaging or insurance (claims processing) transactions. Health Level Seven's domain is clinical and administrative data.</mif:p>
+                     <mif:p>HL7 is a not-for-profit volunteer organization. Its members - providers, vendors, payers, consultants, government groups, pharmaceutical and others who have an interest in the development and advancement of clinical and administrative standards for healthcare - develop the standards. Like all ANSI-accredited SDOs, HL7 adheres to a strict and well-defined set of operating procedures that ensure consensus, openness and balance of interest. A frequent misconception about HL7 (and presumably about the other SDOs) is that it develops software. In reality, Health Level Seven develops specifications, the most widely used being a messaging standard that enables disparate healthcare applications to exchange key sets of clinical and administrative data.</mif:p>
+                     <mif:p>The HL7 Working Group is composed of volunteers who give their time on a personal basis or under sponsorship of their employers. Membership in the HL7 Working Group has been, and continues to be, open to anyone wishing to contribute to the development and refinement of the HL7 standards.</mif:p>
+                  </mif:div>
+                  <mif:div hl7Id="bbintrobak" title="Background">
+                     <mif:p>The term "Level 7" refers to the highest level of the Open System Interconnection (OSI) model of the International Organization for Standardization (ISO). This is not to say that HL7 conforms to ISO defined elements of the OSI's seventh level. Also, HL7 does not specify a set of ISO approved specifications to occupy layers 1 to 6 under HL7's abstract message specifications. HL7 does, however, correspond to the conceptual definition of an application-to-application interface placed in the seventh layer of the OSI model.</mif:p>
+                     <mif:p>In the OSI conceptual model, the functions of both communications software and hardware are separated into seven layers, or levels. The HL7 Messaging Standard is primarily focused on the issues that occur within the seventh, or application, level. These are the definitions of the data to be exchanged, the timing of the exchanges, and the communication of certain application-specific errors between the applications. However, of necessity, protocols that refer to the lower layers of the OSI model are sometimes mentioned to help implementers understand the context of the standard. They are also sometimes specified to assist implementers in establishing working HL7-based systems.</mif:p>
+                     <mif:p>It does not try to assume a particular architecture with respect to the placement of data within applications but is designed to support a central patient care system as well as a more distributed environment where data resides in departmental systems. Instead, HL7 serves as a way for inherently disparate applications and data architectures operating in a heterogeneous system environment to communicate with each other.</mif:p>
+                     <mif:p>If we consider the multitude of healthcare information systems applications as well as the variety of environments in which healthcare is delivered, it is evident that there are many more interfaces which could benefit from standardization. The interfaces chosen were considered to be of high priority by the members participating in the standards writing process. HL7's intent is to prepare a complete standard for these interfaces, built on a generic framework that is sufficiently robust to support many other interfaces.</mif:p>
+                  </mif:div>
+               </mif:div>
+            </mif:text>
+         </mif:documentContent>
+      </mif:freehandDocument>
+   </mif:content>
+</mif:package>

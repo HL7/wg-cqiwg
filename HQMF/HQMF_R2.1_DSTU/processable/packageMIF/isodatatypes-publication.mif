@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mif:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:mif="urn:hl7-org:v3/mif2"
+                 schemaVersion="2.2.0"
+                 xsi:schemaLocation="urn:hl7-org:v3/mif2 ../../support/xsd/mif-model-package.xsd">
+   <mif:packageLocation root="PUB" realmNamespace="UV" name="isodatatypes"/>
+   <mif:header>
+      <mif:renderingInformation application="pubXML2MIF.xsl 0.9" renderingTime="2014-05-06T07:56:42"/>
+   </mif:header>
+   <mif:publishedItem name="isodatatypes" title="ISO-Harmonized Data Types, Release 1">
+      <mif:itemReference root="DEFN" realmNamespace="UV" name="isodatatypes"/>
+   </mif:publishedItem>
+</mif:publication>

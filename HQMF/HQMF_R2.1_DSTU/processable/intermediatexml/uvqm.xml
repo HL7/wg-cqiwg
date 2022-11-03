@@ -1,0 +1,144 @@
+<!-- $Id: mIntCategory.cls,v 1.4 2007/11/18 02:48:41 wbeeler Exp $ -->
+<!--<!DOCTYPE spec PUBLIC "DTDVersion-4" "../../support/dtd/v3mDomain.dtd">-->
+<spec id="POQM_DO000001UV-ic" sectionCode="HMPOQM" lastEdit="2012-10-08T18:26:53"
+    rendered="2012-10-08T18:52:09">
+    <header>
+        <title>Domain: E-Measures</title>
+        <version>V 00-00</version>
+        <ballot type="DSTUBallot" number="2"/>
+        <date>10/8/2012</date>
+        <legalese copyRightDate="2012" copyRightOwner="Health Level Seven, Inc."
+            copyRightNotation="All rights reserved." renderer="RoseTree 5.0.18"
+            renderNotation="This document was rendered into XML using software provided to HL7 by Beeler Consulting LLC."
+            contactEmail="HQ@HL7.org" contactName="HL7 Headquarters Staff"
+            contactNote="Comments or questions about this document may be may be addressed to:"/>
+    </header>
+    <front>
+        <div1 id="navigate-divs">
+            <head>Message Design Element Navigation</head>
+            <artree role="NAVIGATE">
+                <artreeitem>
+                    <rmimref role="rmim" ref="POQM_RM000001UV-rmi" sectID="hmpoqm" sectType="SB"
+                        refName="eMeasure" class="changed" refIdentifier="POQM_RM000001UV"/>
+                    <artreeitem>
+                        <hmdref role="hmd" ref="POQM_HD000001UV-hmd" sectID="hmpoqm" sectType="SB"
+                            refName="eMeasure" class="changed" refIdentifier="POQM_HD000001UV"/>
+                        <artreeitem>
+                            <msgref role="msg" ref="POQM_MT000001UV-msg" sectID="hmpoqm"
+                                sectType="SB" refName="eMeasures" class="changed"
+                                refIdentifier="POQM_MT000001UV"/>
+                        </artreeitem>
+                    </artreeitem>
+                </artreeitem>
+            </artree>
+        </div1>
+    </front>
+    <body>
+        <div1 id="intro-POQM_DO000001UV-ic" ballotStatus="DSTUBallot" ballotNumber="2">
+            <head>Overview</head>
+            <div2 id="spec-scope" lastEdit="2012-10-08T18:19:37">
+                <head>Introduction &amp; Scope</head>
+                <p>This database is defined <emph role="strong">SOLELY</emph> so that the Static
+                    Model will be "defined" in a PubDb, which assures that it will be fully
+                    processed by the "reference integrity" analysis of the Generator and publication
+                    process.</p>
+                <p><emph role="strong">As soon as possible</emph>, this should be replaced by having
+                    the dependency (reference) analysis drive off of the "combined MIF file that
+                    holds the domain content in this instance. <emph>The challenge in this case is
+                        to include the definition for QA and reference purposes without altering the
+                        expression of the text-only domain.</emph></p>
+            </div2>
+        </div1>
+        <dmimdivn identifier="dmims-POQM_DO000001UV" name="Domain Message Information Models"
+            parent="POQM_DO000001UV-ic" id="dmims-POQM_DO000001UV-ic"/>
+        <subdivn identifier="POQM_DO000001UV-Base" name="Base Topic" familiarName="Base"
+            parent="POQM_DO000001UV-ic" id="POQM_DO000001UV-Base-ic" role="BC" sortPrefix="01"
+            baseClass="Base" ballotStatus="DSTUBallot" ballotNumber="2">
+            <descriptive identifier="intro-POQM_DO000001UV-Base" name="Introduction"
+                parent="POQM_DO000001UV-Base-ic" id="intro-POQM_DO000001UV-Base-ic"
+                lastEdit="2012-10-08T18:20:29">
+                <p>Dumnmy Base topic for this dummy domain expression.</p>
+            </descriptive>
+            <rmimdivn identifier="rmims-POQM_DO000001UV-Base"
+                name="Refined Message Information Models" parent="POQM_DO000001UV-Base-ic"
+                id="rmims-POQM_DO000001UV-Base-ic">
+                <descriptive identifier="rmop-POQM_DO000001UV-Base" name="Reference"
+                    parent="POQM_DO000001UV-Base-ic" id="rmop-POQM_DO000001UV-Base-ic">
+                    <p>For details on the interpretation of this section, see <xspecref
+                            spec="v3guide.htm" ref="v3grmim" alt="the description of RMIMs"/> in the
+                        Version 3 Guide.</p>
+                </descriptive>
+                <rmim identifier="POQM_RM000001UV" name="Base Event New Measures"
+                    familiarName="eMeasure" parent="POQM_DO000001UV-Base-ic"
+                    id="POQM_RM000001UV-rmi" sortPrefix="01|20|05|MEASURES" baseClass="Base"
+                    ballotStatus="DSTUBallot" ballotNumber="2" class="changed"
+                    lastEdit="2012-10-08T18:23:38">
+                    <descriptive identifier="desc-POQM_RM000001UV" name="Description"
+                        parent="POQM_RM000001UV-rmi" id="desc-POQM_RM000001UV-rmi"
+                        lastEdit="2012-10-08T18:23:38">
+                        <p>Sole eMeasures RMIM</p>
+                    </descriptive>
+                    <diagref ref="POQM_RM000001UV.gif"/>
+                    <hmdref role="containedHMD" ref="POQM_HD000001UV-hmd" sectID="hmpoqm"
+                        sectType="SB" refName="Base Event New Emeasure" refFamiliarName="eMeasure"
+                        class="changed" refIdentifier="POQM_HD000001UV"/>
+                </rmim>
+            </rmimdivn>
+            <hmddivn identifier="hmds-POQM_DO000001UV-Base" name="Hierarchical Message Descriptions"
+                parent="POQM_DO000001UV-Base-ic" id="hmds-POQM_DO000001UV-Base-ic">
+                <descriptive identifier="hdop-POQM_DO000001UV-Base" name="Reference"
+                    parent="POQM_DO000001UV-Base-ic" id="hdop-POQM_DO000001UV-Base-ic">
+                    <p>For details on the interpretation of this section, see <xspecref
+                            spec="v3guide.htm" ref="v3ghmd" alt="the description of HMDs"/> in the
+                        Version 3 Guide.</p>
+                </descriptive>
+                <hmd identifier="POQM_HD000001UV" name="Base Event New Emeasure"
+                    familiarName="eMeasure" parent="POQM_RM000001UV-rmi" id="POQM_HD000001UV-hmd"
+                    sortPrefix="01|20|05|EMEASURE|" baseClass="Base" ballotStatus="DSTUBallot"
+                    ballotNumber="2" class="changed" lastEdit="2012-10-08T18:25:23">
+                    <descriptive identifier="desc-POQM_HD000001UV" name="Description"
+                        parent="POQM_HD000001UV-hmd" id="desc-POQM_HD000001UV-hmd"
+                        lastEdit="2012-10-08T18:25:23">
+                        <p>Sole eMeasures HMD</p>
+                    </descriptive>
+                    <hmdextref role="tabular" ref="POQM_HD000001UV"/>
+                    <rmimref role="parent" ref="POQM_RM000001UV-rmi" sectID="hmpoqm" sectType="SB"
+                        refName="Base Event New Measures" refFamiliarName="eMeasure" class="changed"
+                        refIdentifier="POQM_RM000001UV"/>
+                    <msgref role="definedMsgType" ref="POQM_MT000001UV-msg" sectID="hmpoqm"
+                        sectType="SB" refName="Base Event New Emeasure" refFamiliarName="eMeasures"
+                        class="changed" refIdentifier="POQM_MT000001UV"/>
+                </hmd>
+            </hmddivn>
+            <msgtypedivn identifier="msgs-POQM_DO000001UV-Base" name="Message Type Definitions"
+                parent="POQM_DO000001UV-Base-ic" id="msgs-POQM_DO000001UV-Base-ic">
+                <msgtype identifier="POQM_MT000001UV" name="Base Event New Emeasure"
+                    familiarName="eMeasures" parent="POQM_HD000001UV-hmd" id="POQM_MT000001UV-msg"
+                    sortPrefix="01|20|05|EMEASURE|" baseClass="Base" ballotStatus="DSTUBallot"
+                    ballotNumber="2" class="changed" lastEdit="2012-10-08T18:26:53">
+                    <msgextref role="tabular" ref="POQM_MT000001UV"/>
+                    <hmdref role="parent" ref="POQM_HD000001UV-hmd" sectID="hmpoqm" sectType="SB"
+                        refName="Base Event New Emeasure" refFamiliarName="eMeasure" class="changed"
+                        refIdentifier="POQM_HD000001UV"/>
+                </msgtype>
+            </msgtypedivn>
+        </subdivn>
+        <indexdivn identifier="cindx-POQM_DO000001UV" name="Common Message Elements Indexes"
+            parent="POQM_DO000001UV-ic" id="cindx-POQM_DO000001UV-ic">
+            <indexlist identifier="cindx-List-1"
+                name="Common Message Elements Defined in this Domain"
+                parent="cindx-POQM_DO000001UV-ic" id="POQM_DO000001UV-icc1id"/>
+            <indexlist identifier="cindx-List-2" name="Common Message Elements Used by this Domain"
+                parent="cindx-POQM_DO000001UV-ic" id="POQM_DO000001UV-icc2id"/>
+        </indexdivn>
+        <indexdivn identifier="indx-POQM_DO000001UV" name="Interaction Indexes"
+            parent="POQM_DO000001UV-ic" id="indx-POQM_DO000001UV-ic">
+            <indexlist identifier="indx-List-1" name="Interaction Index by Application Role"
+                parent="indx-POQM_DO000001UV-ic" id="POQM_DO000001UV-ic1id"/>
+            <indexlist identifier="indx-List-2" name="Interaction Index by Trigger Event"
+                parent="indx-POQM_DO000001UV-ic" id="POQM_DO000001UV-ic2id"/>
+            <indexlist identifier="indx-List-3" name="Interaction Index by Message Type"
+                parent="indx-POQM_DO000001UV-ic" id="POQM_DO000001UV-ic3id"/>
+        </indexdivn>
+    </body>
+</spec>

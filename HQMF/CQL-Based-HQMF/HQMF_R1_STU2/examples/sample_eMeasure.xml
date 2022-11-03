@@ -1,0 +1,21 @@
+<QualityMeasureDocument>
+  <!-- lots of metadata -->
+  <component>
+    <dataCriteriaSection>
+      <entry>...</entry>
+    </dataCriteriaSection>
+  </component>
+  <component>
+    <populationCriteriaSection>
+      <component>
+        <initialPopulationCriteria>...</initialPopulationCriteria>
+      </component>
+      <component>
+        <denominatorCriteria>...</denominatorCriteria>
+      </component>
+      <component>
+        <numeratorCriteria>...</numeratorCriteria>
+      </component>
+    </populationCriteriaSection>
+  </component>
+</QualityMeasureDocument>

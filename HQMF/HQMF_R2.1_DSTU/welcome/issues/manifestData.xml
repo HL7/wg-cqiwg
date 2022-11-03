@@ -1,0 +1,1027 @@
+<manifests>
+   <manifest name="uvmi" dirName="uvmi" dirParent="domains">
+      <file type="manifest" file="uvmi-manifest.txt" fileExists="false"/>
+      <file type="specification" file="uvmi.xml" fileExists="true"/>
+      <file type="databases" file="databases/*_PB*.mdb"
+            note="Existence of database file untested."/>
+      <file type="databases" file="databases/*_RP*.mdb"
+            note="Existence of database file untested."/>
+      <file type="models" file="sourcegraphics/MFMI_DM100000*.vsd" fileExists="false"/>
+      <file type="models" file="sourcegraphics/MFMI_DM700700*.vsd" fileExists="true"/>
+      <file type="models" file="sourcegraphics/MFMI_*700700*.vsd" fileExists="true"/>
+      <file type="models" file="sourcegraphics/MFMI_RM700700UV*.hmd" fileExists="false"/>
+      <file type="models" file="sourcegraphics/MFMI_*700710*.vsd" fileExists="true"/>
+      <file type="models" file="sourcegraphics/MFMI_RM700710UV*.hmd" fileExists="false"/>
+      <file type="models" file="sourcegraphics/MFMI_*700720*.vsd" fileExists="true"/>
+      <file type="models" file="sourcegraphics/MFMI_RM700720UV*.hmd" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_NA000005.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_ST000001UV01.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_ST000002UV01.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_ST000003UV01.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_walkthru_1.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_walkthru_2.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/MFMI_walkthru_3.gif" fileExists="false"/>
+   </manifest>
+   <manifest name="uvqm" dirName="uvqm" dirParent="domains">
+      <file type="manifest" file="uvqm-manifest.txt" fileExists="false"/>
+      <file type="specification" file="uvqm.xml" fileExists="true"/>
+      <file type="databases" file="databases/*_PB*.mdb"
+            note="Existence of database file untested."/>
+      <file type="databases" file="databases/*_RP*.mdb"
+            note="Existence of database file untested."/>
+      <file type="models" file="sourcegraphics/POQM_*000001*.vsd" fileExists="true"/>
+      <file type="models" file="sourcegraphics/POQM_*000001*.xml" fileExists="true"/>
+   </manifest>
+   <manifest name="Backbone" dirName="backbone" dirParent="help">
+      <file type="manifest" file="Backbone-manifest.txt" fileExists="false"/>
+      <file type="specification" file="Backbone.xml" fileExists="true"/>
+      <reference role="idref" locale="local" ref="ExecSummary" name="loc" parentName="p"
+                 exists="true"/>
+      <reference role="idref" locale="local" ref="bbV3int" name="loc" parentName="p"
+                 exists="true"/>
+      <reference role="idref" locale="local" ref="bbballo" name="loc" parentName="p"
+                 exists="true"/>
+      <reference role="idref" locale="local" ref="bbcopyright" name="loc" parentName="p"
+                 exists="true"/>
+      <reference role="idref" locale="local" ref="bbintro" name="loc" parentName="p"
+                 exists="true"/>
+      <reference role="idref" locale="local" ref="bbstart" name="loc" parentName="p"
+                 exists="true"/>
+      <reference role="url" locale="local" ref="../../welcome/downloads/downloads.htm"
+                 name="loc"
+                 parentName="p"/>
+      <file type="graphics" file="outputgraphics/book-closed-blue.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/book-closed-gray.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/book-closed-green.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/book-closed-orange.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/book-closed-red.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/book-closed-yellow.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/bb_Backbone.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/bb_backbone_2.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/bb_backbone_3.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/bb_backbone_ballotstatus1.gif"
+            fileExists="false"/>
+      <file type="graphics" file="outputgraphics/bb_backbone_ballotstatus2.gif"
+            fileExists="false"/>
+      <reference role="url" locale="remote" ref="http://www.hl7.org" name="loc" parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.hl7.org/ctl.cfm?action=ballots.home"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.hl7.org/permalink/?ProjectScopeStatement"
+                 name="loc"
+                 parentName="p"/>
+   </manifest>
+   <manifest name="glossary_master" dirName="glossary" dirParent="help">
+      <file type="manifest" file="glossary_master-manifest.txt" fileExists="false"/>
+      <file type="specification" file="glossary_master.xml" fileExists="true"/>
+      <reference role="url" locale="remote" ref="http://medical.nema.org/" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ansi.org/" name="loc" parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.cdc.gov/nchs/icd9.htm" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.hl7.org/oid/index.cfm" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2046.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.regenstrief.org/loinc" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.snomed.org/" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.uml.org" name="loc" parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/Style/XSL/)" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/xhtml1/" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/xmlschema-0/" name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/xmlschema-1/" name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/xmlschema-2/" name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/xslt/" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.w3c.org/" name="loc" parentName="p"/>
+   </manifest>
+   <manifest name="datatypes" dirName="datatypes" dirParent="infrastructure">
+      <file type="manifest" file="datatypes-manifest.txt" fileExists="false"/>
+      <file type="specification" file="datatypes.xml" fileExists="true"/>
+      <file type="other" file="otherdistribution/dt-T.diff" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.formatted" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.isNotOrdered" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.use" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.useablePeriod" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ADXP.partType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.equal" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.isNull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.nonNull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.notApplicable" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.nullFlavor" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.other" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.unknown" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-BAG.notEmpty" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codeSystemName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.displayName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.originalText" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.qualifier" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.codeSystemName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.displayName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.originalText" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CE.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CR.inverted" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CR.name" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CR.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CV.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CV.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CV.codeSystemName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CV.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CV.displayName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CV.originalText" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.charset" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.compression" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.integrityCheck" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.integrityCheckAlgorithm"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.language" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.mediaType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.reference" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.thumbnail" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.formatted" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.use" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.validTime" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ENXP.partType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ENXP.qualifier" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.denominator" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.head" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.increment" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.period" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.assigningAuthorityName"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.displayable" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.extension" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.root" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-INT.successor" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.center" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.high" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.hull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.low" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.width" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL_TS.promotionTS"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-LIST.isEmpty" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.currency" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.diffType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.values" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.alignment" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.institutionSpecified"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.period" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.phase" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PPD.distributionType"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PPD.standardDeviation"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.canonical" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.diffType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.unit" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.codeSystemName"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.displayName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.originalText" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-QTY.lessOrEqual" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-QTY.lessThan" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-REAL.PQ" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-REAL.literal" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-REAL.precision" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-RTO.denominator" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-RTO.numerator" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SC.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SET.difference" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SET.hull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SET.intersect" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SET.notEmpty" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SET.union" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SLIST.digits" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SLIST.origin" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SLIST.scale" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.charset" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.language" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.mediaType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TEL.use" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TEL.useablePeriod" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TS.calendar" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TS.literal" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TS.offset" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-URL.address" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-URL.scheme" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/DT-NPPD-ex1.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/DT-PPD-ex1.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig11.jpg" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/datyp2fig12.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig14.jpg" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/datyp2fig15.jpg" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/datyp2fig5.jpg" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/datyp2fig9.jpg" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/dtUML-Basics.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Concepts.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-GenericCollections.gif"
+            fileExists="false"/>
+      <file type="graphics" file="outputgraphics/dtUML-Identifiers.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Main.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/dtUML-Names.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/dtUML-Quantities.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/dtUML-Tel.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Text.gif" fileExists="false"/>
+      <file type="graphics" file="outputgraphics/dtUML-Timing.gif" fileExists="false"/>
+      <reference role="url" locale="remote" ref="http://aurora.rg.iupui.edu/UCUM" name="loc"
+                 parentName="td"/>
+      <reference role="url" locale="remote" ref="http://www.iana.org/assignments/character-sets"
+                 name="loc"
+                 parentName="td"/>
+      <reference role="url" locale="remote" ref="http://www.iana.org/assignments/language-tags"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.iana.org/assignments/media-types/index.html"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2045.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2046.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2277.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2396.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2806.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2978.txt" name="loc"
+                 parentName="td"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc3066.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.imc.org/mail-i18n.html" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.w3.org/TR/2000/REC-xml-20001006#sec-line-ends"
+                 name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/charmod" name="loc"
+                 parentName="p"/>
+   </manifest>
+   <manifest name="datatypes_r2" dirName="datatypes_r2" dirParent="infrastructure">
+      <file type="manifest" file="datatypes_r2-manifest.txt" fileExists="false"/>
+      <file type="specification" file="datatypes_r2.xml" fileExists="true"/>
+      <file type="other" file="otherdistribution/CD.qualifier" fileExists="false"/>
+      <file type="other" file="otherdistribution/GTS.BOUNDEDPIVL" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.IMAGE" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.SIGNATURE" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.STRUCTURED_TEXT" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.STRUCTURED_TITLE" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.TEXT" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.charset" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.data" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ED.mediaType" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-GTS.BOUNDEDPIVL" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-INT.NONNEG" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-INT.POS" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-IVL.HIGH" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-IVL.LOW" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-IVL.WIDTH" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-PQ.TIME" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-SC.NT" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ST.NT" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-ST.SIMPLE" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-T.diffType" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TEL.EMAIL" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TEL.PERSON" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TEL.PHONE" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TEL.URL" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TS.DATE" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TS.DATE.FULL" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TS.DATETIME" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TS.DATETIME.FULL" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-TS.INSTANT" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-URG.HIGH" fileExists="false"/>
+      <file type="other" file="otherdistribution/dt-URG.LOW" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.formatted" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.isNotOrdered" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.use" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-AD.useablePeriod" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ADXP.language" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ADXP.partType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.dataType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.equal" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.isNull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.nonNull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.notApplicable" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.nullFlavor" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.other" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ANY.unknown" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-BAG.notEmpty" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codeSystemName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.codingRationale"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.displayName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.originalText" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.source" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.valueSet" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CD.valueSetVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CO.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.codeSystemName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-CS.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-DataType.longName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-DataType.shortName"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.charset" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.compression" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.data" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.description" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.integrityCheck" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.integrityCheckAlgorithm"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.language" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.length" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.mediaType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.reference" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.thumbnail" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ED.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.canonical" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.demotionST" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.formatted" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.use" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EN.validTime" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ENXP.language" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ENXP.partType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ENXP.qualifier" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EXPR.evaluate" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-EXPR.expression" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.denominator" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.head" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.increment" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-GLIST.period" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.displayable" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.extension" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.identifierName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.reliability" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.root" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-II.scope" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-INT.successor" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.HIGH" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.LOW" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.WIDTH" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.any" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.center" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.hull" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL.promotionT" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-IVL_TS.promotionTS"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-LIST.isEmpty" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.currency" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.diffType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-MO.values" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.alignment" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.count" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.displayFrequencyInd"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.frequency" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.isFlexible" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.period" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PIVL.phase" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PPD.distributionType"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PPD.standardDeviation"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.canonical" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.codingRationale"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.demotionREAL" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.diffType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.inverted" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.isOne" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.negated" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.unit" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQ.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.codeSystem" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.codeSystemName"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.codeSystemVersion"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.displayName" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.originalText" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-PQR.value" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-QTY.lessOrEqual" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-QTY.lessThan" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-REAL.literal" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-REAL.precision" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-RTO.demotionPQ" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-RTO.demotionREAL" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-RTO.denominator" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-RTO.numerator" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SC.code" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SET.notEmpty" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SLIST.digits" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SLIST.origin" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-SLIST.scale" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.charset" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.data" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.headCharacter" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.language" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.mediaType" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.tailString" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-ST.translation" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TEL.capabilities" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TEL.use" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TEL.useablePeriod" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TS.calendar" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TS.literal" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-TS.offset" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-URL.address" fileExists="false"/>
+      <file type="other" file="otherdistribution/prop-URL.scheme" fileExists="false"/>
+      <reference role="url" locale="local" ref="../coreprinciples/v3modelcoreprinciples.htm"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="local"
+                 ref="../coreprinciples/v3modelcoreprinciples.htm#coreP_Identification-registry"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="local"
+                 ref="../coreprinciples/v3modelcoreprinciples.htm#coreP_Types_of_HL7_V3_Models-Static-CIM"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="local"
+                 ref="../coreprinciples/v3modelcoreprinciples.htm#coreP_Update_Mode"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="local"
+                 ref="../coreprinciples/v3modelcoreprinciples.htm#coreP_V3_Conformance"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="local"
+                 ref="../coreprinciples/v3modelcoreprinciples.htm#coreP_V3_Conformance-Vocabulary-Binding"
+                 name="loc"
+                 parentName="p"/>
+      <file type="graphics" file="outputgraphics/DT-NPPD-ex1.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/DT-PPD-ex1.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig11.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig12.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig15.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig5.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/datyp2fig9.gif" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Concepts.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Foundation.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Identifiers.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Main.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Names.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Quantities.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-QuantityCollections.png"
+            fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Tel.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Text.png" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/dtUML-Uncertainties.png" fileExists="true"/>
+      <reference role="url" locale="remote" ref="http://aurora.regenstrief.org/ucum" name="loc"
+                 parentName="td"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.hl7.org/v3ballot/html/infrastructure/cda/cda.htm"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.hl7.org/v3ballot/html/infrastructure/conformance/conformance.htm"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.iana.org/assignments/character-sets"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.iana.org/assignments/language-tags"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.iana.org/assignments/media-types/index.html"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2045.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2046.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2277.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2368.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2396.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2806.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc2978.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc3066.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.ietf.org/rfc/rfc822.txt" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.ihtsdo.org/fileadmin/user_upload/Docs_01/Technical_Docs/abstract_models_and_representational_forms.pdf"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.imc.org/mail-i18n.html" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.rm-odp.net/" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/Signature/" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.w3.org/TR/2000/REC-xml-20001006#sec-line-ends"
+                 name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/charmod" name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/uri-clarification"
+                 name="loc"
+                 parentName="p"/>
+      <reference role="url" locale="remote"
+                 ref="http://www.who.int/entity/classifications/icd/ICD-10_2nd_ed_volume2.pdf"
+                 name="loc"
+                 parentName="p"/>
+   </manifest>
+   <manifest name="ISODatatypes" dirName="its_r2" dirParent="infrastructure">
+      <file type="manifest" file="ISODatatypes-manifest.txt" fileExists="false"/>
+      <file type="specification" file="ISODatatypes.xml" fileExists="true"/>
+      <file type="other" file="otherdistribution/ISO 21090 Healthcare Datatypes.pdf"
+            fileExists="true"/>
+      <file type="other" file="otherdistribution/ISO 21090 resources.zip" fileExists="true"/>
+   </manifest>
+   <manifest name="ISODatatypesGuide" dirName="its_r2" dirParent="infrastructure">
+      <file type="manifest" file="ISODatatypesGuide-manifest.txt" fileExists="false"/>
+      <file type="specification" file="ISODatatypesGuide.xml" fileExists="true"/>
+   </manifest>
+   <manifest name="its_r2Guide" dirName="its_r2" dirParent="infrastructure">
+      <file type="manifest" file="its_r2Guide-manifest.txt" fileExists="false"/>
+      <file type="specification" file="its_r2Guide.xml" fileExists="true"/>
+      <file type="other" file="otherdistribution/standard_validation_pattern"
+            fileExists="false"/>
+      <file type="other" file="otherdistribution/xml_serialization" fileExists="false"/>
+   </manifest>
+   <manifest name="its_r2Spec" dirName="its_r2" dirParent="infrastructure">
+      <file type="manifest" file="its_r2Spec-manifest.txt" fileExists="false"/>
+      <file type="specification" file="its_r2Spec.xml" fileExists="true"/>
+      <file type="specification" file="ITS_R2SPEC_GL999999.xml" fileExists="true"/>
+      <file type="other" file="otherdistribution/XMIexamples.zip" fileExists="false"/>
+      <reference role="url" locale="local" ref="isodatatypes.htm" name="loc" parentName="p"/>
+      <file type="graphics" file="outputgraphics/PlacerOrderSpecimen.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/AssignedExcel.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/ChoiceExcel.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/Ex1.jpg" fileExists="true"/>
+      <file type="graphics" file="outputgraphics/ExChoice.jpg" fileExists="true"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/2004/REC-xml11-20040204/"
+                 name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/TR/REC-xml-names/ "
+                 name="loc"
+                 parentName="item"/>
+      <reference role="url" locale="remote" ref="http://www.w3.org/XML/Schema" name="loc"
+                 parentName="item"/>
+   </manifest>
+   <!--
+######################
+# Manifest for: uvmi #
+######################
+input/domains/uvmi/databases/*_PB*.mdb
+input/domains/uvmi/databases/*_RP*.mdb
+input/domains/uvmi/outputgraphics/MFMI_NA000005.gif
+input/domains/uvmi/outputgraphics/MFMI_ST000001UV01.gif
+input/domains/uvmi/outputgraphics/MFMI_ST000002UV01.gif
+input/domains/uvmi/outputgraphics/MFMI_ST000003UV01.gif
+input/domains/uvmi/outputgraphics/MFMI_walkthru_1.gif
+input/domains/uvmi/outputgraphics/MFMI_walkthru_2.gif
+input/domains/uvmi/outputgraphics/MFMI_walkthru_3.gif
+input/domains/uvmi/sourcegraphics/MFMI_*700700*.vsd
+input/domains/uvmi/sourcegraphics/MFMI_*700710*.vsd
+input/domains/uvmi/sourcegraphics/MFMI_*700720*.vsd
+input/domains/uvmi/sourcegraphics/MFMI_DM100000*.vsd
+input/domains/uvmi/sourcegraphics/MFMI_DM700700*.vsd
+input/domains/uvmi/sourcegraphics/MFMI_RM700700UV*.hmd
+input/domains/uvmi/sourcegraphics/MFMI_RM700710UV*.hmd
+input/domains/uvmi/sourcegraphics/MFMI_RM700720UV*.hmd
+input/domains/uvmi/uvmi-manifest.txt
+input/domains/uvmi/uvmi.xml
+######################
+# Manifest for: uvqm #
+######################
+input/domains/uvqm/databases/*_PB*.mdb
+input/domains/uvqm/databases/*_RP*.mdb
+input/domains/uvqm/sourcegraphics/POQM_*000001*.vsd
+input/domains/uvqm/sourcegraphics/POQM_*000001*.xml
+input/domains/uvqm/uvqm-manifest.txt
+input/domains/uvqm/uvqm.xml
+######################
+# Manifest for: Backbone #
+######################
+input/help/backbone/Backbone-manifest.txt
+input/help/backbone/Backbone.xml
+input/help/backbone/outputgraphics/bb_Backbone.gif
+input/help/backbone/outputgraphics/bb_backbone_2.gif
+input/help/backbone/outputgraphics/bb_backbone_3.gif
+input/help/backbone/outputgraphics/bb_backbone_ballotstatus1.gif
+input/help/backbone/outputgraphics/bb_backbone_ballotstatus2.gif
+input/help/backbone/outputgraphics/book-closed-blue.gif
+input/help/backbone/outputgraphics/book-closed-gray.gif
+input/help/backbone/outputgraphics/book-closed-green.gif
+input/help/backbone/outputgraphics/book-closed-orange.gif
+input/help/backbone/outputgraphics/book-closed-red.gif
+input/help/backbone/outputgraphics/book-closed-yellow.gif
+######################
+# Manifest for: glossary_master #
+######################
+input/help/glossary/glossary_master-manifest.txt
+input/help/glossary/glossary_master.xml
+######################
+# Manifest for: datatypes #
+######################
+input/infrastructure/datatypes/datatypes-manifest.txt
+input/infrastructure/datatypes/datatypes.xml
+input/infrastructure/datatypes/otherdistribution/dt-T.diff
+input/infrastructure/datatypes/otherdistribution/prop-AD.formatted
+input/infrastructure/datatypes/otherdistribution/prop-AD.isNotOrdered
+input/infrastructure/datatypes/otherdistribution/prop-AD.use
+input/infrastructure/datatypes/otherdistribution/prop-AD.useablePeriod
+input/infrastructure/datatypes/otherdistribution/prop-ADXP.partType
+input/infrastructure/datatypes/otherdistribution/prop-ANY.equal
+input/infrastructure/datatypes/otherdistribution/prop-ANY.isNull
+input/infrastructure/datatypes/otherdistribution/prop-ANY.nonNull
+input/infrastructure/datatypes/otherdistribution/prop-ANY.notApplicable
+input/infrastructure/datatypes/otherdistribution/prop-ANY.nullFlavor
+input/infrastructure/datatypes/otherdistribution/prop-ANY.other
+input/infrastructure/datatypes/otherdistribution/prop-ANY.unknown
+input/infrastructure/datatypes/otherdistribution/prop-BAG.notEmpty
+input/infrastructure/datatypes/otherdistribution/prop-CD.code
+input/infrastructure/datatypes/otherdistribution/prop-CD.codeSystem
+input/infrastructure/datatypes/otherdistribution/prop-CD.codeSystemName
+input/infrastructure/datatypes/otherdistribution/prop-CD.codeSystemVersion
+input/infrastructure/datatypes/otherdistribution/prop-CD.displayName
+input/infrastructure/datatypes/otherdistribution/prop-CD.originalText
+input/infrastructure/datatypes/otherdistribution/prop-CD.qualifier
+input/infrastructure/datatypes/otherdistribution/prop-CD.translation
+input/infrastructure/datatypes/otherdistribution/prop-CE.code
+input/infrastructure/datatypes/otherdistribution/prop-CE.codeSystem
+input/infrastructure/datatypes/otherdistribution/prop-CE.codeSystemName
+input/infrastructure/datatypes/otherdistribution/prop-CE.codeSystemVersion
+input/infrastructure/datatypes/otherdistribution/prop-CE.displayName
+input/infrastructure/datatypes/otherdistribution/prop-CE.originalText
+input/infrastructure/datatypes/otherdistribution/prop-CE.translation
+input/infrastructure/datatypes/otherdistribution/prop-CR.inverted
+input/infrastructure/datatypes/otherdistribution/prop-CR.name
+input/infrastructure/datatypes/otherdistribution/prop-CR.value
+input/infrastructure/datatypes/otherdistribution/prop-CS.code
+input/infrastructure/datatypes/otherdistribution/prop-CS.codeSystem
+input/infrastructure/datatypes/otherdistribution/prop-CS.codeSystemVersion
+input/infrastructure/datatypes/otherdistribution/prop-CV.code
+input/infrastructure/datatypes/otherdistribution/prop-CV.codeSystem
+input/infrastructure/datatypes/otherdistribution/prop-CV.codeSystemName
+input/infrastructure/datatypes/otherdistribution/prop-CV.codeSystemVersion
+input/infrastructure/datatypes/otherdistribution/prop-CV.displayName
+input/infrastructure/datatypes/otherdistribution/prop-CV.originalText
+input/infrastructure/datatypes/otherdistribution/prop-ED.charset
+input/infrastructure/datatypes/otherdistribution/prop-ED.compression
+input/infrastructure/datatypes/otherdistribution/prop-ED.integrityCheck
+input/infrastructure/datatypes/otherdistribution/prop-ED.integrityCheckAlgorithm
+input/infrastructure/datatypes/otherdistribution/prop-ED.language
+input/infrastructure/datatypes/otherdistribution/prop-ED.mediaType
+input/infrastructure/datatypes/otherdistribution/prop-ED.reference
+input/infrastructure/datatypes/otherdistribution/prop-ED.thumbnail
+input/infrastructure/datatypes/otherdistribution/prop-EN.formatted
+input/infrastructure/datatypes/otherdistribution/prop-EN.use
+input/infrastructure/datatypes/otherdistribution/prop-EN.validTime
+input/infrastructure/datatypes/otherdistribution/prop-ENXP.partType
+input/infrastructure/datatypes/otherdistribution/prop-ENXP.qualifier
+input/infrastructure/datatypes/otherdistribution/prop-GLIST.denominator
+input/infrastructure/datatypes/otherdistribution/prop-GLIST.head
+input/infrastructure/datatypes/otherdistribution/prop-GLIST.increment
+input/infrastructure/datatypes/otherdistribution/prop-GLIST.period
+input/infrastructure/datatypes/otherdistribution/prop-II.assigningAuthorityName
+input/infrastructure/datatypes/otherdistribution/prop-II.displayable
+input/infrastructure/datatypes/otherdistribution/prop-II.extension
+input/infrastructure/datatypes/otherdistribution/prop-II.root
+input/infrastructure/datatypes/otherdistribution/prop-INT.successor
+input/infrastructure/datatypes/otherdistribution/prop-IVL.center
+input/infrastructure/datatypes/otherdistribution/prop-IVL.high
+input/infrastructure/datatypes/otherdistribution/prop-IVL.hull
+input/infrastructure/datatypes/otherdistribution/prop-IVL.low
+input/infrastructure/datatypes/otherdistribution/prop-IVL.width
+input/infrastructure/datatypes/otherdistribution/prop-IVL_TS.promotionTS
+input/infrastructure/datatypes/otherdistribution/prop-LIST.isEmpty
+input/infrastructure/datatypes/otherdistribution/prop-MO.currency
+input/infrastructure/datatypes/otherdistribution/prop-MO.diffType
+input/infrastructure/datatypes/otherdistribution/prop-MO.value
+input/infrastructure/datatypes/otherdistribution/prop-MO.values
+input/infrastructure/datatypes/otherdistribution/prop-PIVL.alignment
+input/infrastructure/datatypes/otherdistribution/prop-PIVL.institutionSpecified
+input/infrastructure/datatypes/otherdistribution/prop-PIVL.period
+input/infrastructure/datatypes/otherdistribution/prop-PIVL.phase
+input/infrastructure/datatypes/otherdistribution/prop-PPD.distributionType
+input/infrastructure/datatypes/otherdistribution/prop-PPD.standardDeviation
+input/infrastructure/datatypes/otherdistribution/prop-PQ.canonical
+input/infrastructure/datatypes/otherdistribution/prop-PQ.diffType
+input/infrastructure/datatypes/otherdistribution/prop-PQ.translation
+input/infrastructure/datatypes/otherdistribution/prop-PQ.unit
+input/infrastructure/datatypes/otherdistribution/prop-PQ.value
+input/infrastructure/datatypes/otherdistribution/prop-PQR.code
+input/infrastructure/datatypes/otherdistribution/prop-PQR.codeSystem
+input/infrastructure/datatypes/otherdistribution/prop-PQR.codeSystemName
+input/infrastructure/datatypes/otherdistribution/prop-PQR.codeSystemVersion
+input/infrastructure/datatypes/otherdistribution/prop-PQR.displayName
+input/infrastructure/datatypes/otherdistribution/prop-PQR.originalText
+input/infrastructure/datatypes/otherdistribution/prop-PQR.value
+input/infrastructure/datatypes/otherdistribution/prop-QTY.lessOrEqual
+input/infrastructure/datatypes/otherdistribution/prop-QTY.lessThan
+input/infrastructure/datatypes/otherdistribution/prop-REAL.PQ
+input/infrastructure/datatypes/otherdistribution/prop-REAL.literal
+input/infrastructure/datatypes/otherdistribution/prop-REAL.precision
+input/infrastructure/datatypes/otherdistribution/prop-RTO.denominator
+input/infrastructure/datatypes/otherdistribution/prop-RTO.numerator
+input/infrastructure/datatypes/otherdistribution/prop-SC.code
+input/infrastructure/datatypes/otherdistribution/prop-SET.difference
+input/infrastructure/datatypes/otherdistribution/prop-SET.hull
+input/infrastructure/datatypes/otherdistribution/prop-SET.intersect
+input/infrastructure/datatypes/otherdistribution/prop-SET.notEmpty
+input/infrastructure/datatypes/otherdistribution/prop-SET.union
+input/infrastructure/datatypes/otherdistribution/prop-SLIST.digits
+input/infrastructure/datatypes/otherdistribution/prop-SLIST.origin
+input/infrastructure/datatypes/otherdistribution/prop-SLIST.scale
+input/infrastructure/datatypes/otherdistribution/prop-ST.charset
+input/infrastructure/datatypes/otherdistribution/prop-ST.language
+input/infrastructure/datatypes/otherdistribution/prop-ST.mediaType
+input/infrastructure/datatypes/otherdistribution/prop-TEL.use
+input/infrastructure/datatypes/otherdistribution/prop-TEL.useablePeriod
+input/infrastructure/datatypes/otherdistribution/prop-TS.calendar
+input/infrastructure/datatypes/otherdistribution/prop-TS.literal
+input/infrastructure/datatypes/otherdistribution/prop-TS.offset
+input/infrastructure/datatypes/otherdistribution/prop-URL.address
+input/infrastructure/datatypes/otherdistribution/prop-URL.scheme
+input/infrastructure/datatypes/outputgraphics/DT-NPPD-ex1.gif
+input/infrastructure/datatypes/outputgraphics/DT-PPD-ex1.gif
+input/infrastructure/datatypes/outputgraphics/datyp2fig11.jpg
+input/infrastructure/datatypes/outputgraphics/datyp2fig12.jpg
+input/infrastructure/datatypes/outputgraphics/datyp2fig14.jpg
+input/infrastructure/datatypes/outputgraphics/datyp2fig15.jpg
+input/infrastructure/datatypes/outputgraphics/datyp2fig5.jpg
+input/infrastructure/datatypes/outputgraphics/datyp2fig9.jpg
+input/infrastructure/datatypes/outputgraphics/dtUML-Basics.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Concepts.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-GenericCollections.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Identifiers.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Main.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Names.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Quantities.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Tel.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Text.gif
+input/infrastructure/datatypes/outputgraphics/dtUML-Timing.gif
+######################
+# Manifest for: datatypes_r2 #
+######################
+input/infrastructure/datatypes_r2/datatypes_r2-manifest.txt
+input/infrastructure/datatypes_r2/datatypes_r2.xml
+input/infrastructure/datatypes_r2/otherdistribution/CD.qualifier
+input/infrastructure/datatypes_r2/otherdistribution/GTS.BOUNDEDPIVL
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.IMAGE
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.SIGNATURE
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.STRUCTURED_TEXT
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.STRUCTURED_TITLE
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.TEXT
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.charset
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.data
+input/infrastructure/datatypes_r2/otherdistribution/dt-ED.mediaType
+input/infrastructure/datatypes_r2/otherdistribution/dt-GTS.BOUNDEDPIVL
+input/infrastructure/datatypes_r2/otherdistribution/dt-INT.NONNEG
+input/infrastructure/datatypes_r2/otherdistribution/dt-INT.POS
+input/infrastructure/datatypes_r2/otherdistribution/dt-IVL.HIGH
+input/infrastructure/datatypes_r2/otherdistribution/dt-IVL.LOW
+input/infrastructure/datatypes_r2/otherdistribution/dt-IVL.WIDTH
+input/infrastructure/datatypes_r2/otherdistribution/dt-PQ.TIME
+input/infrastructure/datatypes_r2/otherdistribution/dt-SC.NT
+input/infrastructure/datatypes_r2/otherdistribution/dt-ST.NT
+input/infrastructure/datatypes_r2/otherdistribution/dt-ST.SIMPLE
+input/infrastructure/datatypes_r2/otherdistribution/dt-T.diffType
+input/infrastructure/datatypes_r2/otherdistribution/dt-TEL.EMAIL
+input/infrastructure/datatypes_r2/otherdistribution/dt-TEL.PERSON
+input/infrastructure/datatypes_r2/otherdistribution/dt-TEL.PHONE
+input/infrastructure/datatypes_r2/otherdistribution/dt-TEL.URL
+input/infrastructure/datatypes_r2/otherdistribution/dt-TS.DATE
+input/infrastructure/datatypes_r2/otherdistribution/dt-TS.DATE.FULL
+input/infrastructure/datatypes_r2/otherdistribution/dt-TS.DATETIME
+input/infrastructure/datatypes_r2/otherdistribution/dt-TS.DATETIME.FULL
+input/infrastructure/datatypes_r2/otherdistribution/dt-TS.INSTANT
+input/infrastructure/datatypes_r2/otherdistribution/dt-URG.HIGH
+input/infrastructure/datatypes_r2/otherdistribution/dt-URG.LOW
+input/infrastructure/datatypes_r2/otherdistribution/prop-AD.formatted
+input/infrastructure/datatypes_r2/otherdistribution/prop-AD.isNotOrdered
+input/infrastructure/datatypes_r2/otherdistribution/prop-AD.use
+input/infrastructure/datatypes_r2/otherdistribution/prop-AD.useablePeriod
+input/infrastructure/datatypes_r2/otherdistribution/prop-ADXP.language
+input/infrastructure/datatypes_r2/otherdistribution/prop-ADXP.partType
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.dataType
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.equal
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.isNull
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.nonNull
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.notApplicable
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.nullFlavor
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.other
+input/infrastructure/datatypes_r2/otherdistribution/prop-ANY.unknown
+input/infrastructure/datatypes_r2/otherdistribution/prop-BAG.notEmpty
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.code
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.codeSystem
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.codeSystemName
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.codeSystemVersion
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.codingRationale
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.displayName
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.originalText
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.source
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.translation
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.valueSet
+input/infrastructure/datatypes_r2/otherdistribution/prop-CD.valueSetVersion
+input/infrastructure/datatypes_r2/otherdistribution/prop-CO.value
+input/infrastructure/datatypes_r2/otherdistribution/prop-CS.code
+input/infrastructure/datatypes_r2/otherdistribution/prop-CS.codeSystem
+input/infrastructure/datatypes_r2/otherdistribution/prop-CS.codeSystemName
+input/infrastructure/datatypes_r2/otherdistribution/prop-CS.codeSystemVersion
+input/infrastructure/datatypes_r2/otherdistribution/prop-DataType.longName
+input/infrastructure/datatypes_r2/otherdistribution/prop-DataType.shortName
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.charset
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.compression
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.data
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.description
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.integrityCheck
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.integrityCheckAlgorithm
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.language
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.length
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.mediaType
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.reference
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.thumbnail
+input/infrastructure/datatypes_r2/otherdistribution/prop-ED.translation
+input/infrastructure/datatypes_r2/otherdistribution/prop-EN.canonical
+input/infrastructure/datatypes_r2/otherdistribution/prop-EN.demotionST
+input/infrastructure/datatypes_r2/otherdistribution/prop-EN.formatted
+input/infrastructure/datatypes_r2/otherdistribution/prop-EN.use
+input/infrastructure/datatypes_r2/otherdistribution/prop-EN.validTime
+input/infrastructure/datatypes_r2/otherdistribution/prop-ENXP.language
+input/infrastructure/datatypes_r2/otherdistribution/prop-ENXP.partType
+input/infrastructure/datatypes_r2/otherdistribution/prop-ENXP.qualifier
+input/infrastructure/datatypes_r2/otherdistribution/prop-EXPR.evaluate
+input/infrastructure/datatypes_r2/otherdistribution/prop-EXPR.expression
+input/infrastructure/datatypes_r2/otherdistribution/prop-GLIST.denominator
+input/infrastructure/datatypes_r2/otherdistribution/prop-GLIST.head
+input/infrastructure/datatypes_r2/otherdistribution/prop-GLIST.increment
+input/infrastructure/datatypes_r2/otherdistribution/prop-GLIST.period
+input/infrastructure/datatypes_r2/otherdistribution/prop-II.displayable
+input/infrastructure/datatypes_r2/otherdistribution/prop-II.extension
+input/infrastructure/datatypes_r2/otherdistribution/prop-II.identifierName
+input/infrastructure/datatypes_r2/otherdistribution/prop-II.reliability
+input/infrastructure/datatypes_r2/otherdistribution/prop-II.root
+input/infrastructure/datatypes_r2/otherdistribution/prop-II.scope
+input/infrastructure/datatypes_r2/otherdistribution/prop-INT.successor
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.HIGH
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.LOW
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.WIDTH
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.any
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.center
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.hull
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL.promotionT
+input/infrastructure/datatypes_r2/otherdistribution/prop-IVL_TS.promotionTS
+input/infrastructure/datatypes_r2/otherdistribution/prop-LIST.isEmpty
+input/infrastructure/datatypes_r2/otherdistribution/prop-MO.currency
+input/infrastructure/datatypes_r2/otherdistribution/prop-MO.diffType
+input/infrastructure/datatypes_r2/otherdistribution/prop-MO.value
+input/infrastructure/datatypes_r2/otherdistribution/prop-MO.values
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.alignment
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.count
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.displayFrequencyInd
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.frequency
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.isFlexible
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.period
+input/infrastructure/datatypes_r2/otherdistribution/prop-PIVL.phase
+input/infrastructure/datatypes_r2/otherdistribution/prop-PPD.distributionType
+input/infrastructure/datatypes_r2/otherdistribution/prop-PPD.standardDeviation
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.canonical
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.codingRationale
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.demotionREAL
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.diffType
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.inverted
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.isOne
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.negated
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.translation
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.unit
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQ.value
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.code
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.codeSystem
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.codeSystemName
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.codeSystemVersion
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.displayName
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.originalText
+input/infrastructure/datatypes_r2/otherdistribution/prop-PQR.value
+input/infrastructure/datatypes_r2/otherdistribution/prop-QTY.lessOrEqual
+input/infrastructure/datatypes_r2/otherdistribution/prop-QTY.lessThan
+input/infrastructure/datatypes_r2/otherdistribution/prop-REAL.literal
+input/infrastructure/datatypes_r2/otherdistribution/prop-REAL.precision
+input/infrastructure/datatypes_r2/otherdistribution/prop-RTO.demotionPQ
+input/infrastructure/datatypes_r2/otherdistribution/prop-RTO.demotionREAL
+input/infrastructure/datatypes_r2/otherdistribution/prop-RTO.denominator
+input/infrastructure/datatypes_r2/otherdistribution/prop-RTO.numerator
+input/infrastructure/datatypes_r2/otherdistribution/prop-SC.code
+input/infrastructure/datatypes_r2/otherdistribution/prop-SET.notEmpty
+input/infrastructure/datatypes_r2/otherdistribution/prop-SLIST.digits
+input/infrastructure/datatypes_r2/otherdistribution/prop-SLIST.origin
+input/infrastructure/datatypes_r2/otherdistribution/prop-SLIST.scale
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.charset
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.data
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.headCharacter
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.language
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.mediaType
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.tailString
+input/infrastructure/datatypes_r2/otherdistribution/prop-ST.translation
+input/infrastructure/datatypes_r2/otherdistribution/prop-TEL.capabilities
+input/infrastructure/datatypes_r2/otherdistribution/prop-TEL.use
+input/infrastructure/datatypes_r2/otherdistribution/prop-TEL.useablePeriod
+input/infrastructure/datatypes_r2/otherdistribution/prop-TS.calendar
+input/infrastructure/datatypes_r2/otherdistribution/prop-TS.literal
+input/infrastructure/datatypes_r2/otherdistribution/prop-TS.offset
+input/infrastructure/datatypes_r2/otherdistribution/prop-URL.address
+input/infrastructure/datatypes_r2/otherdistribution/prop-URL.scheme
+input/infrastructure/datatypes_r2/outputgraphics/DT-NPPD-ex1.gif
+input/infrastructure/datatypes_r2/outputgraphics/DT-PPD-ex1.gif
+input/infrastructure/datatypes_r2/outputgraphics/datyp2fig11.jpg
+input/infrastructure/datatypes_r2/outputgraphics/datyp2fig12.jpg
+input/infrastructure/datatypes_r2/outputgraphics/datyp2fig15.jpg
+input/infrastructure/datatypes_r2/outputgraphics/datyp2fig5.gif
+input/infrastructure/datatypes_r2/outputgraphics/datyp2fig9.gif
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Concepts.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Foundation.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Identifiers.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Main.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Names.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Quantities.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-QuantityCollections.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Tel.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Text.png
+input/infrastructure/datatypes_r2/outputgraphics/dtUML-Uncertainties.png
+######################
+# Manifest for: ISODatatypes #
+######################
+input/infrastructure/its_r2/ISODatatypes-manifest.txt
+input/infrastructure/its_r2/ISODatatypes.xml
+input/infrastructure/its_r2/otherdistribution/ISO 21090 Healthcare Datatypes.pdf
+input/infrastructure/its_r2/otherdistribution/ISO 21090 resources.zip
+######################
+# Manifest for: ISODatatypesGuide #
+######################
+input/infrastructure/its_r2/ISODatatypesGuide-manifest.txt
+input/infrastructure/its_r2/ISODatatypesGuide.xml
+######################
+# Manifest for: its_r2Guide #
+######################
+input/infrastructure/its_r2/its_r2Guide-manifest.txt
+input/infrastructure/its_r2/its_r2Guide.xml
+input/infrastructure/its_r2/otherdistribution/standard_validation_pattern
+input/infrastructure/its_r2/otherdistribution/xml_serialization
+######################
+# Manifest for: its_r2Spec #
+######################
+input/infrastructure/its_r2/ITS_R2SPEC_GL999999.xml
+input/infrastructure/its_r2/its_r2Spec-manifest.txt
+input/infrastructure/its_r2/its_r2Spec.xml
+input/infrastructure/its_r2/otherdistribution/XMIexamples.zip
+input/infrastructure/its_r2/outputgraphics/AssignedExcel.jpg
+input/infrastructure/its_r2/outputgraphics/ChoiceExcel.jpg
+input/infrastructure/its_r2/outputgraphics/Ex1.jpg
+input/infrastructure/its_r2/outputgraphics/ExChoice.jpg
+input/infrastructure/its_r2/outputgraphics/PlacerOrderSpecimen.jpg
+--></manifests>
